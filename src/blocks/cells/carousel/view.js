@@ -5,9 +5,7 @@ import { tns } from 'tiny-slider';
 import { activateButon } from '../../atoms/tab-buttons/view';
 import { adjustControlsPosition } from '../../organisms/carousel-text-section/view';
 import { changeSlide } from '../../organisms/hero-blog/view';
-import { galleryCarouselArrowPosition } from '../../organisms/gallery-carousel/view';
 import { loadGalleryEvents, pauseAllGalleryVideos, volumeVideo } from '../../organisms/social-media-gallery/view';
-import { positionArrows } from '../../organisms/inspirational-stories/view';
 
 document.addEventListener('DOMContentLoaded', function () {
 	let slider = []; //It will be populated with this format = [{ id: 0, slide: [] }]
@@ -154,10 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			const transitionStartFunction = (info) => {
 				wrapper.closest('.carousel').setAttribute('current-slide', info.displayIndex);
 
-				if (id === 'inspirational-stories-carousel') {
-					positionArrows(info.slideItems[info.index]);
-				}
-
 				if (controlsText && id === 'text-with-image-carousel') {
 					adjustControlsPosition();
 				}
@@ -182,10 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
 					currentItemVideo.play();
 				}
 
-				if (id === 'gallery-carousel-mosaic') {
-					const galleryWrapper = wrapper.closest('.gallery-carousel');
-					galleryCarouselArrowPosition(galleryWrapper, info.slideItems[info.index]);
-				}
 			};
 
 			//Change Desktop Slides

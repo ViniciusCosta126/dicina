@@ -50,11 +50,6 @@ $breadcrumbLink =  $attributes["breadcrumbLink"]["pt"];
 			</div>
 
 			<div class="buttons-wrapper">
-				<a href="<?= $attributes["shopLink"]; ?>" target="_blank" class="shop-link">
-					<svg width="21" height="24" fill="none">
-						<path fill="#fff" d="M10.212 0C7.677 0 5.597 2.08 5.597 4.615v.923H1.038l-.057.866L.058 23.02 0 24h20.423l-.057-.981-.923-16.616-.058-.865h-4.558v-.923c0-2.534-2.08-4.615-4.615-4.615Zm0 1.846a2.77 2.77 0 0 1 2.77 2.77v.922h-5.54v-.923a2.77 2.77 0 0 1 2.77-2.769ZM2.769 7.385h2.828v2.769h1.846v-2.77h5.538v2.77h1.846v-2.77h2.828l.807 14.77h-16.5l.807-14.77Z" />
-					</svg>
-				</a>
 
 				<button class="header__menu_btn" aria-label="Menu hamburguer">
 					<span></span>
@@ -79,12 +74,7 @@ $breadcrumbLink =  $attributes["breadcrumbLink"]["pt"];
 						</div>
 					</div>
 
-					<div class="navbar__text_down">
-						<?= $content ?>
-						<p>
-							<?= $attributes['donation'] ?>
-						</p>
-					</div>
+	
 				</div>
 
 				<div class="navbar__container__right">

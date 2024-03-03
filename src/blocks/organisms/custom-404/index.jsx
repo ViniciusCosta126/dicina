@@ -46,7 +46,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 							[
 								'il/typography',
 								{
-									content: `<strong>opa! algo</strong> <senna class="senna-stroke">deu errado</senna> `,
+									content: `<strong>opa! algo</strong> deu errado `,
 									tag: 'h2',
 									sizeM: 'title-1-m',
 									sizeD: 'title-2-responsive-d',

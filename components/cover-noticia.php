@@ -1,1 +1,0 @@
-<div class="cover" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>

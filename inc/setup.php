@@ -157,12 +157,6 @@ function getLanguageUrl($lang)
 	return $finalUrl;
 }
 
-if (!function_exists('qtrans_getLanguage')) {
-	function qtrans_getLanguage()
-	{
-		return qtranxf_getLanguage();
-	}
-}
 
 
 // Insert metadata and scripts in head
