@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/mosaic",
+	"title": "Mosaico",
+	"description": "Componente para criação de um mosaico de imagens",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-mosaic"],
+	"render": "file:./render.php",
+	"attributes": {
+		"amount": {
+			"type": "integer",
+			"default": 0
+		},
+		"item": {
+			"type": "integer",
+			"default": 0
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#002753"
+		}
+	}
+}

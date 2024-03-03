@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/wallpapers",
+	"title": "Wallpapers",
+	"description": "Componente para apresentação de wallpapers disponíveis para download",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"viewScript": "file:view.js",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-wallpapers"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"itemsLength": {
+			"type": "integer",
+			"default": 1
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#002753"
+		}
+	}
+}

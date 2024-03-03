@@ -1,0 +1,49 @@
+@import '../../../css/variables';
+
+.book-for-carousel {
+	&.default {
+		@extend %bookForCarouselDefault;
+	}
+}
+
+%bookForCarouselDefault {
+	width: calc(200px + 24px);
+	vertical-align: top;
+	padding-bottom: 15px;
+
+	a {
+		text-decoration: none;
+	}
+
+	.slide-item--image {
+		display: block;
+
+		img {
+			width: 100%;
+			margin-bottom: 16px;
+			aspect-ratio: 125/178;
+			object-fit: cover;
+			background: $surface-quaternary;
+
+			@include md {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	//panel setup
+	&.wp-editor {
+		.text-container {
+			.block-editor-inner-blocks {
+				.block-editor-block-list__layout {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+	}
+
+	@include md {
+		width: calc(250px + 40px);
+	}
+}

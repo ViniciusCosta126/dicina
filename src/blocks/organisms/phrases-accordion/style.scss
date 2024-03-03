@@ -1,0 +1,13 @@
+@import '../../../css/variables';
+
+.phrases-accordion {
+	&.default {
+		@extend %phrasesAccordionDefault;
+	}
+}
+
+%phrasesAccordionDefault {
+	display: block;
+	width: 100%;
+	// Default variant styles;
+}

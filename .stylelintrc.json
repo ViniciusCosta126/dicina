@@ -1,0 +1,9 @@
+{
+	"extends": "stylelint-config-recommended-scss",
+	"plugins": ["stylelint-order", "stylelint-scss"],
+	"rules": {
+		"no-empty-source": null,
+		"order/order": ["custom-properties", "dollar-variables", "declarations", "rules", "at-rules"],
+		"scss/no-global-function-names": null
+	}
+}

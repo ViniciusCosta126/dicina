@@ -1,0 +1,234 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.circuit-detail {
+	&.default {
+		@extend %circuitDetailDefault;
+	}
+}
+
+// Default Variant
+%circuitDetailDefault {
+	&.top-center {
+		@extend %circuitDetailTopCenter;
+	}
+
+	&.top-left {
+		@extend %circuitDetailTopLeft;
+	}
+
+	&.bottom-left {
+		@extend %circuitDetailBottomLeft;
+	}
+
+	.circuit-detail {
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-direction: column;
+			height: 90px;
+			overflow: hidden;
+			position: relative;
+			z-index: 2;
+
+			@include md {
+				height: fit-content;
+			}
+		}
+
+		&-image {
+			display: block;
+			width: 100%;
+			max-width: none;
+			height: auto;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&.wp-editor {
+		.circuit-detail-wrapper {
+			height: auto;
+
+			> .block-editor-inner-blocks {
+				> .block-editor-block-list__layout {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 20px;
+					max-width: 360px;
+					padding-bottom: 10px;
+					overflow-x: auto;
+					overflow-y: hidden;
+
+					[data-type='il/details'] {
+						opacity: 0.3;
+
+						&.is-selected,
+						&.has-child-selected {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+%circuitDetailTopCenter {
+	width: 100%;
+	position: relative;
+
+	.circuit-detail {
+		&-image {
+			padding-top: 60px;
+			transform: translateY(-60px);
+		}
+
+		&-wrapper {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			@include sm {
+				top: 50px;
+				left: 40%;
+				transform: translateX(-50%);
+			}
+
+			@include md {
+				top: 120px;
+				left: 40%;
+				transform: translateX(-50%);
+			}
+
+			@include lg {
+				top: 90px;
+				left: 40%;
+				transform: translateX(-50%);
+			}
+
+			@include laptop {
+				top: 120px;
+				left: 40%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+
+%circuitDetailTopLeft {
+	width: 100%;
+	position: relative;
+
+	.circuit-detail {
+		&-image {
+			padding-bottom: 25px;
+
+			@include md {
+				padding-bottom: 80px;
+				transform: translateY(80px);
+			}
+		}
+
+		&-wrapper {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@include md {
+				top: -20px;
+				left: 0;
+				transform: translateX(0%);
+			}
+
+			@include laptop {
+				top: 0;
+				left: 0;
+				transform: translateX(0%);
+			}
+		}
+	}
+}
+
+%circuitDetailBottomLeft {
+	width: 100%;
+	position: relative;
+
+	.circuit-detail {
+		&-wrapper {
+			position: absolute;
+			top: 100%;
+
+			@include sm {
+				top: 80%;
+				left: 0;
+			}
+
+			@include md {
+				top: unset;
+				bottom: -50px;
+				left: 0;
+			}
+		}
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/circuit-detail'] {
+	height: fit-content;
+
+	&:not(.has-child-selected) {
+		.circuit-detail-wrapper {
+			> .block-editor-inner-blocks {
+				> .block-editor-block-list__layout {
+					[data-type='il/details'] {
+						&:first-child {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	> .circuit-detail {
+		> .circuit-detail-wrapper {
+			> .block-editor-inner-blocks {
+				> .block-editor-block-list__layout {
+					/* stylelint-disable */
+					@extend %blockAppenderButton;
+
+					> .block-list-appender {
+						left: unset;
+						top: unset;
+						right: 0;
+						bottom: 0;
+						opacity: 1;
+						pointer-events: all;
+						width: fit-content;
+						position: sticky;
+
+						.custom-appender {
+							width: fit-content;
+
+							button {
+								width: fit-content;
+								padding: 10px;
+							}
+						}
+					}
+					/* stylelint-enable */
+				}
+			}
+		}
+
+		> .circuit-detail-image {
+			@include md {
+				min-width: 768px;
+			}
+		}
+	}
+}

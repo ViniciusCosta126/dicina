@@ -1,0 +1,114 @@
+@import '../../../css/variables';
+
+.post-listing-header {
+	&.default {
+		@extend %postListingHeaderDefault;
+	}
+
+	&.left-line {
+		@extend %postListingHeaderLeftLine;
+	}
+
+	&.section-title {
+		@extend %postListingHeaderSectionTitle;
+	}
+}
+
+%postListingHeaderDefault {
+	display: flex;
+	flex-direction: column;
+
+	.aux-title {
+		display: inline;
+		text-transform: uppercase;
+		width: fit-content;
+		-webkit-text-stroke: 0.5px;
+
+		@include md {
+			-webkit-text-stroke: 1px;
+		}
+	}
+
+	.title {
+		display: inline;
+		text-transform: uppercase;
+		width: fit-content;
+	}
+}
+
+%postListingHeaderLeftLine {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	position: relative;
+	padding-left: 24px;
+
+	.typography {
+		width: 100%;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 8px;
+		height: 100%;
+		background: $green-blue2;
+
+		@include lg {
+			width: 6px;
+		}
+	}
+
+	@include lg {
+		padding-left: 22px;
+	}
+}
+
+%postListingHeaderSectionTitle {
+	display: block;
+	width: 100%;
+
+	.aux-title {
+		display: inline-block;
+		text-transform: uppercase;
+		-webkit-text-stroke: 0.5px $white;
+
+		&.big {
+			font-size: clamp(20px, 7vw, 30px) !important;
+
+			@include xxs {
+				font-size: clamp(32px, 6vw, 50px) !important;
+			}
+
+			@include lg {
+				font-size: clamp(32px, 6vw, 50px) !important;
+			}
+		}
+
+		@include lg {
+			-webkit-text-stroke: 0 $white;
+		}
+	}
+
+	.title {
+		letter-spacing: 2px;
+		line-height: 130%;
+		text-transform: uppercase;
+		margin-top: 0;
+		-webkit-background-clip: text !important;
+		-webkit-text-fill-color: transparent !important;
+		width: fit-content;
+		font-size: clamp(20px, 7vw, 30px) !important;
+
+		@include xxs {
+			font-size: clamp(32px, 6vw, 52px) !important;
+		}
+
+		@include lg {
+			font-size: clamp(32px, 7vw, 52px) !important;
+		}
+	}
+}

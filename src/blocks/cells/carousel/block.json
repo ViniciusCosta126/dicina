@@ -1,0 +1,186 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/carousel",
+	"title": "Carousel",
+	"description": "Componente utilizado para cria o de carrosséis",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-carousel"],
+	"render": "file:./render.php",
+	"attributes": {
+		"appender": {
+			"type": "boolean",
+			"default": true
+		},
+		"variant": {
+			"type": "string",
+			"default": "hero"
+		},
+		"forceHeightTransition": {
+			"type": "boolean",
+			"default": false
+		},
+		"getHigher": {
+			"type": "boolean",
+			"default": false
+		},
+		"mode": {
+			"type": "string",
+			"default": ""
+		},
+		"animateIn": {
+			"type": "string",
+			"default": ""
+		},
+		"animateOut": {
+			"type": "string",
+			"default": ""
+		},
+		"isLocked": {
+			"type": "boolean",
+			"default": false
+		},
+		"allowed_blocks": {
+			"type": "array",
+			"default": ["il/slide-item"]
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"navigation": {
+			"type": "boolean",
+			"default": false
+		},
+		"navigationDesktop": {
+			"type": "boolean",
+			"default": false
+		},
+		"dots": {
+			"type": "boolean",
+			"default": false
+		},
+		"centered": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoWidth": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoHeight": {
+			"type": "boolean",
+			"default": false
+		},
+		"loop": {
+			"type": "boolean",
+			"default": false
+		},
+		"isVertical": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoplay": {
+			"type": "boolean",
+			"default": false
+		},
+		"speed": {
+			"type": "integer",
+			"default": 400
+		},
+		"autoplayTimeout": {
+			"type": "integer",
+			"default": 5000
+		},
+		"gutter": {
+			"type": "integer",
+			"default": 0
+		},
+		"gutterDesktop": {
+			"type": "integer",
+			"default": 0
+		},
+		"destroy": {
+			"type": "boolean",
+			"default": false
+		},
+		"destroyIn": {
+			"type": "integer",
+			"default": 0
+		},
+		"perView": {
+			"type": "integer",
+			"default": 1
+		},
+		"perView480": {
+			"type": "integer",
+			"default": 2
+		},
+		"perView768": {
+			"type": "integer",
+			"default": 2
+		},
+		"perView960": {
+			"type": "integer",
+			"default": 3
+		},
+		"perView1366": {
+			"type": "integer",
+			"default": 3
+		},
+		"id": {
+			"type": "string",
+			"default": ""
+		},
+		"sort": {
+			"type": "boolean",
+			"default": false
+		},
+		"selfGoTo": {
+			"type": "boolean",
+			"default": false
+		},
+		"otherGoTo": {
+			"type": "boolean",
+			"default": false
+		},
+		"otherGoToId": {
+			"type": "string",
+			"default": ""
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"controlsText": {
+			"type": "boolean",
+			"default": false
+		},
+		"delay": {
+			"type": "integer",
+			"default": 0
+		},
+		"extraClass": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"wrapper": "slider",
+			"perPage": 1,
+			"bgColor": "#ffffff",
+			"variant": "default"
+		}
+	}
+}

@@ -1,0 +1,133 @@
+@import '../../../css/variables';
+
+.posts-pagination {
+	&.default {
+		@extend %postsPaginationDefault;
+	}
+}
+
+%postsPaginationDefault {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	font-family: $font-primary;
+
+	.posts-pagination {
+		&-list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 8px;
+			padding: 0;
+			margin: 0;
+
+			&:not(.final-items) {
+				li {
+					&:nth-child(4) {
+						display: none;
+
+						@include md {
+							display: inline-block;
+						}
+					}
+				}
+			}
+
+			&.final-items {
+				li {
+					&:nth-child(1) {
+						display: none;
+
+						@include md {
+							display: inline-block;
+						}
+					}
+				}
+			}
+
+			li {
+				display: inline-block;
+
+				a,
+				div {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					text-decoration: none;
+					height: 40px;
+					width: 40px;
+
+					@include md {
+						height: 64px;
+						width: 64px;
+					}
+				}
+			}
+
+			&--link {
+				color: $primary;
+				background: $white;
+				border: 1px solid $primary;
+				transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+				font-size: 24px;
+				font-weight: 700;
+				margin-right: 8px;
+
+				&.active,
+				&:hover {
+					color: $white;
+					background: $primary;
+					border: 1px solid $primary;
+				}
+
+				@include md {
+					font-size: 32px;
+					margin: 0;
+				}
+			}
+
+			&--prev,
+			&--next {
+				border-radius: 2px;
+				color: $white;
+				background: $primary;
+				border: 1px solid $primary;
+
+				&.disabled {
+					color: $white;
+					background: $surface-primary;
+					border: 1px solid $surface-primary;
+					pointer-events: none;
+				}
+
+				&:hover {
+					color: $white;
+					background: $primary;
+					border: 1px solid $primary;
+				}
+			}
+
+			&--prev {
+				@include md {
+					margin-left: 8px;
+					margin-right: 4px;
+				}
+			}
+
+			&--next {
+				@include md {
+					margin-left: 4px;
+
+					svg {
+						transform: translateX(2px);
+					}
+				}
+			}
+
+			@include md {
+				gap: 16px;
+			}
+		}
+	}
+}

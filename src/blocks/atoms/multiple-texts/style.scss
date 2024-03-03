@@ -1,0 +1,34 @@
+@import '../../../css/variables';
+
+.multiple-texts {
+    display: flex;
+    color: white;
+    padding: 16px 0 19px;
+    align-items: flex-end;
+
+    & div {
+        font-weight: 400;
+        font-size: 88px;
+        line-height: 105px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: white;
+
+        &:nth-child(1) {
+            font-family: $font-helvetica;
+            font-weight: bold;
+        }
+
+        &:nth-child(2) {
+            font-family: $font-helvetica;
+            color: transparent;
+            line-height: 92px;
+        }
+
+        &:nth-child(3) {
+            font-family: $font-helvetica;
+            font-weight: bold;
+        }
+    }
+}

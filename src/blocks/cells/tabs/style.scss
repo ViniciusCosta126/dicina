@@ -1,0 +1,229 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.tabs {
+	&.default {
+		@extend %tabsDefault;
+	}
+}
+
+%tabsDefault {
+	width: 100%;
+	position: relative;
+	transition: height 0.6s linear;
+
+	.tabs {
+		&-buttons {
+			width: 100%;
+			position: relative;
+			padding-bottom: 8px;
+			overflow-x: auto;
+			overflow-y: hidden;
+
+			// Active item demonstration line
+			.tab-bar {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 8px;
+				left: $containerMobile;
+				background: $gradientGrayTransparent;
+
+				.tab-bar-item {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 0;
+					height: 8px;
+					background: $green-blue;
+					transition: left 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), width 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+					@include md {
+						height: 16px;
+					}
+				}
+
+				@include md {
+					left: 0;
+					height: 16px;
+				}
+			}
+
+			// Row of buttons
+			.tabs-buttons-content {
+				width: fit-content;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				gap: 24px;
+
+				@include md {
+					gap: 40px;
+				}
+			}
+
+			@include max-md {
+				width: 100vw;
+				padding-inline: $containerMobile;
+				margin-left: -$containerMobile;
+			}
+
+			@include md {
+				width: auto;
+				padding-bottom: 16px;
+			}
+		}
+
+		&-contents {
+			display: block;
+			width: 100%;
+			position: relative;
+		}
+	}
+
+	&.is-mobile {
+		.tabs {
+			&-buttons {
+				// Hide scrollbar for IE, Edge and Firefox
+				-ms-overflow-style: none; // IE and Edge
+				scrollbar-width: none; // Firefox
+
+				// Hide scrollbar for Chrome, Safari and Opera
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.wp-editor {
+		@extend %tabsDefaultEditor;
+	}
+}
+
+// Default variant styles for the editor
+%tabsDefaultEditor {
+	padding-bottom: 45px;
+	position: relative;
+
+	> .block-editor-inner-blocks {
+		width: 100%;
+		height: fit-content;
+
+		> .block-editor-block-list__layout {
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.tabs {
+				&-buttons {
+					padding-bottom: 0;
+
+					.tab-bar {
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	[data-type='il/wrapper'] {
+		display: inline-block;
+		width: 100%;
+		position: unset;
+
+		&:has(> .tab-bar) {
+			.tab-bar {
+				> .block-editor-inner-blocks {
+					width: 100%;
+					height: fit-content;
+
+					> .block-editor-block-list__layout {
+						height: 8px;
+
+						@include md {
+							height: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		.wrapper.tabs-buttons-content {
+			> .block-editor-inner-blocks {
+				width: 100%;
+				height: 100%;
+
+				> .block-editor-block-list__layout {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: flex-start;
+					justify-content: flex-start;
+					overflow-x: auto;
+					overflow-y: hidden;
+					padding-bottom: 8px;
+					gap: 24px;
+
+					@include md {
+						gap: 40px;
+					}
+
+					@include md {
+						padding-bottom: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/tabs'] {
+	height: fit-content;
+
+	> .tabs {
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				> .block-list-appender {
+					bottom: -45px !important;
+					pointer-events: none !important;
+					opacity: 0 !important;
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+
+	&:not(.is-selected) {
+		&::after {
+			content: 'Selecionar Abas';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: fit-content;
+			height: 30px;
+			line-height: 30px;
+			padding: 5px 15px;
+			background: $surface-light-gray;
+			color: $black;
+			cursor: pointer;
+		}
+	}
+
+	&.is-selected {
+		> .tabs {
+			> .block-editor-inner-blocks {
+				> .block-editor-block-list__layout {
+					> .block-list-appender {
+						opacity: 1 !important;
+						pointer-events: all !important;
+					}
+				}
+			}
+		}
+	}
+}

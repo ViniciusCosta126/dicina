@@ -1,0 +1,63 @@
+@import '../../../css/variables';
+
+.brand-description {
+	padding: 116px 0;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		p {
+			font-size: 24px !important;
+		}
+
+		.img-wrapper {
+			margin-top: 40px;
+			display: flex;
+			gap: 24px;
+			align-items: center;
+			width: 260px;
+
+			.rect {
+				width: 10px;
+				height: 85px;
+				background: $gradient-bar;
+			}
+		}
+
+		> .block-editor-inner-blocks {
+			width: 80%;
+		}
+	}
+
+	@include lg {
+		.container {
+			flex-direction: row-reverse;
+			justify-content: center;
+			gap: 64px;
+
+			p {
+				font-size: 32px !important;
+				line-height: 48px;
+				text-align: left;
+			}
+
+			.img-wrapper {
+				flex-direction: row-reverse;
+				height: fit-content;
+				align-items: flex-end;
+
+				.rect {
+					width: 17px;
+					height: 323px;
+				}
+			}
+		}
+	}
+
+	@include lg {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+	}
+}

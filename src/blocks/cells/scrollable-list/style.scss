@@ -1,0 +1,181 @@
+@import '../../../css/variables';
+@import '../../../css/mixins';
+
+.scrollable-list {
+	&.links,
+	&.details {
+		@extend %scrollableListDefault;
+	}
+
+	&.links {
+		@extend %scrollableListLinks;
+	}
+
+	&.details {
+		@extend %scrollableListDetails;
+	}
+}
+
+%scrollableListDefault {
+	width: 100%;
+	display: block;
+	position: relative;
+
+	.scrollable-list {
+		&-content {
+			overflow-x: hidden;
+			overflow-y: auto;
+			position: relative;
+			align-items: flex-end;
+			display: flex;
+			flex-direction: column;
+			padding-left: 24px;
+			height: 100%;
+			direction: rtl;
+
+			.button {
+				direction: ltr;
+			}
+
+			@include scrollBar(rgba($white, 0.2), $white, 8, 8, 0);
+
+			@include md {
+				direction: ltr;
+				padding-left: 0px;
+				padding-right: 60px;
+
+				&::-webkit-scrollbar {
+					width: 10px;
+					height: 10px;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+	}
+
+	&.wp-editor {
+		.scrollable-list-content {
+			> .block-editor-inner-blocks {
+				height: 100%;
+
+				> .block-editor-block-list__layout {
+					min-height: 450px;
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					height: 450px;
+
+					.block-editor-block-list__block {
+						position: relative;
+						z-index: 1;
+					}
+
+					.block-list-appender {
+						position: absolute;
+						bottom: 0px;
+						right: -50px;
+						z-index: 2;
+					}
+
+					@include md {
+						align-items: flex-end;
+					}
+				}
+			}
+		}
+
+		.block-list-appender {
+			position: sticky !important;
+			margin-right: -50px;
+
+			.button-appender {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+				padding: 5px 10px 5px 15px;
+				line-height: 30px;
+				border-radius: 4px;
+				border: none;
+				cursor: pointer;
+				white-space: nowrap;
+				background: $black;
+				color: $white;
+
+				svg {
+					width: 15px;
+
+					path {
+						stroke: $white;
+					}
+				}
+			}
+		}
+
+		&.links {
+			.scrollable-list-content {
+				> .block-editor-inner-blocks {
+					> .block-editor-block-list__layout {
+						gap: 32px;
+
+						@include md {
+							gap: 50px;
+						}
+					}
+				}
+			}
+		}
+
+		&.details {
+			.scrollable-list-content {
+				> .block-editor-inner-blocks {
+					> .block-editor-block-list__layout {
+						gap: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+%scrollableListLinks {
+	.scrollable-list {
+		&-content {
+			height: 450px;
+			gap: 32px;
+
+			@include md {
+				gap: 50px;
+			}
+		}
+	}
+}
+
+%scrollableListDetails {
+	height: 283px;
+
+	.scrollable-list {
+		&-content {
+			overscroll-behavior: contain;
+			gap: 14px;
+		}
+	}
+
+	@include md {
+		height: 426px;
+	}
+
+	@include lg {
+		height: 316px;
+	}
+
+	@include laptop {
+		height: 426px;
+	}
+}

@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/seek-your-truth",
+	"title": "Busque sua verdade",
+	"description": "Seção com texto e vídeo",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-seek-your-truth"],
+	"render": "file:./render.php",
+	"attributes": {
+		"bgColor": {
+			"type": "string",
+			"default": "#022653"
+		},
+		"variant": {
+			"type": "string",
+			"default": "full-width"
+		},
+		"line1": {
+			"type": "string",
+			"default": "busque"
+		},
+		"line2": {
+			"type": "string",
+			"default": "sua"
+		},
+		"line3": {
+			"type": "string",
+			"default": "verdade"
+		},
+		"image": {
+			"type": "object",
+			"default": {
+				"src": "/wp-content/themes/Template-blocks/images/home/capacete_senna.png",
+				"alt": "Capacete Ayrton Senna"
+			}
+		},
+		"video": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "",
+				"alt": "",
+				"width": "",
+				"height": "",
+				"type": "",
+				"poster": ""
+			}
+		},
+		"showVideo": {
+            "type": "boolean",
+            "default": true
+        },
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#022653",
+			"variant": "none"
+		}
+	}
+}

@@ -1,0 +1,114 @@
+@import '../../../css/variables';
+
+.hero-brand {
+	position: relative;
+	overflow: hidden;
+	&__content {
+		height: 100vh;
+
+		.product-item {
+			height: 100vh;
+		}
+	}
+
+	.products__carousel__card__img--hover {
+		display: none;
+	}
+
+	&__overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(18, 18, 18, 0.2) 0%, rgba(18, 18, 18, 0.8) 100%);
+	}
+
+	.tns-visually-hidden {
+		display: none;
+	}
+
+	// Style to arrows hero
+	.slide-item.home-hero .slide-item--text-box {
+		background: transparent;
+		bottom: auto;
+		top: calc(50% + 50px);
+		transform: translateY(-50%);
+		max-width: none;
+		padding: 0;
+
+		p {
+			text-transform: uppercase;
+			font-size: 40px;
+
+			@media (min-width: $tablet) {
+				font-size: 64px;
+				line-height: 70px;
+			}
+		}
+	}
+
+	.tns-controls {
+		z-index: 2;
+		position: absolute;
+		bottom: 40px;
+		left: $containerMobile;
+
+		button {
+			display: inline-block;
+			text-align: center;
+			height: 40px;
+			width: 40px;
+			background: transparent;
+			font-size: 0;
+			position: relative;
+			border: none;
+			margin-left: 16px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+			&::after {
+				content: '';
+				display: block;
+				height: 27px;
+				width: 17px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+
+			@include md {
+				height: 48px;
+				width: 48px;
+				margin-left: 24px;
+			}
+		}
+
+		[data-controls='prev'] {
+			&::after {
+				background-image: url(../../../../images/arrow-left.svg);
+			}
+		}
+
+		[data-controls='next'] {
+			&::after {
+				background-image: url(../../../../images/arrow-right.svg);
+			}
+		}
+
+		@include md {
+			left: calc((100% - $containerTablet) / 2);
+			bottom: 68px;
+		}
+
+		@include lg {
+			left: calc((100% - $containerLaptop) / 2);
+		}
+
+		@include laptop {
+			left: calc((100% - $containerDesk) / 2);
+		}
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/quotes",
+	"title": "Citação",
+	"description": "Frase que vai aparecendo no scroll",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-frase"],
+	"viewScript": "file:view.js",
+	"render": "file:./render.php",
+	"attributes": {
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"textContent": {
+			"type": "string",
+			"default": "LEMBRE-SE QUE, NAS ADVERSIDADES, ALGUNS DESISTEM ENQUANTO OUTROS BATEM RECORDS"
+		},
+		"imgMob": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/frases2.jpg",
+				"width": "181",
+				"height": "342"
+			}
+		},
+		"imgDeskOne": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/frases1.jpg",
+				"width": "386",
+				"height": "521"
+			}
+		},
+		"imgDeskTwo": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/frases2.jpg",
+				"width": "477",
+				"height": "735"
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#002753",
+			"variant": "default",
+			"imgMob": "https://placehold.co/181x342",
+			"imgDeskOne": "https://placehold.co/386x521",
+			"imgDeskTwo": "https://placehold.co/447x735"
+		}
+	}
+}

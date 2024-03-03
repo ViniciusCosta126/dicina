@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/header",
+	"title": "Header",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-header"],
+	"render": "file:./render.php",
+	"attributes": {
+		"colorVariant": {
+			"type": "string",
+			"default": "blue"
+		},
+		"startTransparent": {
+			"type": "boolean",
+			"default": true
+		},
+		"position": {
+			"type": "string",
+			"default": "p-fixed"
+		},
+		"hasSearch": {
+			"type": "boolean",
+			"default": false
+		},
+		"shortMenu": {
+			"type": "string",
+			"default": "main"
+		},
+		"keepShortMenus": {
+			"type": "boolean",
+			"default": false
+		},
+		"shopLink": {
+			"type": "string",
+			"default": ""
+		},
+		"shopLinkEn": {
+			"type": "string",
+			"default": ""
+		},
+		"breadcrumb": {
+			"type": "object",
+			"default": {
+				"en": "",
+				"pt": "teste"
+			}
+		},
+		"breadcrumbLink": {
+			"type": "object",
+			"default": {
+				"en": "",
+				"pt": "teste"
+			}
+		},
+		"menu": {
+			"type": "string",
+			"default": "menu"
+		},
+		"donation": {
+			"type": "string",
+			"default": ""
+		},
+		"donationEN": {
+			"type": "string",
+			"default": ""
+		},
+		"bigMenuImg": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/221x100",
+				"alt": "imagem placeholder image"
+			}
+		}
+	}
+}

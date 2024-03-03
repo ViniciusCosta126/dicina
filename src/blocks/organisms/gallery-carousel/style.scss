@@ -1,0 +1,38 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.gallery-carousel {
+	&.default {
+		@extend %galleryCarouselDefault;
+	}
+}
+
+%galleryCarouselDefault {
+	display: block;
+	width: 100%;
+
+	&.wp-editor {
+		min-height: 100px;
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/gallery-carousel'] {
+	> .gallery-carousel {
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				.block-list-appender {
+					bottom: 10px !important;
+					opacity: 1 !important;
+					pointer-events: all !important;
+
+					.button-remove {
+						padding: 15px !important;
+					}
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/podium-number",
+	"title": "Seção Pódio",
+	"description": "Componente para seção de podio",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-podium-number"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgImg": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": ""
+			}
+		},
+		"firstImg": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "https://placeholder.co/75x75",
+				"alt": "icone"
+			}
+		},
+		"secondImg": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "https://placeholder.co/75x75",
+				"alt": "icone"
+			}
+		},
+		"thirdImg": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "https://placeholder.co/75x75",
+				"alt": "icone"
+			}
+		},
+		"valueTime": {
+			"type": "number",
+			"default": 1
+		},
+		"valueRacing": {
+			"type": "number",
+			"default": 1
+		},
+		"valuePole": {
+			"type": "number",
+			"default": 1
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"firstContent": {
+			"type": "string",
+			"default": "Primeiro Lugar"
+		},
+		"secondContent": {
+			"type": "string",
+			"default": "Segundo Lugar"
+		},
+		"thirdContent": {
+			"type": "string",
+			"default": "Terceiro Lugar"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

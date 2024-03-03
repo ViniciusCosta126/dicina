@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/brand-big-numbers",
+	"title": "Marca - Grandes Numeros",
+	"description": "Componente da secao de grandes numeros jornada",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-brand-big-numbers"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "linear-gradient(90deg, #00a851 0%, #1832d7 100%)"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "linear-gradient(90deg, #00a851 0%, #1832d7 100%)"
+		}
+	}
+}

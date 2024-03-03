@@ -1,0 +1,257 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+.call-to-products {
+	&.default {
+		@extend %callToProductsDefault;
+	}
+}
+
+%callToProductsDefault {
+	background: $blue-green;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	overflow: hidden;
+
+	.container-title {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		background: transparent;
+		border: none;
+
+		&.active {
+			img {
+				left: 0;
+				transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			}
+
+			.text,
+			svg {
+				opacity: 1;
+				transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			}
+		}
+
+		img {
+			width: 66px;
+			aspect-ratio: 2/1;
+			object-fit: contain;
+			position: relative;
+			left: -2000px;
+			transition: left 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+			@include md {
+				width: 110px;
+			}
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+			transition: 0.2s;
+			transform: rotate(0);
+			opacity: 0;
+			margin-top: -4px;
+
+			&.open {
+				transition: 0.2s;
+				transform: rotate(180deg);
+			}
+
+			@include md {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.text {
+			font-family: $font-primary;
+			font-size: 16px;
+			-webkit-text-stroke: 1px;
+			letter-spacing: 0.8px;
+			text-transform: uppercase;
+			color: #fff;
+			opacity: 0;
+			transition: all ease-in 0.5s;
+
+			@include md {
+				font-size: 32px;
+				line-height: 120%;
+				letter-spacing: 3.84px;
+				-webkit-text-stroke: 2px;
+			}
+		}
+
+		@include md {
+			gap: 40px;
+		}
+	}
+
+	.content-container {
+		max-height: 0;
+		opacity: 0;
+		transition: all 0.2s;
+
+		&.open {
+			transition: all 0.2s;
+			max-height: 300px;
+			opacity: 1;
+
+			.typography {
+				margin-top: 24px;
+				margin-bottom: 20px;
+
+				@include md {
+					margin-bottom: 56px;
+				}
+			}
+		}
+
+		.typography {
+			text-align: center;
+		}
+	}
+
+	.carousel-container {
+		max-height: 0;
+		opacity: 0;
+		transition: all 0.2s;
+
+		&.open {
+			max-height: 300px;
+			opacity: 1;
+			transition: all 0.2s;
+		}
+
+		&.carousel {
+			position: relative;
+			overflow: unset;
+
+			.tns-controls {
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				width: 100%;
+				pointer-events: none;
+
+				button {
+					position: absolute;
+					margin-left: 0;
+					top: 50%;
+					background-color: #00713b;
+					transform: translateY(-50%);
+					left: -20px;
+					pointer-events: all;
+
+					&:last-child {
+						left: unset;
+						right: -20px;
+
+						@include lg {
+							right: -40px;
+						}
+
+						@include laptop-large {
+							right: -60px;
+						}
+					}
+
+					@include lg {
+						left: -40px;
+					}
+
+					@include laptop-large {
+						left: -60px;
+					}
+				}
+			}
+		}
+
+		@include max-md {
+			margin-inline: -24px;
+			width: 85%;
+
+			.tns-ovh {
+				overflow: visible !important;
+			}
+
+			.tns-inner {
+				padding-inline: 24px;
+			}
+		}
+	}
+
+	&.wp-editor {
+		padding-bottom: 80px;
+
+		.container-title {
+			.text {
+				opacity: 1;
+			}
+
+			img {
+				left: 0;
+			}
+		}
+
+		.content-container {
+			height: auto;
+			max-height: unset;
+			opacity: 1;
+		}
+
+		.carousel-container {
+			max-height: unset;
+			margin-top: 40px;
+		}
+
+		.carousel {
+			opacity: 1;
+			height: auto;
+
+			.card-product {
+				height: fit-content;
+				min-height: 180px;
+			}
+
+			> .carousel-content {
+				> .block-editor-inner-blocks {
+					> .block-editor-block-list__layout {
+						display: flex;
+						overflow-x: auto;
+						gap: 16px;
+					}
+				}
+			}
+
+			[data-type='il/card-product'] {
+				min-width: 310px;
+				max-width: 320px;
+			}
+		}
+
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				.block-list-appender {
+					bottom: -60px !important;
+					pointer-events: all !important;
+					opacity: 1 !important;
+
+					button {
+						padding: 15px !important;
+					}
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+
+	@include md {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}

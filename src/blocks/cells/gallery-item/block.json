@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/gallery-item",
+	"title": "Gallery Item",
+	"description": "Item para a galeria de imagens",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-gallery-item"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"expandedImage": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/740x585",
+				"height": "740",
+				"width": "585",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"expandedCaption": {
+			"type": "string",
+			"default": "Legenda da image nova aqui"
+		},
+		"forceLandsape": {
+			"type": "boolean",
+			"default": true
+		},
+		"hidePanelItem": {
+			"type": "boolean",
+			"default": false
+		},
+		"id": {
+			"type": "string",
+			"default": "gallery-modal-id"
+		},
+		"indexId": {
+			"type": "integer",
+			"default": 0
+		},
+		"image": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/740x585",
+				"height": "740",
+				"width": "585",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#002753"
+		}
+	}
+}

@@ -1,0 +1,198 @@
+@import '../../../css/variables';
+@import '../../../css/mixins';
+
+.modal {
+	&.default {
+		@extend %modalDefault;
+	}
+
+	&.inner {
+		@extend %modalInner;
+	}
+}
+
+%modalDefault {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $primary;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: $zModal;
+	overflow: auto;
+	overscroll-behavior-y: contain;
+	opacity: 0;
+	transform: scale(0.8);
+	pointer-events: none;
+	transition: opacity 0.9s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.16s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	&.open {
+		opacity: 1;
+		transform: scale(1);
+		pointer-events: all;
+	}
+
+	.modal {
+		&-close-button {
+			position: absolute;
+			top: 26px;
+			right: 23px;
+			height: 48px;
+			width: 48px;
+			background: transparent;
+			border: none;
+			outline: none;
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 4px;
+				height: 35px;
+				background: $white;
+				transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+
+			&::before {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+
+			&::after {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			&:hover {
+				&::before {
+					transform: translate(-50%, -50%) rotate(50deg);
+				}
+
+				&::after {
+					transform: translate(-50%, -50%) rotate(-50deg);
+				}
+			}
+		}
+
+		&-content {
+			display: block;
+			width: 85%;
+			max-width: 1054px;
+			max-height: 80vh;
+
+			iframe {
+				width: 100% !important;
+				height: unset !important;
+				aspect-ratio: 16/9;
+			}
+		}
+	}
+
+	&.modal--gallery-expanded {
+		.modal-close-button {
+			top: 15px;
+			right: 15px;
+		}
+
+		.modal-content {
+			@include max-md {
+				width: 100%;
+				max-width: 550px;
+			}
+		}
+	}
+}
+
+%modalInner {
+	position: absolute !important;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	overscroll-behavior-y: unset;
+	overflow: hidden;
+	z-index: 10;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		background: $blue-transparent;
+		z-index: 50;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+		transform: rotate(180deg);
+	}
+
+	.modal {
+		&-close-button {
+			position: relative;
+			top: unset;
+			right: unset;
+			font-size: 24px;
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			width: fit-content;
+			height: auto;
+			margin-top: 30px;
+
+			&::before,
+			&::after {
+				content: none;
+			}
+
+			svg {
+				width: 32px;
+			}
+
+			@include md {
+				margin-top: 40px;
+			}
+		}
+
+		&-content {
+			width: 100%;
+			height: 100%;
+			max-width: none;
+			max-height: none;
+			overflow: auto;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+
+			@include lg {
+				align-items: unset;
+				align-content: center;
+			}
+
+			@include scrollBar(rgba($white, 0.2), $white, 8, 8, 0);
+		}
+	}
+
+	&.wp-editor {
+		> .modal-content {
+			> .block-editor-inner-blocks {
+				width: 100%;
+			}
+		}
+	}
+
+	@extend %modalDefault;
+}

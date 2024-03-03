@@ -1,0 +1,26 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.container-block {
+	margin: 0 auto;
+
+	// Container padrão
+	&.default {
+		@extend %containerDefault;
+	}
+
+	// Container pequeno
+	&.small {
+		@extend %containerSmall;
+	}
+
+	// Container grande
+	&.large {
+		@extend %containerLarge;
+	}
+
+	// Container normal no mobile e grande no desktop
+	&.large-on-desk {
+		@extend %containerLargeOnDesk;
+	}
+}

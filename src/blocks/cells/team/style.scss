@@ -1,0 +1,115 @@
+@import '../../../css/variables';
+
+.team {
+	font-family: $font-primary;
+	min-height: calc(100vh - $headerHeightMobile);
+	display: flex;
+	align-items: center;
+
+	&__container {
+		color: $white;
+
+		@include laptop-small {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+		}
+	}
+
+	&__left {
+		text-align: center;
+		align-self: flex-end;
+
+		@include laptop-small {
+			text-align: left;
+		}
+	}
+
+	&__right {
+		@include laptop-small {
+			max-width: 400px;
+		}
+
+		@include laptop {
+			max-width: 425px;
+		}
+	}
+
+	&__title {
+		background: -webkit-linear-gradient(0deg, #00a851 0%, #1832d7 100%);
+		font-family: $font-helvetica;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-stroke: 4px transparent;
+		color: #002753;
+		line-height: 58px;
+		font-size: 53px;
+		text-transform: uppercase;
+
+		@include md {
+			-webkit-text-stroke: 10px transparent;
+			font-size: 90px;
+			line-height: 140px;
+		}
+
+		@include laptop {
+			-webkit-text-stroke: 10px transparent;
+			font-size: 135px;
+			line-height: 140px;
+		}
+	}
+
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: 24px;
+		line-height: 27px;
+		font-weight: 600;
+
+		@include md {
+			font-size: 36px;
+			line-height: 120%;
+		}
+
+		@include laptop {
+			font-size: 54px;
+			line-height: 120%;
+		}
+	}
+
+	&__content {
+		font-size: 16px;
+		margin-bottom: 20px;
+
+		@include laptop-small {
+			font-size: 22px;
+		}
+
+		@include laptop {
+			font-size: 24px;
+			margin-bottom: 35px;
+		}
+	}
+
+	.hr {
+		background: linear-gradient(90deg, #00a851 0%, #1832d7 100%);
+		border: 0;
+		height: 10px;
+		margin: 40px 0;
+
+		@include laptop-small {
+			background: linear-gradient(180deg, #00a851 0%, #1832d7 100%);
+			margin: 0 36px 0;
+			height: 326px;
+			width: 12px;
+		}
+
+		@include laptop-small {
+			margin: 0 53px 0;
+		}
+	}
+
+	@include lg {
+		min-height: calc(100vh - $headerHeightDesk);
+	}
+}

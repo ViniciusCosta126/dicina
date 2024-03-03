@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/webserie-list",
+	"title": "Seção WebSerie",
+	"description": "Compoente da seção de webseries video",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-webserie-list"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"itemsLength": {
+			"type": "integer",
+			"default": 1
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

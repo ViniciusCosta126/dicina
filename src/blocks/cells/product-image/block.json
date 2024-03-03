@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/product-image",
+	"title": "Product Image",
+	"description": "Item com imagem para ser utilizado no carrossel",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-product-image"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"smallImage": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/120x120/black/white",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"largeImage": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/768x1024",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"largeImageDesk": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/1920x1080",
+				"alt": "Imagem placeholder"
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default"
+		}
+	}
+}

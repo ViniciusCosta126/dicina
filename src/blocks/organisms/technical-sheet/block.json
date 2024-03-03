@@ -1,0 +1,99 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/technical-sheet",
+	"title": "Ficha tecnica",
+	"description": "Componente para secao de ficha tecnica",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": [
+		"file:./style.scss",
+		"style-technical-sheet"
+	],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"imgBack": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "",
+				"width": "720",
+				"height": "892"
+			}
+		},
+		"title": {
+			"type": "string",
+			"default": "Ficha técnica"
+		},
+		"nameCar": {
+			"type": "string",
+			"default": "lotus 98t-renault ef15"
+		},
+		"engine": {
+			"type": "string",
+			"default": "1.5 - v6t"
+		},
+		"subtitleEngine": {
+			"type": "string",
+			"default": "motor"
+		},
+		"horses": {
+			"type": "string",
+			"default": "3.497Cc"
+		},
+		"subtitleHorses": {
+			"type": "string",
+			"default": "cavalos"
+		},
+		"hasImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"bgImageMobile": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/768x768",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"bgImageDesk": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/720x890",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"hPosition": {
+			"type": "string",
+			"default": "left"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

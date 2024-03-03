@@ -1,0 +1,112 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/input",
+	"title": "Input",
+	"description": "",
+	"category": "atoms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-input"],
+	"viewScript": "file:view.js",
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"label": {
+			"type": "string",
+			"default": "Digite seu nome"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"placeholder": {
+			"type": "string",
+			"default": ""
+		},
+		"errorMessage": {
+			"type": "string",
+			"default": ""
+		},
+		"regexValidate": {
+			"type": "string",
+			"default": ""
+		},
+		"name": {
+			"type": "string",
+			"default": ""
+		},
+		"ariaLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"checkboxLabel": {
+			"type": "string",
+			"default": "Li e concordo com as <a href=''>Políticas de Privacidade</a>"
+		},
+		"required": {
+			"type": "boolean",
+			"default": false
+		},
+		"buttonLabel": {
+			"type": "string",
+			"default": "Increva-se Agora"
+		},
+		"isTemplated": {
+			"type": "boolean",
+			"default": false
+		},
+		"labelEn": {
+			"type": "string",
+			"default": "Type your name"
+		},
+		"buttonLabelEn": {
+			"type": "string",
+			"default": "Sign up now"
+		},
+		"ariaLabelEn": {
+			"type": "string",
+			"default": ""
+		},
+		"checkboxLabelEn": {
+			"type": "string",
+			"default": "*Required field"
+		},
+		"placeholderEn": {
+			"type": "string",
+			"default": ""
+		},
+		"errorMessageEn": {
+			"type": "string",
+			"default": ""
+		},
+		"type": {
+			"type": "string",
+			"default": ""
+		},
+		"limit": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

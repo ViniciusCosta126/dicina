@@ -1,0 +1,85 @@
+@import '../../../css/variables';
+
+.testimony {
+	&.collabs {
+		@extend %testimonyDefault;
+	}
+
+	&.legacy {
+		@extend %testimonyLegacy;
+	}
+}
+
+%testimonyDefault {
+	position: relative;
+	padding: 30px 45px;
+
+	&.has-signature {
+		padding-bottom: 90px;
+
+		.quotation-marks.bottom {
+			bottom: 50px;
+		}
+	}
+
+	.quotation-marks {
+		position: absolute;
+		width: 40px;
+		height: 29px;
+
+		&.top {
+			top: 0;
+			left: 0;
+		}
+
+		&.bottom {
+			bottom: 0;
+			right: 0;
+		}
+
+		@include lg {
+			width: 60px;
+			height: 42px;
+		}
+	}
+
+	.signature {
+		width: 180px;
+		height: 80px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -15px;
+
+		@include lg {
+			left: unset;
+			transform: unset;
+			right: 20%;
+		}
+	}
+
+	@include lg {
+		padding: 50px 62px;
+	}
+}
+
+%testimonyLegacy {
+	background-color: transparent;
+	padding: 30px 0px;
+	position: relative;
+
+	.typography {
+		font-size: 24px;
+		margin: 8px 0;
+
+		@include lg {
+			font-size: 32px;
+		}
+	}
+
+	@include lg {
+		padding: 50px 0;
+	}
+
+	@extend %testimonyDefault;
+}

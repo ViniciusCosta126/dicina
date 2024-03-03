@@ -1,0 +1,143 @@
+@import '../../../css/variables';
+
+.inspire-histories {
+	position: relative;
+
+	&:not(.wp-editor) {
+		overflow-x: clip;
+	}
+
+	.lightspeed-text {
+		position: relative;
+		width: 100%;
+		z-index: 2;
+
+		.container {
+			max-width: none;
+			width: 100% !important;
+			padding: 0 !important;
+		}
+
+		.lightspeed-text__container {
+			text-transform: uppercase;
+			position: sticky;
+			top: 57px;
+			transform-origin: 0;
+
+			h2,
+			p {
+				line-height: 1.1;
+			}
+
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			p {
+				font-size: 2rem;
+			}
+
+			&::after {
+				content: '';
+			}
+
+			@include md {
+				h2 {
+					font-size: 4rem;
+				}
+
+				p {
+					font-size: 3rem;
+				}
+			}
+
+			@include lg-small {
+				h2 {
+					font-size: 8rem;
+				}
+
+				p {
+					font-size: 4.3rem;
+				}
+			}
+		}
+
+		@include md {
+			height: 120vh;
+			align-items: flex-start;
+
+			.lightspeed-text {
+				position: relative;
+				width: 100%;
+				z-index: 2;
+				align-items: flex-start;
+			}
+		}
+	}
+
+	.video-background {
+		background: linear-gradient(
+			180deg,
+			#002753 0%,
+			rgba(0, 39, 83, 0.7) 6.25%,
+			rgba(0, 39, 83, 0) 16.67%,
+			rgba(0, 39, 83, 0) 82.29%,
+			rgba(0, 39, 83, 0.7) 90.62%,
+			#002753 100%
+		);
+
+		margin-bottom: 2rem;
+		height: 360px;
+	}
+	.body-5-m.typography {
+		padding: 0 0 1rem;
+	}
+
+	.button {
+		margin: 0 0;
+	}
+
+	@include md {
+		padding-top: 0;
+		padding-bottom: 96px;
+		position: relative;
+
+		.lightspeed-text__container {
+			z-index: 3;
+			transition: all 0.3s 0.4s linear;
+		}
+
+		.video-background {
+			background: linear-gradient(90deg, #002753 0%, rgba(0, 39, 83, 0) 100%);
+			min-height: 890px;
+			height: 100vh;
+			position: absolute;
+			z-index: 1;
+
+			&::after {
+				content: '';
+				background: linear-gradient(90deg, #002753 35%, rgba(0, 39, 83, 0) 60%);
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		p.body-5-m.typography {
+			position: relative;
+			z-index: 2;
+			padding: 300px 0 96px;
+			max-width: 565px;
+		}
+
+		.button {
+			position: relative;
+			z-index: 2;
+			margin: 0;
+			max-width: 50%;
+			transform: translateY(-50px);
+		}
+	}
+}

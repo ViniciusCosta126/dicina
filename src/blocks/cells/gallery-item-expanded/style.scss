@@ -1,0 +1,44 @@
+@import '../../../css/variables';
+
+.gallery-item-expanded {
+	&.default {
+		@extend %galleryItemExpandedDefault;
+	}
+}
+
+%galleryItemExpandedDefault {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+
+	.gallery-item-expanded {
+		&--image {
+			width: 100%;
+			margin: 0;
+			display: block;
+
+			img {
+				display: block;
+				height: auto;
+				width: 100%;
+				max-height: 80vh;
+				object-fit: cover;
+			}
+
+			figcaption {
+				margin-top: 8px;
+
+				@include md {
+					margin-top: 32px;
+				}
+			}
+		}
+	}
+
+	@include md {
+		padding: 0;
+	}
+}

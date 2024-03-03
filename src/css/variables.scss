@@ -1,0 +1,157 @@
+@import './media';
+
+$primary: #002753;
+$light-primary: #1832d7;
+$secondary: #00713b;
+$light-secondary: #00a851;
+$tertiary: #000974;
+$quaternary: #ebc535;
+$light-quaternary: #efd936;
+
+$surface-primary: #6d6e71;
+$surface-secondary: #808285;
+$surface-tertiary: #939598;
+$surface-quaternary: #bcbec0;
+$surface-quinary: #d0d0d0;
+
+//Devices
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1200px;
+
+//Layers
+$zBase: 1;
+$zHeader: 99999;
+$zModal: 999999;
+
+//Header
+$headerHeightMobile: 54px;
+$headerHeightDesk: 68px;
+$largeHeaderHeightMobile: 116px; //to header with short menu in mobile
+$navJourneyHeightMobile: 70px;
+$navJourneyHeightDesk: 92px;
+
+// Container size
+$containerMobile: 24px;
+$containerTablet: 690px;
+$containerLaptop: 960px;
+$containerDesk: 1248px;
+
+// Sizes to Press area
+$sidebarWidth: 390px;
+$bannerProductHeight: 261px;
+$bannerProductHeightDesk: 476px;
+$pressHeroTextHeightMobile: 220px;
+$pressHeroTextHeightDesk: 200px;
+
+// Sizes to Journer Pages
+$breadcrumbHeightMobile: 213px;
+$breadcrumbHeight: 284px;
+$breadcrumbTopMobile: 130px;
+$breadcrumbTopTablet: 138px;
+$breadcrumbTopDesk: 160px;
+
+
+// Fonts
+$font-primary: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+$font-tertiary: 'HelveticaNeueCond', Helvetica, Arial, sans-serif;
+
+$font-helvetica: $font-primary;
+
+
+// Senna Colors:
+
+/******* Gradient Colors *******/
+$blue-green: linear-gradient(90deg, #002753 0%, #00a851 100%);
+$blue-yellow: linear-gradient(90deg, #002753 7.81%, #efd936 100%);
+$blue-yellow2: linear-gradient(
+	90deg,
+	#002753 0%,
+	#002857 14.58%,
+	#002857 28.65%,
+	#0b3058 41.67%,
+	#31495c 54.69%,
+	#59645d 66.15%,
+	#8d8556 79.17%,
+	#b09a4c 88.02%,
+	#d8b334 100%
+);
+$blue-light-green: linear-gradient(90deg, #1832d7 0%, #00a851 100%);
+$blue-light-green-bottom: linear-gradient(180deg, #1832d7 0%, #00a851 100%);
+$green-blue: linear-gradient(90deg, #00a851 0%, #1832d7 100%);
+$green-blue2: linear-gradient(to bottom, #00a851, #1832d7) 0 100%;
+$green-blue3: -webkit-linear-gradient(0deg, #00a851 0%, #00a851 15%, #1832d7 70%, #1832d7 100%);
+$button-hover: linear-gradient(90deg, #002753 0%, #ebc535 100%);
+$text-gradient: linear-gradient(180deg, #00275300 0%, #00275369 20.83%, #002753 50.52%);
+$linear6: linear-gradient(90deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96%);
+$blue-transparent: linear-gradient(#002753 0, transparent 100%);
+$yellow-blue: linear-gradient(270deg, #002753 11.46%, #697546 63.02%, #efd936 100%);
+$yellow-blue-bottom: linear-gradient(
+	180deg,
+	#e4ce36 0%,
+	#e0cb39 13.21%,
+	#bcb152 26.23%,
+	#7a8381 50.19%,
+	#3551b2 75.19%,
+	#0a33d0 98.96%
+);
+$yellow-blue-right: linear-gradient(
+	90deg,
+	#e4ce36 0%,
+	#e0cb39 13.21%,
+	#bcb152 26.23%,
+	#7a8381 50.19%,
+	#3551b2 75.19%,
+	#0a33d0 98.96%
+);
+$gradient: linear-gradient(180deg, #002753 0%, #00713b 26.56%, #000974 50.52%, #efd936 76.04%, #ebc535 100%);
+$gradientBlackTransparent: linear-gradient(to bottom, #000 50%, transparent 100%);
+$gradientWhiteTransparent: linear-gradient(to bottom, transparent 50%, white 100%);
+$gradientBlackTransparentRight: linear-gradient(
+	90deg,
+	rgba(0, 0, 0, 0.6) 0%,
+	rgba(0, 0, 0, 0.7) 0%,
+	rgba(48, 48, 48, 0) 99.99%,
+	rgba(0, 0, 0, 0) 100%
+);
+$gradientGrayTransparent: linear-gradient(90deg, #d0d0d0 0%, transparent 100%);
+$gradientBlueTransparent: linear-gradient(90deg, #002753 0%, transparent 100%);
+$gradient-bar: linear-gradient(180deg, #e4ce36 0%, #0a33d0 88%);
+
+/******* Brand Colors *******/
+$dark-blue: #002753;
+$blue: #1832d7;
+$dark-green: #00713b;
+$light-green: #00a851;
+$navy-blue: #000974;
+$yellow: #ebc535;
+$light-yellow: #efd936;
+
+/******* Secondary Colors *******/
+$black-0: #000000;
+$black: #121212;
+$dark-gray: #43485c;
+$middle-gray: #757580;
+$light-gray: #a2a1a8;
+$white: #ffffff;
+
+/******* Surface Colors *******/
+$surface-light-gray: #bcbec0;
+$surface-middle-gray: #939598;
+$surface-dark-gray: #808285;
+$surface-lead-gray: #6d6e71;
+
+/******* Text Colors *******/
+$text-black: #191919;
+$text-white: #ffffff;
+$blog-info: #232323;
+
+/******* Status Colors *******/
+$error: #ff000a;
+$warning: #ffbe3f;
+$validation: #6dc000;
+$disable: #d0d0d0;
+
+/******* Effect Styles Colors *******/
+$strong-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$soft-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);

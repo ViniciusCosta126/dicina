@@ -1,0 +1,588 @@
+@import '../../../css/media';
+@import '../../../css/variables';
+
+.typography {
+	color: #000;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+
+	strong {
+		display: inline;
+	}
+
+	a {
+		text-decoration: underline;
+		color: inherit;
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+
+	&.position {
+		&-left {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+		&-center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&-right {
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+
+	// Font Family
+	.helveticaneue,
+	&.helveticaneue {
+		font-family: $font-primary;
+	}
+
+
+
+	.helveticaneue-cond,
+	&.helveticaneue-cond {
+		font-family: $font-tertiary;
+	}
+
+	&.uppercase {
+		text-transform: uppercase;
+	}
+
+	// Aligns
+	&.align-unset {
+		width: fit-content;
+	}
+
+	&.align-left-center {
+		width: 100%;
+		text-align: left;
+
+		@include md {
+			text-align: center;
+		}
+	}
+
+	&.align-left-right {
+		width: 100%;
+		text-align: left;
+
+		@include md {
+			text-align: right;
+		}
+	}
+
+	&.align-center-left {
+		width: 100%;
+		text-align: center;
+
+		@include md {
+			text-align: left;
+		}
+	}
+
+	&.align-left {
+		width: 100%;
+		text-align: left;
+	}
+
+	&.align-center {
+		width: 100%;
+		text-align: center;
+	}
+
+	&.align-right {
+		width: 100%;
+		text-align: right;
+	}
+
+	&.transform {
+		&-uppercase {
+			text-transform: uppercase;
+		}
+
+		&-lowercase {
+			text-transform: lowercase;
+		}
+
+		&-captalize {
+			text-transform: capitalize;
+		}
+	}
+
+	// Weights
+	&.weight {
+		&-thin {
+			font-weight: 100;
+		}
+
+		&-light {
+			font-weight: 300;
+		}
+
+		&-normal {
+			font-weight: 400;
+		}
+
+		&-normal-italic {
+			font-weight: 400;
+			font-style: italic;
+		}
+
+		&-medium {
+			font-weight: 500;
+		}
+
+		&-bold {
+			font-weight: 700;
+		}
+
+		&-black {
+			font-weight: 900;
+		}
+	}
+
+	// Sizes
+	&.title-1 {
+		&-m {
+			@extend %title-1;
+		}
+
+		&-d {
+			@extend %title-1-desk;
+		}
+	}
+
+	&.title-2 {
+		&-m {
+			@extend %title-2;
+		}
+
+		&-d {
+			@extend %title-2-desk;
+		}
+
+		&-responsive {
+			&-m {
+				@extend %title-2-responsive;
+			}
+
+			&-d {
+				@extend %title-2-responsive-desk;
+			}
+		}
+	}
+
+	&.title-3 {
+		&-m {
+			@extend %title-3;
+		}
+
+		&-d {
+			@extend %title-3-desk;
+		}
+	}
+
+	&.title-4 {
+		&-m {
+			@extend %title-4;
+		}
+
+		&-d {
+			@extend %title-4-desk;
+		}
+	}
+
+	&.title-5 {
+		&-m {
+			@extend %title-5;
+		}
+
+		&-d {
+			@extend %title-5-desk;
+		}
+	}
+
+	&.body-1 {
+		&-m {
+			@extend %body-1;
+		}
+
+		&-d {
+			@extend %body-1-desk;
+		}
+	}
+
+	&.body-2 {
+		&-m {
+			@extend %body-2;
+		}
+
+		&-m-desk {
+			@extend %body-2-m-desk;
+		}
+
+		&-d {
+			@extend %body-2-desk;
+		}
+	}
+
+	&.body-3 {
+		&-m {
+			@extend %body-3;
+		}
+
+		&-d {
+			@extend %body-3-desk;
+		}
+	}
+	&.body-4 {
+		&-m {
+			@extend %body-4;
+		}
+
+		&-m-desk {
+			@extend %body-4-m-desk;
+		}
+
+		&-d {
+			@extend %body-4-desk;
+		}
+	}
+	&.body-5 {
+		&-m {
+			@extend %body-5;
+		}
+
+		&-d {
+			@extend %body-5-desk;
+		}
+	}
+	&.body-6 {
+		&-m {
+			@extend %body-6;
+		}
+
+		&-d {
+			@extend %body-6-desk;
+		}
+	}
+	&.body-7 {
+		&-m {
+			@extend %body-7;
+		}
+
+		&-d {
+			@extend %body-7-desk;
+		}
+	}
+
+	&.body-8 {
+		&-m {
+			@extend %body-8;
+		}
+
+		&-d {
+			@extend %body-8-desk;
+		}
+	}
+
+	&.body-9 {
+		&-m {
+			@extend %body-9;
+		}
+
+		&-d {
+			@extend %body-9-desk;
+		}
+	}
+
+	&.cta {
+		&-m {
+			@extend %cta;
+		}
+
+		&-d {
+			@extend %cta-desk;
+		}
+	}
+}
+
+// Style to controler
+.font-size-control {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	p {
+		width: 100%;
+	}
+
+	.size-value {
+		width: calc(100% - 75px);
+		margin: 0;
+	}
+
+	.size-type {
+		width: 65px;
+	}
+}
+
+// Sizes
+%title-1 {
+	@include max-lg {
+		font-size: 48px;
+		line-height: 56px;
+		letter-spacing: 0.03em;
+	}
+}
+
+%title-1-desk {
+	@include lg {
+		font-size: 96px;
+		line-height: 115px;
+		letter-spacing: 0.05em;
+	}
+}
+
+%title-2 {
+	@include max-lg {
+		font-size: 48px;
+		line-height: 52px;
+		letter-spacing: 0.08em;
+	}
+}
+
+%title-2-desk {
+	@include lg {
+		font-size: 88px;
+		line-height: 105px;
+	}
+}
+
+%title-2-responsive {
+	@include max-lg {
+		font-size: 48px;
+		line-height: 52px;
+		letter-spacing: 0.08em;
+	}
+}
+
+%title-2-responsive-desk {
+	@include lg {
+		font-size: clamp(44px, 6vw, 90px);
+		line-height: 150%;
+		letter-spacing: 0.03em;
+	}
+}
+
+%title-3 {
+	@include max-lg {
+		font-size: 32px;
+		line-height: 38px;
+		letter-spacing: 0.12em;
+	}
+}
+
+%title-3-desk {
+	@include lg {
+		font-size: 70px;
+		line-height: 70px;
+		letter-spacing: 0.06em;
+	}
+}
+
+%title-4 {
+	@include max-lg {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+%title-4-desk {
+	@include lg {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+%title-5 {
+	@include max-lg {
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0.05em;
+	}
+}
+
+%title-5-desk {
+	@include lg {
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0.05em;
+	}
+}
+
+%body-1 {
+	@include max-lg {
+		font-size: 28px;
+		line-height: 36px;
+	}
+}
+
+%body-1-desk {
+	@include lg {
+		font-size: 50px;
+		line-height: 65px;
+	}
+}
+
+%body-2 {
+	@include max-lg {
+		font-size: 18px;
+		line-height: 18px;
+	}
+}
+
+%body-2-m-desk {
+	@include max-lg {
+		font-size: 40px;
+		line-height: 60px;
+	}
+}
+
+%body-2-desk {
+	@include lg {
+		font-size: 40px;
+		line-height: 60px;
+	}
+}
+
+%body-3 {
+	@include max-lg {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+
+%body-3-desk {
+	@include lg {
+		font-size: 32px;
+		line-height: 48px;
+	}
+}
+
+%body-4 {
+	@include max-lg {
+		font-size: 18px;
+		line-height: 27px;
+	}
+}
+
+%body-4-desk {
+	@include lg {
+		font-size: 26px;
+		line-height: 39px;
+	}
+}
+
+%body-4-m-desk {
+	@include max-lg {
+		font-size: 26px;
+		line-height: 39px;
+	}
+}
+
+%body-5 {
+	@include max-lg {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+%body-5-desk {
+	@include lg {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+
+%body-6 {
+	@include max-lg {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+%body-6-desk {
+	@include lg {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+%body-7 {
+	@include max-lg {
+		font-size: 18px;
+		line-height: 27px;
+	}
+}
+
+%body-7-desk {
+	@include lg {
+		font-size: 18px;
+		line-height: 27px;
+	}
+}
+
+%body-8 {
+	@include max-lg {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+%body-8-desk {
+	@include lg {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+%body-9 {
+	@include max-lg {
+		font-size: 20px;
+		line-height: 150%;
+	}
+}
+
+%body-9-desk {
+	@include lg {
+		font-size: 30px;
+		line-height: 150%;
+	}
+}
+
+%cta {
+	@include lg {
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
+%cta-desk {
+	@include lg {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+
+.typography.fixedStyle {
+	@include lg {
+		line-height: 1.5;
+	}
+}

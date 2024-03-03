@@ -1,0 +1,97 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.webserie-list {
+	&.default {
+		@extend %sectionWebserieDefault;
+	}
+}
+
+%sectionWebserieDefault {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 40px;
+
+	.webserie-card {
+		width: 100%;
+	}
+
+	&.wp-editor {
+		display: block;
+
+		> .block-editor-inner-blocks {
+			width: 100%;
+
+			> .block-editor-block-list__layout {
+				width: 100%;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				gap: 40px;
+
+				.webserie-card {
+					width: 100%;
+				}
+
+				[data-type='il/webserie-card'] {
+					width: 100%;
+				}
+
+				@include smd {
+					[data-type='il/webserie-card'] {
+						width: calc(50% - 20px);
+					}
+				}
+
+				@include md {
+					gap: 48px;
+
+					[data-type='il/webserie-card'] {
+						width: calc(33.333% - 32px);
+					}
+				}
+			}
+		}
+	}
+
+	@include smd {
+		.webserie-card {
+			width: calc(50% - 20px);
+		}
+	}
+
+	@include md {
+		gap: 48px;
+
+		.webserie-card {
+			width: calc(33.333% - 32px);
+		}
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/webserie-list'] {
+	height: fit-content;
+
+	> .webserie-list {
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				.block-list-appender {
+					bottom: 0 !important;
+					pointer-events: all !important;
+					opacity: 1 !important;
+
+					button {
+						padding: 15px !important;
+					}
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+}

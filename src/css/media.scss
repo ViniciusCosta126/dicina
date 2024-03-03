@@ -1,0 +1,179 @@
+$grid-breakpoints: (
+	xxs: 330px,
+	xs: 375px,
+	sm: 480px,
+	smd: 540px,
+	msmd: 680px,
+	md: 768px,
+	lg-small: 960px,
+	lg: 1024px,
+	laptop-small: 1180px,
+	laptop: 1366px,
+	laptop-large: 1440px,
+	large: 1580px,
+	over-full-hd: 2000px,
+) !default;
+
+// Breakpoints
+@mixin xxs {
+	@media (min-width: map-get($grid-breakpoints, 'xxs')) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media (min-width: map-get($grid-breakpoints, 'xs')) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: map-get($grid-breakpoints, 'sm')) {
+		@content;
+	}
+}
+
+@mixin smd {
+	@media (min-width: map-get($grid-breakpoints, 'smd')) {
+		@content;
+	}
+}
+
+@mixin msmd {
+	@media (min-width: map-get($grid-breakpoints, 'msmd')) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: map-get($grid-breakpoints, 'md')) {
+		@content;
+	}
+}
+
+@mixin lg-small {
+	@media (min-width: map-get($grid-breakpoints, 'lg-small')) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: map-get($grid-breakpoints, 'lg')) {
+		@content;
+	}
+}
+
+@mixin laptop-small {
+	@media (min-width: map-get($grid-breakpoints, 'laptop-small')) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (min-width: map-get($grid-breakpoints, 'laptop')) {
+		@content;
+	}
+}
+
+@mixin laptop-large {
+	@media (min-width: map-get($grid-breakpoints, 'laptop-large')) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (min-width: map-get($grid-breakpoints, 'large')) {
+		@content;
+	}
+}
+
+@mixin over-full-hd {
+	@media (min-width: map-get($grid-breakpoints, 'over-full-hd')) {
+		@content;
+	}
+}
+
+// Max Breakpoints
+@mixin max-xs {
+	@media (max-width: calc(map-get($grid-breakpoints, 'xs') - 1px)) {
+		@content;
+	}
+}
+
+@mixin max-sm {
+	@media (max-width: calc(map-get($grid-breakpoints, 'sm') - 1px)) {
+		@content;
+	}
+}
+
+@mixin max-msmd {
+	@media (max-width: calc(map-get($grid-breakpoints, 'msmd') - 1px)) {
+		@content;
+	}
+}
+
+@mixin max-md {
+	@media (max-width: calc(map-get($grid-breakpoints, 'md') - 1px)) {
+		@content;
+	}
+}
+
+@mixin max-lg-small {
+	@media (max-width: calc(map-get($grid-breakpoints, 'lg-small') - 1px)) {
+		@content;
+	}
+}
+
+@mixin max-lg {
+	@media (max-width: calc(map-get($grid-breakpoints, 'lg') - 1px)) {
+		@content;
+	}
+}
+
+@mixin max-laptop-small {
+	@media (max-width: calc(map-get($grid-breakpoints, 'laptop-small') - 1px)) {
+		@content;
+	}
+}
+@mixin max-laptop {
+	@media (max-width: calc(map-get($grid-breakpoints, 'laptop') - 1px)) {
+		@content;
+	}
+}
+
+// Betweens Breakpoints
+@mixin sm-msmd {
+	@media (min-width: map-get($grid-breakpoints, 'sm')) and (max-width: calc(map-get($grid-breakpoints, 'msmd') - 1px)) {
+		@content;
+	}
+}
+
+@mixin msmd-md {
+	@media (min-width: map-get($grid-breakpoints, 'msmd')) and (max-width: calc(map-get($grid-breakpoints, 'md') - 1px)) {
+		@content;
+	}
+}
+
+@mixin md-lg {
+	@media (min-width: map-get($grid-breakpoints, 'md')) and (max-width: map-get($grid-breakpoints, 'lg')) {
+		@content;
+	}
+}
+
+@mixin smd-lg {
+	@media (min-width: map-get($grid-breakpoints, 'smd')) and (max-width: map-get($grid-breakpoints, 'lg')) {
+		@content;
+	}
+}
+
+@mixin lg-laptop-small {
+	@media (min-width: map-get($grid-breakpoints, 'lg')) and (max-width: calc(map-get($grid-breakpoints, 'laptop-small') - 1px)) {
+		@content;
+	}
+}
+
+@mixin laptop-laptop-large {
+	@media (min-width: map-get($grid-breakpoints, 'laptop')) and (max-width: calc(map-get($grid-breakpoints, 'laptop-large') - 1px)) {
+		@content;
+	}
+}

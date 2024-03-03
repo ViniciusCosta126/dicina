@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/news-slider",
+	"title": "News-Slider",
+	"description": "",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-news-slider"],
+	"render": "file:./render.php",
+	"attributes": {		
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"title": {
+			"type": "string",
+			"default": "Título fonte Senna"
+		},
+		"upperTitle": {
+			"type": "string",
+			"default": "Título fonte Helvetica"
+		},
+		"link": {
+			"type": "string",
+			"default": "Receba notícias em primeira mão"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

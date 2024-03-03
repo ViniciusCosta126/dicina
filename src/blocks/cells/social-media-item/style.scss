@@ -1,0 +1,103 @@
+@import '../../../css/variables';
+@import '../../../css/mixins';
+
+.social-media-item {
+	&.default {
+		@extend %socialMediaItemDefault;
+	}
+}
+
+%socialMediaItemDefault {
+	//for this variant height and width configs must be applied in parent component
+	position: relative;
+	overflow: hidden;
+	min-height: 200px;
+
+	.social-media-item {
+		//for this variant height and width configs must be applied in parent component
+
+		&--embed {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 60px 10px 30px;
+			height: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			overscroll-behavior: contain;
+
+			iframe {
+				max-width: 400px !important;
+				margin-bottom: 0 !important;
+				border-radius: 12px !important;
+			}
+
+			@include scrollBar(rgba($white, 0.2), $white, 8, 8, 0);
+
+			@include lg {
+				padding: 0;
+				align-items: flex-end;
+				justify-content: flex-start;
+			}
+		}
+
+		&--image,
+		&--video {
+			z-index: 1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -50%);
+
+			&.has-content {
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgba($black, 0.15);
+				}
+			}
+
+			img,
+			video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&--content {
+			display: block;
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			right: 62px;
+			z-index: 2;
+
+			.block-editor-block-list__layout {
+				display: flex;
+				width: 100%;
+				flex-wrap: wrap;
+				flex-direction: column;
+				padding: 10px;
+			}
+
+			@include md {
+				top: 24px;
+				left: 24px;
+			}
+
+			@include lg {
+				top: 32px;
+				left: 32px;
+			}
+		}
+	}
+}

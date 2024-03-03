@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/product-gallery",
+	"title": "Product Gallery",
+	"description": "Produto com galeria de imagens",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-product-gallery"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"bgPosition": {
+			"type": "string",
+			"default": "center"
+		},
+		"itemsLength": {
+			"type": "integer",
+			"default": 1
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#000000"
+		}
+	}
+}

@@ -1,0 +1,168 @@
+@import '../../../css/variables';
+@import '../../../css/media';
+
+.newsletter {
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #002753;
+		opacity: 0.3;
+		z-index: 1;
+	}
+
+	.info-text {
+		width: 100%;
+		font-size: 28px;
+		font-weight: 600;
+		color: $light-yellow;
+	}
+
+	.container {
+		padding: 40px 24px 48px;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		font-size: 42px;
+		width: 100%;
+		font-weight: 700;
+		font-family: $font-helvetica;
+		color: $white;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		word-break: break-word;
+		-webkit-text-stroke: 0.5px $white;
+
+		&--senna-sans {
+			font-family: $font-helvetica;
+			-webkit-text-stroke: 2px;
+			-webkit-text-stroke-color: white;
+			color: transparent;
+			letter-spacing: 0.012em;
+		}
+
+		&--mobile {
+			display: block;
+		}
+		&--desktop {
+			display: none;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		font-family: $font-helvetica;
+		color: $white;
+		font-size: 32px;
+		line-height: 120%;
+		letter-spacing: 0.03em;
+		margin-bottom: 32px;
+
+		@include md {
+			margin-bottom: 24px;
+			font-size: 50px;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		max-width: 422px;
+		margin-inline: auto;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+
+		.alert-msg {
+			bottom: 6px;
+		}
+
+		.return_message {
+			margin-top: 10px;
+			margin-top: 1rem;
+			text-align: center;
+			font-size: 1.5rem;
+			display: none;
+
+			&.visible {
+				display: block;
+			}
+		}
+
+		&.sended {
+			.success_message {
+				display: block;
+			}
+		}
+		
+	}
+
+	@include lg {
+		background-size: cover;
+
+		.container {
+			padding: 90px 0px;
+			display: grid;
+			column-gap: 24px;
+			grid-template-columns: 500px minmax(300px, 530px);
+			grid-template-rows: 1fr;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.right {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+
+		&__title,
+		.wrapper__title {
+			grid-column: 1/2;
+			padding-right: 0;
+			grid-row: 1/3;
+			letter-spacing: 0.06em;
+			margin-bottom: 0;
+			font-size: 48px;
+			line-height: 1;
+			-webkit-text-stroke: 1px $white;
+
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
+
+			&--senna-sans {
+				line-height: 76px;
+				letter-spacing: 0.025em;
+			}
+		}
+
+		&__form {
+			grid-column: 2/3;
+			margin-inline: 0;			
+		}
+	}
+
+	@include laptop {
+		.container {
+			grid-template-columns: 610px minmax(300px, 530px);
+		}
+
+		&__title,
+		.wrapper__title {
+			font-size: 62px;
+		}
+	}
+}

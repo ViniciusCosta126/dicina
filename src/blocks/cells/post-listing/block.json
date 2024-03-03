@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/post-listing",
+	"title": "Imprensa - Listagem",
+	"description": "Componente para listagem de posts",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": [
+		"file:./style.scss",
+		"style-post-listing"
+	],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"withImages": {
+			"type": "boolean",
+			"default": true
+		},
+		"titleTag": {
+			"type": "string",
+			"default": "h2"
+		},
+		"firstItem": {
+			"type": "string",
+			"default": "small"
+		},
+		"filterBy": {
+			"type": "integer",
+			"default": 0
+		},
+		"delete_category": {
+			"type": "boolean",
+			"default": false
+		},
+		"excluded_categories": {
+			"type": "array",
+			"default": []
+		},
+		"amount": {
+			"type": "integer",
+			"default": 3
+		},
+		"perPage": {
+			"type": "integer",
+			"default": 3
+		},
+		"paginationType": {
+			"type": "string",
+			"default": "none"
+		},
+		"isSeeAll": {
+			"type": "boolean",
+			"default": true
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default"
+		}
+	}
+}

@@ -1,0 +1,177 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.hero-journey {
+	&.default {
+		@extend %heroJourneyDefault;
+	}
+
+	&.full-screen {
+		@extend %heroJourneySecondary;
+	}
+}
+
+// Default variant styles;
+%heroJourneyDefault {
+	height: calc(70vh - $headerHeightMobile);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+	min-height: 400px;
+
+	.overlay {
+		height: 100%;
+		width: 100%;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(18, 18, 18, 0.3) 0%, rgba(18, 18, 18, 0.65) 100%);
+
+		@include lg {
+			background: linear-gradient(
+				89deg,
+				rgba(0, 0, 0, 0.56) 0%,
+				rgba(0, 0, 0, 0.39) 26.04%,
+				rgba(0, 0, 0, 0) 52.21%,
+				rgba(0, 0, 0, 0) 100%
+			);
+		}
+	}
+
+	.hero-journey__content {
+		text-transform: uppercase;
+		font-size: 36px;
+		line-height: 120%;
+		letter-spacing: 2.88px;
+		padding-top: 20px;
+		overflow: hidden;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		-webkit-text-stroke: 2px #fff;
+
+		span {
+			font-family: $font-helvetica;
+			font-size: 18px;
+			font-weight: 500;
+			color: $warning;
+			display: block;
+			margin-bottom: 12px;
+		}
+
+		.small {
+			font-size: 32px !important;
+			@include md {
+				font-size: inherit !important;
+			}
+		}
+
+		@include md {
+			font-size: 52px;
+		}
+
+		@include lg {
+			padding-top: 80px;
+			-webkit-text-stroke: 4px #fff;
+			padding-bottom: 0;
+			justify-content: center;
+			font-size: 64px;
+		}
+	}
+
+	.container {
+		height: 100%;
+	}
+
+	@include lg {
+		height: calc(70vh - $headerHeightDesk);
+	}
+}
+
+// Full Screen variant styles;
+%heroJourneySecondary {
+	height: calc(100vh - $headerHeightMobile);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	min-height: 600px;
+
+	.overlay {
+		height: 100%;
+		width: 100%;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(18, 18, 18, 0.3) 0%, rgba(18, 18, 18, 0.65) 100%);
+
+		.arrow-down {
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			@extend %animatedArrowsButton;
+		}
+
+		@include lg {
+			background: linear-gradient(
+				89deg,
+				rgba(0, 0, 0, 0.56) 0%,
+				rgba(0, 0, 0, 0.39) 26.04%,
+				rgba(0, 0, 0, 0) 52.21%,
+				rgba(0, 0, 0, 0) 100%
+			);
+		}
+	}
+
+	.hero-journey__content {
+		position: absolute;
+		top: calc(50% - $headerHeightMobile);
+		text-transform: uppercase;
+		font-size: 36px;
+		line-height: 120%;
+		letter-spacing: 2.88px;
+		overflow: hidden;
+
+		.big-title {
+			-webkit-text-stroke: 2px #fff;
+			line-height: 105%;
+
+			@include lg {
+				-webkit-text-stroke: 4px #fff;
+			}
+		}
+
+		.label {
+			line-height: 150%;
+			margin-bottom: 8px;
+			-webkit-text-stroke: 1px #fff;
+
+			@include lg {
+				margin-bottom: 24px;
+			}
+		}
+
+		span {
+			font-family: $font-helvetica;
+			font-size: 18px;
+			font-weight: 500;
+			color: $warning;
+			display: block;
+			margin-bottom: 12px;
+		}
+
+		.small {
+			font-size: 32px !important;
+
+			@include md {
+				font-size: inherit !important;
+			}
+		}
+
+		@include lg {
+			top: calc(50% - $headerHeightDesk);
+			font-size: 64px;
+		}
+	}
+
+	@include lg {
+		height: calc(100vh - $headerHeightDesk);
+	}
+}

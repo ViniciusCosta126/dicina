@@ -1,0 +1,101 @@
+@import '../../../css/variables';
+
+.slide-item {
+	&.home-hero {
+		@extend %homeHeroItem;
+	}
+}
+
+%homeHeroItem {
+	min-height: 500px;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+		height: 100%;
+	}
+
+	.slide-item {
+		overflow: hidden;
+
+		&--image {
+			z-index: 1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -50%);
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&::before {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.25);
+				content: '';
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&--video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&--picture-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background: radial-gradient(50% 50% at 50% 50%, rgba(18, 18, 18, 0.2) 0%, rgba(18, 18, 18, 0.8) 100%);
+		}
+
+		&--text-box {
+			z-index: 3;
+			color: #fff;
+			text-decoration: none;
+			position: absolute;
+			bottom: 130px;
+			left: $containerMobile;
+			width: calc(100% - 48px);
+			max-width: 480px;
+			height: fit-content;
+			background: rgba($primary, 0.3);
+			border-radius: 8px;
+			font-family: $font-primary;
+			padding: 16px 17px 26px 8px;
+			text-align: left;
+
+			@include md {
+				left: 0;
+				max-width: unset;
+				width: 60%;
+			}
+
+			@include lg {
+				width: 70%;
+				padding: 24px 16px 35px;
+			}
+
+			@include laptop {
+				width: 50%;
+			}
+		}
+	}
+}

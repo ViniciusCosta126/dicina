@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/wrapper",
+	"title": "Wrapper",
+	"description": "Componente vazio para englobar divs",
+	"category": "atoms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"render": "file:./render.php",
+	"attributes": {
+		"extraClass": {
+			"type": "string",
+			"default": ""
+		},
+		"id": {
+			"type": "string",
+			"default": ""
+		},
+		"allowedBlocks": {
+			"type": "array",
+			"default": []
+		},
+		"isLocked": {
+			"type": "boolean",
+			"default": true
+		},
+		"renderAppender": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

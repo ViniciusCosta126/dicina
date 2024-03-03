@@ -1,0 +1,139 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+$tabNavHeight: 72px;
+
+.tab-nav {
+	background: transparent;
+	position: fixed;
+	top: $headerHeightMobile;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	overflow: hidden;
+	height: calc($tabNavHeight + 3px);
+	transition: all 0.9s cubic-bezier(0.075, 0.82, 0.165, 1), background 1s ease-in;
+
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		margin-top: -3px;
+		background: $green-blue;
+		filter: blur(0.2px);
+		opacity: 0;
+		transition: opacity 0.5s ease-in;
+	}
+
+	> .container {
+		max-width: 1178px;
+		position: relative;
+		padding: 0;
+
+		@include max-md {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+
+			.tns-ovh {
+				padding: 0 $containerMobile;
+			}
+		}
+	}
+
+	.carousel-content {
+		min-height: 0;
+		height: $tabNavHeight;
+		display: flex;
+		align-items: center;
+	}
+
+	&.wp-editor {
+		background: rgba(18, 18, 18, 0.8);
+		position: relative;
+		top: 0;
+
+		[data-type='il/carousel'] {
+			width: 100% !important;
+			white-space: nowrap;
+
+			.carousel-content {
+				> .block-editor-inner-blocks {
+					width: 100%;
+
+					> .block-editor-block-list__layout {
+						overflow: auto;
+						width: 100%;
+						padding-right: 100px;
+					}
+				}
+			}
+
+			[data-type='il/button'] {
+				white-space: normal;
+				display: inline-block;
+				width: fit-content;
+			}
+		}
+	}
+
+	&--background {
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		background: $black;
+
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&--hidden {
+		height: 3px;
+		background: $black;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	.link-tab:first-child {
+		padding-left: 10px;
+
+		@include md {
+			padding-left: 10px;
+		}
+	}
+
+	.link-tab:last-child {
+		padding-right: 50px !important;
+
+		@include md {
+			padding-right: 29px !important;
+		}
+	}
+
+	.tns-horizontal.tns-subpixel > .tns-item {
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	@include lg {
+		top: $headerHeightDesk;
+	}
+}
+
+// Common styles to tab-nav block
+[data-type='il/tab-nav'] {
+	height: fit-content;
+
+	/* stylelint-disable */
+	.block-editor-inner-blocks > {
+		.block-editor-block-list__layout {
+			@extend %blockAppenderButton;
+		}
+	}
+	/* stylelint-enable */
+}

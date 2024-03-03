@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/partner-item",
+	"title": "Item parceiro",
+	"description": "Item para utiliza o da seção sobre o parceiro",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-partner-item"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "about"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"imagePartner": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/720x960",
+				"alt": "Imagem placeholder",
+				"width": "720",
+				"height": "960"
+			}
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

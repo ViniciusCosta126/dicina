@@ -1,0 +1,64 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/hero-seek-your-truth",
+	"title": "Hero Busque sua verdade",
+	"description": "Hero da página busque sua verdade: contém um texto dinâmico que muda com o tempo e um video que sobe sobre o texto no scroll",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-hero-seek-your-truth"],
+	"render": "file:./render.php",
+	"attributes": {
+		"bgColor": {
+			"type": "string",
+			"default": "#022653"
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"staticText": {
+			"type": "string",
+			"default": "busque"
+		},
+		"mutationText": {
+			"type": "string",
+			"default": "sua verdade, sua força, sua vocação, sua paixão, seu sonho, seu talento, sua melhor versão"
+		},
+		"showVideo": {
+			"type": "boolean",
+			"default": true
+		},
+		"video": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "",
+				"alt": "",
+				"width": "",
+				"height": "",
+				"type": "",
+				"poster": ""
+			}
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#022653",
+			"variant": "editor"
+		}
+	}
+}

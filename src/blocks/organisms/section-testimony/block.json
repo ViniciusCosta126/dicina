@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/section-testimony",
+	"title": "Seção Depoimento",
+	"description": "Componente para secao de depoimentos",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-section-testimony"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "linear-gradient(90deg, #002753 0%, #00a851 100%)"
+		},
+		"content": {
+			"type": "string",
+			"default": ""
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"signature": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/180x180",
+				"alt": "Imagem placeholder"
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "linear-gradient(90deg, #002753 0%, #00a851 100%)"
+		}
+	}
+}

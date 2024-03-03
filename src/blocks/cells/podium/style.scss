@@ -1,0 +1,12 @@
+@import '../../../css/variables';
+
+.podium {
+	&.default {
+		@extend %podiumDefault;
+	}
+}
+
+%podiumDefault {
+	display: block;
+	width: fit-content;
+}

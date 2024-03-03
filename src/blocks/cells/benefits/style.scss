@@ -1,0 +1,120 @@
+@import '../../../css/variables';
+
+.benefits {
+    padding: 56px 0;
+
+    h2 {
+        font-family: $font-primary;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 34px;
+        text-align: center;
+        margin: 0;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 32px;
+            line-height: 46px;
+        }
+    }
+
+    .subtitle {
+        font-family: $font-primary;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+        margin: 8px auto 0;
+        max-width: 450px;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        align-items: center;
+
+        .card {
+            width: 300px;
+            margin-top: 32px;
+            background: transparent;
+            border: none;
+
+            .img-wrapper {
+                width: calc(300px - 4px);
+                height: calc(162px - 4px);
+                border: 2px solid $primary;
+                border-radius: 8px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    margin-bottom: -8px;
+                }
+
+                @media screen and (min-width: $tablet) {
+                    width: calc(200px - 4px);
+                    height: calc(102px - 4px);
+                }
+
+                @media screen and (min-width: $desktop) {
+                    width: calc(300px - 4px);
+                    height: calc(162px - 4px);
+                }
+            }
+
+            h3 {
+                font-family: $font-primary;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                text-align: left;
+                margin: 12px 0 0 0;
+
+                @media screen and (min-width: $tablet) {
+                    font-size: 17px;
+                }
+
+                @media screen and (min-width: $desktop) {
+                    font-size: 23px;
+                    line-height: 36px;
+                }
+            }
+
+            p {
+                font-family: $font-primary;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                margin: 4px 0 0 0;
+
+                @media screen and (min-width: $desktop) {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+            }
+
+            @media screen and (min-width: $tablet) {
+                justify-content: flex-start;
+            }
+
+            @media screen and (min-width: $desktop) {
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 0;
+        }
+    }
+}

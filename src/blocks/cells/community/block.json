@@ -1,0 +1,82 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/community",
+	"title": "Lead Comunidade",
+	"description": "Seção com formulário para Lead de Comunidade",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-community"],
+	"render": "file:./render.php",
+	"attributes": {
+		"textoPrincipal": {
+			"type": "object",
+			"default": {
+				"normal": "Vamos conectar histórias ",
+				"sennaSans": "INSPIRADORAS?"
+			}
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Em breve lançaremos um espaço de conexão entre pessoas que, como você, querem fazer parte deste grande movimento de busca pela sua verdade. O que você gostaria de encontrar neste espaço?"
+		},
+		"inputPlaceholder": {
+			"type": "string",
+			"default": "Digite seu e-mail"
+		},
+		"checkboxLabel": {
+			"type": "string",
+			"default": "Li e concordo com as <a href='/politica-de-uso'>Políticas de Privacidade</a>"
+		},
+		"buttonLabel": {
+			"type": "string",
+			"default": "ENVIE SUA SUGESTÃO"
+		},
+		"bgImage": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/bg-community.jpg"
+			}
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"errorMessage": {
+			"type": "string",
+			"default": "Erro ao enviar, tente novamente."
+		},
+		"successMessage": {
+			"type": "string",
+			"default": "Inscrição realizada!"
+		},
+		"requiredMessage": {
+			"type": "string",
+			"default": "*Campo Obrigatório"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

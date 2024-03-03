@@ -1,0 +1,102 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.button {
+	.text {
+		margin: 0;
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
+	&.primary {
+		//Importa de placeholders.scss
+		@extend %ButtonPrimary;
+	}
+
+	&.secondary {
+		//Importa de placeholders.scss
+		@extend %ButtonSecondary;
+	}
+
+	&.tertiary {
+		//Importa de placeholders.scss
+		@extend %ButtonTertiary;
+	}
+
+	&.link {
+		//Importa de placeholders.scss
+		@extend %ButtonLink;
+	}
+
+	&.link-arrow {
+		//Importa de placeholders.scss
+		@extend %ButtonLinkArrow;
+	}
+
+	&.link-double-arrow {
+		//Importa de placeholders.scss
+		@extend %ButtonLinkDoubleArrow;
+	}
+
+	&.link-tab {
+		//Importa de placeholders.scss
+		@extend %ButtonLinkTab;
+	}
+
+	&.tab-button {
+		//Importa de placeholders.scss
+		@extend %ButtonTab;
+	}
+
+	&.share-button {
+		//Importa de placeholders.scss
+		@extend %ButtonShare;
+	}
+
+	&.hasTooltip {
+		position: relative;
+
+		.tooltiptext {
+			font-family: $font-primary;
+			width: 120px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: 130%;
+			left: 50%;
+			margin-left: -60px;
+			/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+			opacity: 0;
+			transition: opacity 1s;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: black transparent transparent transparent;
+			}
+		}
+
+		&:hover:not(.copy-icon) {
+			.tooltiptext {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+[data-type='il/button'] {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+}

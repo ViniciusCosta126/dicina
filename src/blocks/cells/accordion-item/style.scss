@@ -1,0 +1,157 @@
+@import '../../../css/variables';
+
+details {
+	font-family: $font-helvetica;
+	color: $white;
+	padding: 1px 0;
+	background: $light-secondary;
+	background: linear-gradient(90deg, $light-secondary 0%, $light-primary 88%);
+	position: relative;
+	overflow: hidden;
+	transition: max-height 2s linear;
+	max-height: 300px;
+
+	img {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		z-index: 0;
+		opacity: 0;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	summary {
+		list-style: none;
+		cursor: pointer;
+
+		.accordion__title {
+			font-family: $font-helvetica;
+			text-transform: uppercase;
+			font-size: 32px;
+		}
+	}
+
+	&[open] {
+		background: $black-0;
+		max-height: 7000px;
+
+		summary {
+			background: transparent;
+
+			position: relative;
+			z-index: 1;
+
+			.accordion__title{
+				color: $surface-quinary;
+				-webkit-text-stroke-color: $surface-quinary;
+			}
+
+		}
+
+		img {
+			opacity: 0.5;
+		}
+
+		.content {
+			min-height: 445px;
+			display: flex;
+			align-items: center;
+			margin: 0 32px;
+
+			.testimony {
+				padding: 30px 25px;
+
+				.typography {
+					font-size: 24px;
+					line-height: 150%;
+					text-transform: none;
+				}
+			}
+		}
+	}
+
+	&:not([open]) {
+		summary {
+			background-color: $primary;
+			list-style: none;
+			cursor: pointer;
+			padding: 16px 0;
+
+			.accordion__title {
+				-webkit-text-stroke: 1px;
+				-webkit-text-stroke-color: $light-gray;
+				letter-spacing: 0.05em;
+				color: transparent;
+
+			}
+
+			&:hover{
+				.accordion__title{
+
+				background: $green-blue;
+				-webkit-text-stroke: 0px;
+				-webkit-text-stroke-color: transparent;
+
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				}
+			}
+		}
+
+	}
+
+	@include md {
+		&[open] {
+			.content {
+				&.right {
+					justify-content: flex-end;
+				}
+
+				&.left{
+					justify-content: flex-start;
+				}
+
+				&.center{
+					justify-content: center;
+				}
+				.testimony {
+					max-width: 544px;
+					padding: 50px 25px;
+				}
+
+			}
+		}
+
+		summary{
+			.accordion__title {
+				font-size: 54px;
+				line-height: 65px;
+			}
+		}
+	}
+
+	@include laptop {
+		summary {
+			padding: 8px 0;
+			.accordion__title {
+				font-size: 96px;
+				line-height: 117px;
+			}
+		}
+
+		&[open] {
+			.content {
+				.testimony {
+					padding: 60px 0 45px;
+					max-width: 544px;
+
+					.typography {
+						font-size: 32px;
+					}
+				}
+			}
+		}
+	}
+}

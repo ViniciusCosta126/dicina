@@ -1,0 +1,116 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/social-media-item",
+	"title": "Slide Item Image",
+	"description": "Item de slide para utilização de vídeo ou imagem no carrossel",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"style": ["file:./style-index.css", "style-slide-item"],
+	"render": "file:./render.php",
+	"attributes": {
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"hasControls": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasExpanded": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasGoTo": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasContent": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasEmbed": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasEmbedExpanded": {
+			"type": "boolean",
+			"default": false
+		},
+		"isExpanded": {
+			"type": "boolean",
+			"default": false
+		},
+		"embedContent": {
+			"type": "string",
+			"default": ""
+		},
+		"embedContentExpanded": {
+			"type": "string",
+			"default": ""
+		},
+		"date": {
+			"type": "string",
+			"default": ""
+		},
+		"id": {
+			"type": "string",
+			"default": ""
+		},
+		"indexId": {
+			"type": "integer",
+			"default": 1
+		},
+		"bgFile": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"type": "image/jpeg",
+				"src": "https://placehold.co/1024x768",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"bgFileExpanded": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"type": "image/jpeg",
+				"src": "https://placehold.co/1024x768",
+				"alt": "Imagem placeholder expandido"
+			}
+		},
+		"posterImage": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"type": "image/jpeg",
+				"src": "https://placehold.co/1024x768",
+				"alt": "Imagem de capa"
+			}
+		},
+		"posterImageExpanded": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"type": "image/jpeg",
+				"src": "https://placehold.co/1024x768",
+				"alt": "Imagem de capa expandida"
+			}
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "linear-gradient( 90deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )",
+			"variant": "default",
+			"bgFile": "https://placehold.co/768x1024"
+		}
+	}
+}

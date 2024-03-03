@@ -1,0 +1,147 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.product-gallery {
+	&.default {
+		@extend %productGalleryDefault;
+	}
+}
+
+%productGalleryDefault {
+	position: relative;
+	z-index: 1;
+	padding-top: 55px;
+	overflow: hidden;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	.product-gallery {
+		&-title {
+			order: 1;
+			text-transform: uppercase;
+		}
+
+		&-subtitle {
+			order: 2;
+		}
+
+		&-button {
+			order: 3;
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+
+			@include md {
+				margin-left: 0;
+			}
+		}
+
+		&-full-image {
+			order: 4;
+			width: calc(100vw + 10px);
+			max-height: 90vh;
+			left: 50%;
+			transform: translateX(-50%);
+			aspect-ratio: 72/149;
+			position: relative;
+
+			&.transition {
+				animation: fadeImage 1.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+				animation-iteration-count: 1;
+
+				@keyframes fadeImage {
+					0% {
+						transform: translateX(-5px);
+						opacity: 0.3;
+					}
+
+					100% {
+						transform: translateX(0);
+						opacity: 1;
+					}
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba($black, 0.2);
+			}
+
+			@include md {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: calc(100% + 10px);
+				height: 100%;
+				max-height: none;
+				z-index: -1;
+				transform: translateX(0);
+			}
+		}
+
+		&-carousel {
+			order: 5;
+			position: absolute;
+			bottom: 50px;
+			left: 0;
+			width: 100%;
+
+			@include md {
+				position: relative;
+				bottom: unset;
+				left: unset;
+				max-width: 576px;
+			}
+		}
+	}
+
+	&.wp-editor {
+		.product-gallery-carousel {
+			overflow: auto;
+		}
+	}
+
+	@include md {
+		min-height: 100vh;
+		padding-bottom: 100px;
+		display: flex;
+		align-items: flex-end;
+
+		.container {
+			height: 100%;
+		}
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/product-gallery'] {
+	height: fit-content;
+
+	> .product-gallery > .container {
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				> .block-list-appender {
+					bottom: 0 !important;
+					pointer-events: all !important;
+					opacity: 1 !important;
+
+					.button-remove,
+					.button-appender {
+						padding: 15px;
+					}
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+}

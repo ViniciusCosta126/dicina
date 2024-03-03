@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/social-media-gallery",
+	"title": "Galeria mídias sociais",
+	"description": "Seção para exibição item de mídias sociais em um carrossel",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"viewScript": "file:./view.js",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-social-media-gallery"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "tiktok"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"itemsLength": {
+			"type": "integer",
+			"default": 1
+		},
+		"selectedColor": {
+			"type": "integer",
+			"default": 0
+		},
+		"gradientColor": {
+			"type": "string",
+			"default": "linear-gradient(90deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )"
+		},
+		"gradientTitleColor": {
+			"type": "string",
+			"default": "linear-gradient(0deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#002753",
+			"gradientColor": "linear-gradient( 90deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )",
+			"gradientTitleColor": "linear-gradient( 0deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )"
+		}
+	}
+}

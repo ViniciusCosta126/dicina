@@ -1,0 +1,260 @@
+@import '../../../css/variables';
+
+.sharing-buttons {
+	&.default {
+		@extend %sharingButtonsDefault;
+	}
+
+	// Initially closed variant
+	&.closed {
+		@extend %sharingButtonsClosed;
+	}
+
+	&.post-footer {
+		@extend %sharingButtonsPostFooter;
+	}
+}
+
+%sharingButtonsDefault {
+	.sharing-buttons--icons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 24px;
+
+		.button {
+			filter: invert(1) contrast(4);
+			transition: filter 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+			&:hover {
+				filter: invert(0.4) contrast(2);
+			}
+		}
+	}
+
+	&.wp-editor {
+		.sharing-buttons {
+			&--icons {
+				.block-editor-block-list__layout {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 24px;
+				}
+			}
+		}
+	}
+}
+
+%sharingButtonsClosed {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	z-index: 1;
+
+	.sharing-buttons {
+		&--icons {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 12px;
+			transform: scale(0.9) translateY(100%);
+			opacity: 0;
+			transition: opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), transform 1.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+			padding: 16px 8px;
+			width: 36px;
+			pointer-events: none;
+			z-index: -1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: $primary;
+				z-index: -1;
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 93%);
+			}
+
+			.button {
+				display: block;
+				position: relative;
+				transition: filter 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 3px;
+					right: 3px;
+					bottom: 3px;
+					left: 3px;
+					background: $white;
+					z-index: -1;
+
+					@include md {
+						&::before {
+							top: 6px;
+							right: 6px;
+							bottom: 6px;
+							left: 6px;
+						}
+					}
+				}
+
+				img {
+					display: block;
+					width: 100%;
+					fill: $white;
+				}
+
+				.tooltiptext {
+					pointer-events: none;
+					width: 70px;
+					margin-left: -35px;
+				}
+
+				&:hover {
+					filter: contrast(1.3);
+				}
+			}
+
+			&.opened {
+				transform: scale(1);
+				opacity: 1;
+				pointer-events: all;
+				transition: opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s,
+					transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+
+			@include md {
+				width: 52px;
+			}
+		}
+
+		&--closed {
+			height: 36px;
+			width: 36px;
+			background: $primary;
+			cursor: pointer;
+			position: relative;
+			clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 20px;
+				width: 20px;
+				//background: url('../../../../assets/images/share-icon.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+
+				@include md {
+					height: 36px;
+					width: 36px;
+				}
+			}
+
+			@include md {
+				height: 52px;
+				width: 52px;
+			}
+		}
+	}
+
+	&.wp-editor {
+		.sharing-buttons {
+			&--icons {
+				transform: scale(1);
+				opacity: 1;
+
+				.button {
+					@include max-md {
+						max-height: 20px;
+
+						&::before {
+							max-height: 14px;
+						}
+					}
+				}
+
+				.block-editor-block-list__layout {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 4px;
+				}
+			}
+		}
+
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 4px;
+			}
+		}
+	}
+}
+
+%sharingButtonsPostFooter {
+	min-width: 312px;
+
+	.sharing-buttons {
+		&--text {
+			font-family: $font-helvetica;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 28px;
+			letter-spacing: 0em;
+			text-align: left;
+			border-top: 4px solid transparent;
+			border-image: linear-gradient(90deg, #00a851 0%, #1832d7 100%);
+			border-image-slice: 1;
+			padding: 24px 0 16px;
+			max-width: 436px !important;
+
+			@include lg {
+				padding: 24px 0;
+			}
+		}
+
+		&--icons {
+			display: flex;
+			flex-direction: row;
+			gap: 16px;
+
+			@include lg {
+				gap: 24px;
+			}
+		}
+	}
+
+	&.wp-editor {
+		.sharing-buttons {
+			&--icons {
+				.block-editor-block-list__layout {
+					display: flex;
+					flex-direction: row;
+					gap: 16px;
+
+					@include lg {
+						gap: 24px;
+					}
+				}
+			}
+		}
+	}
+}

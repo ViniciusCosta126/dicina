@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/products-scroller",
+	"title": "Products Scroller",
+	"description": "Listagem de produtos com efeito de scroll",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-products"],
+	"render": "file:./render.php",
+	"attributes": {
+		"productsTitle": {
+			"type": "string",
+			"default": "Produtos mais <span>desejados</span>"
+		},
+		"productsSubtitle": {
+			"type": "string",
+			"default": "Vista sua verdade e contribua com o Instituto Ayrton Senna."
+		},
+		"title": {
+			"type": "string",
+			"default": "Produtos mais<br><span>desejados</span>"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Conheça nossos produtos <br>oficiais da marca Senna."
+		},
+		"subtitle__second": {
+			"type": "string",
+			"default": "Suas compras podem contribuir <br>com o Instituto Ayrton Senna."
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#ffffff",
+			"variant": "default"
+		}
+	}
+}

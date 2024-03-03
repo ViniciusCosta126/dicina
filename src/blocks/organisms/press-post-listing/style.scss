@@ -1,0 +1,23 @@
+@import '../../../css/variables';
+
+.press-post-listing {
+	&.default {
+		@extend %pressPostListingDefault;
+	}
+	&.journey {
+		@extend %pressPostListingJourney;
+	}
+}
+
+%pressPostListingDefault {
+	// Default variant styles;
+}
+
+%pressPostListingJourney {
+	background-color: $dark-blue;
+	.post-listing-header {
+		.title {
+			width: initial;
+		}
+	}
+}

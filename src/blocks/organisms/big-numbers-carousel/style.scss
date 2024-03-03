@@ -1,0 +1,30 @@
+@import '../../../css/variables';
+@import '../../../../node_modules/tiny-slider/src/tiny-slider';
+.big-numbers-carousel {
+	position: relative;
+	.carousel-content-social {
+		width: 100%;
+	}
+
+	#tns1-mw {
+		font-size: 0;
+	}
+	.tns-controls {
+		[disabled] {
+			display: none;
+		}
+
+		> :last-child {
+			z-index: 2;
+			position: absolute;
+			bottom: $containerMobile;
+			right: $containerMobile;
+			border: none;
+			background: transparent;
+		}
+
+		> :first-child {
+			display: none;
+		}
+	}
+}

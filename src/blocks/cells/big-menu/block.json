@@ -1,0 +1,191 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/big-menu",
+	"title": "Menu Parceiros",
+	"description": "Menu para página inicial de Collabs",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-big-menu"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"slides": {
+			"type": "array",
+			"default": [
+				{
+					"link": {
+						"url": "",
+						"target": "blank"
+					},
+					"category": "Coleções | RELÓGIO",
+					"product": "Nesta parceria com a TAG HEUER, desenvolvemos coleções de relógios de alta performance e sofisticação. ",
+					"image1": {
+						"src": "/wp-content/themes/Template-blocks/images/products/tag-hauer/tag-hauer-bg-360.png",
+						"alt": "Capa Tênis Esportivo LOTUS Special Edition Feminina Ayrton Senna Preto"
+					},
+					"image2": {
+						"src": "/wp-content/themes/Template-blocks/images/products/tag-hauer/tag-hauer-bg.png",
+						"alt": "Tênis Esportivo LOTUS Special Edition Feminina Ayrton Senna Preto"
+					}
+				},
+				{
+					"link": {
+						"url": "",
+						"target": "blank"
+					},
+					"category": "pulseira ",
+					"product": "Braceletes produzidos em parceria com a MONGRIP™ e lançado no Automóvel Clube de Mônaco.",
+					"image1": {
+						"src": "/wp-content/themes/Template-blocks/images/products/mongrip/mongrip-bg-360.png",
+						"alt": "Braceletes produzidos em parceria com a MONGRIP™ e lançado no Automóvel Clube de Mônaco."
+					},
+					"image2": {
+						"src": "/wp-content/themes/Template-blocks/images/products/mongrip/mongrip-bg.png",
+
+						"alt": "Braceletes produzidos em parceria com a MONGRIP™ e lançado no Automóvel Clube de Mônaco."
+					}
+				},
+				{
+					"link": {
+						"url": "",
+						"target": "blank"
+					},
+					"category": "MC LAREN GTR",
+					"product": "Produção limitada do carro de rua McLaren GTR, carregando o nome do nosso ídolo, apresentou a conexão mais pura entre o piloto e o carro que qualquer outra McLaren na história. ",
+					"image1": {
+						"src": "/wp-content/themes/Template-blocks/images/products/mc-laren/mc-laren-bg.png",
+						"alt": "Produção limitada do carro de rua McLaren GTR, carregando o nome do nosso ídolo, apresentou a conexão mais pura entre o piloto e o carro que qualquer outra McLaren na história. "
+					},
+					"image2": {
+						"src": "/wp-content/themes/Template-blocks/images/products/mc-laren/mc-laren-bg.png",
+						"alt": "Produção limitada do carro de rua McLaren GTR, carregando o nome do nosso ídolo, apresentou a conexão mais pura entre o piloto e o carro que qualquer outra McLaren na história. "
+					}
+				},
+				{
+					"link": {
+						"url": "",
+						"target": "blank"
+					},
+					"category": "cainã gartner",
+					"product": "Os capacetes do tricampeonato e o clássico da vitória de kart em Bercy, esculpidos manualmente em blocos de marchetaria de marfim e imbuia, com detalhes folheados em ouro.",
+					"image1": {
+						"src": "/wp-content/themes/Template-blocks/images/products/caina-gartner/caina-gartner-bg-360.png",
+						"alt": "Os capacetes do tricampeonato e o clássico da vitória de kart em Bercy, esculpidos manualmente em blocos de marchetaria de marfim e imbuia, com detalhes folheados em ouro."
+					},
+					"image2": {
+						"src": "/wp-content/themes/Template-blocks/images/products/caina-gartner/caina-gartner-bg.png",
+						"alt": "Os capacetes do tricampeonato e o clássico da vitória de kart em Bercy, esculpidos manualmente em blocos de marchetaria de marfim e imbuia, com detalhes folheados em ouro."
+					}
+				}
+			]
+		},
+		"slideDots": {
+			"type": "array",
+			"default": [
+				{
+					"url": "",
+					"name": "TAG HEUER"
+				},
+				{
+					"url": "",
+					"name": "MONGRIP™"
+				},
+				{
+					"url": "",
+					"name": "CAINÃ GARTNER"
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				},
+				{
+					"url": "",
+					"name": ""
+				}
+			]
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

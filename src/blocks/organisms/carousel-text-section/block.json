@@ -1,0 +1,56 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/carousel-text-section",
+	"title": "Carrossel de textos",
+	"description": "Seção de carrossel de textos com imagem",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-carousel-text-section"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"itemsLength": {
+			"type": "integer",
+			"default": 1
+		},
+		"hPosition": {
+			"type": "string",
+			"default": "left"
+		},
+		"vPosition": {
+			"type": "string",
+			"default": "top"
+		},
+		"isHero": {
+			"type": "boolean",
+			"default": false
+		},
+		"itemVariant": {
+			"type": "integer",
+			"default": "titles-texts"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

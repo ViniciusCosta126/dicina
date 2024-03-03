@@ -1,0 +1,605 @@
+@import './variables';
+
+// Botão Primário
+%ButtonPrimary,
+%ButtonSecondary {
+	cursor: pointer;
+	font-family: $font-helvetica;
+	font-size: 1rem;
+	outline: none;
+	padding: 1rem 2rem;
+	letter-spacing: 0.18em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (min-width: $tablet) {
+		font-size: 0.875rem;
+		padding: 1.125rem 3.125rem;
+	}
+}
+
+%ButtonPrimary {
+	position: relative;
+	color: $white;
+	background-color: transparent;
+	border: 2px solid $white;
+	z-index: 4;
+
+	&.loading {
+		color: $primary;
+		background: $primary;
+
+		@extend %btnLoading;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		z-index: -1;
+		background-color: $white;
+		transition: all 0.3s ease;
+	}
+
+	&:hover {
+		color: $black;
+
+		&:after {
+			width: 100%;
+		}
+	}
+}
+
+// Botão Secundário
+%ButtonSecondary {
+	color: $dark-gray;
+	background: $quaternary;
+	font-weight: 700;
+	border: 0;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: $light-quaternary;
+	}
+}
+
+// Botão Terciário
+%ButtonTertiary {
+	cursor: pointer;
+	font-family: $font-helvetica;
+	font-size: 1rem;
+	font-weight: 500;
+	color: $white;
+	background: $primary;
+	border: 1px solid $primary;
+	transition: background 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	border-radius: 0;
+	height: 55px;
+	padding: 0 32px;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&.loading {
+		color: $primary;
+		background: $primary;
+
+		@extend %btnLoading;
+	}
+
+	&:hover {
+		color: $primary;
+		background: $white;
+
+		&.loading {
+			color: $primary;
+			background: $primary;
+		}
+	}
+}
+
+%btnLoading {
+	position: relative;
+	pointer-events: none;
+
+	&::before {
+		content: '';
+		z-index: 3;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 40px;
+		width: 40px;
+		border-top: 2px solid $white;
+		border-right: 2px solid $white;
+		border-bottom: 2px solid $white;
+		border-left: 2px solid transparent;
+		animation: loading 1s infinite linear;
+		border-radius: 50%;
+	}
+
+	@keyframes loading {
+		from {
+			transform: translate(-50%, -50%) rotate(0);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
+	}
+}
+
+//botão de link
+%ButtonLink {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 1rem;
+	line-height: 1.5;
+	padding: 0;
+	padding-right: 1.25rem;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	font-family: $font-helvetica;
+	font-weight: 700;
+	background-color: transparent;
+
+	&.black {
+		background: transparent;
+		color: $text-black;
+
+		&:before {
+			content: url("data:image/svg+xml; utf8, %3Csvg width='10' height='10' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.72308 16L0 14.2769L11.8154 2.46154H1.23077V0H16V14.7692H13.5385V4.18462L1.72308 16Z' fill='black'/%3E%3C/svg%3E ");
+			position: absolute;
+			right: 0;
+		}
+
+		&::after {
+			background-color: $text-black;
+		}
+	}
+
+	&:not(.black) {
+		color: white;
+
+		&:before {
+			content: url("data:image/svg+xml; utf8, %3Csvg width='10' height='10' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.72308 16L0 14.2769L11.8154 2.46154H1.23077V0H16V14.7692H13.5385V4.18462L1.72308 16Z' fill='white'/%3E%3C/svg%3E ");
+			position: absolute;
+			right: 0;
+		}
+
+		&::after {
+			background-color: $light-yellow;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 0;
+		height: 2px;
+		bottom: -5px;
+		transition: all 0.5s ease;
+		left: 0;
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+
+	&.small {
+		font-size: 0.875rem;
+	}
+
+	@include md {
+		font-size: 1.5rem;
+		padding-right: 1.5rem;
+
+		&.small {
+			font-size: 1rem;
+			padding-right: 1.5rem;
+		}
+
+		&.black {
+			&:before {
+				content: url("data:image/svg+xml; utf8, %3Csvg width='12' height='12' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.72308 16L0 14.2769L11.8154 2.46154H1.23077V0H16V14.7692H13.5385V4.18462L1.72308 16Z' fill='black'/%3E%3C/svg%3E ");
+			}
+		}
+
+		&:not(.black) {
+			&:before {
+				content: url("data:image/svg+xml; utf8, %3Csvg width='12' height='12' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.72308 16L0 14.2769L11.8154 2.46154H1.23077V0H16V14.7692H13.5385V4.18462L1.72308 16Z' fill='white'/%3E%3C/svg%3E ");
+			}
+		}
+	}
+}
+
+//botão de link com seta
+%ButtonLinkArrow {
+	display: flex;
+	justify-content: space-between;
+	font-family: $font-helvetica;
+	font-size: 1.5rem;
+	font-weight: 500;
+	gap: 16px;
+	align-items: center;
+	color: $primary;
+	background: transparent;
+	border: none;
+	padding: 0;
+	outline: none;
+	position: relative;
+	text-decoration: none;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 2px;
+		margin-top: 10px;
+		transition: width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+		background: $quaternary;
+	}
+
+	&:not(.overwrite-colors) {
+		color: $primary;
+
+		svg {
+			fill: $primary;
+		}
+
+		&:hover {
+			background: transparent;
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+//Botão de link com duas setas
+%ButtonLinkDoubleArrow {
+	background: transparent;
+	border: none;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	cursor: pointer;
+	text-align: left;
+	text-decoration: none;
+
+	p {
+		font-family: $font-primary;
+		padding-right: 10px;
+		font-size: 20px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		transform: translateY(2px);
+		background: $white;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: background 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		@include smd {
+			font-size: 26px;
+			letter-spacing: 3.84px;
+		}
+
+		@include md {
+			font-size: 32px;
+		}
+	}
+
+	.arrows {
+		opacity: 0;
+		width: 0 !important;
+		transition: opacity 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), width 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&::before,
+		&::after {
+			border-color: $yellow !important;
+		}
+
+		@extend %animatedRightArrowsButton;
+	}
+
+	&:hover {
+		background: transparent;
+		text-decoration: none;
+
+		p {
+			background: $yellow-blue-right;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.arrows {
+			width: 50px !important;
+			opacity: 1;
+		}
+	}
+}
+
+//Link com borda no hover
+%ButtonLinkTab {
+	font-family: $font-helvetica;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: $white;
+	background: transparent;
+	border: 0;
+	padding: 4px 0;
+	text-decoration: none;
+
+	p {
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			background: linear-gradient(to right, #000000 0%, #ffffff 100%);
+			position: absolute;
+			top: 100%;
+			left: 0;
+			margin-top: 8px;
+			height: 6px;
+			width: 0;
+			transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+	}
+
+	&:hover {
+		p {
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+
+	@include lg-small {
+		font-size: 20px;
+		letter-spacing: 0.1em;
+	}
+}
+
+//Botão para utilização em abas
+%ButtonTab {
+	font-family: $font-primary;
+	display: inline-block;
+	background: transparent;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: $disable;
+	text-transform: uppercase;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+
+	&.active,
+	&:hover {
+		color: $white;
+		background: transparent;
+	}
+
+	@include md {
+		font-size: 1.25rem;
+	}
+}
+
+// Botão setas duplas animadas
+%doubleArrowsButton {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: fit-content;
+	width: fit-content;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		width: 20px;
+		height: 20px;
+		border-bottom: 5px solid #fff;
+		border-right: 5px solid #fff;
+		z-index: 1;
+	}
+
+	&.right {
+		height: 40px;
+		width: 40px;
+
+		&::before,
+		&::after {
+			transform: translate(0%, 0%) rotate(-45deg);
+		}
+
+		&::before {
+			margin-left: -10px;
+		}
+
+		&::after {
+			margin-left: 0;
+			margin-top: -25px;
+		}
+	}
+
+	&:not(.right) {
+		&::before,
+		&::after {
+			transform: translate(-50%, 0%) rotate(45deg);
+		}
+
+		&::after {
+			margin-top: -10px;
+		}
+	}
+}
+
+%animatedArrowsButton {
+	&::before,
+	&::after {
+		animation: move_down 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+	}
+
+	@extend %doubleArrowsButton;
+
+	// animated scroll arrow animation
+	@keyframes move_down {
+		0% {
+			transform: translate(0, -10px) rotate(45deg);
+		}
+
+		100% {
+			transform: translate(0, 10px) rotate(45deg);
+		}
+	}
+}
+
+%animatedRightArrowsButton {
+	&::before {
+		animation: move_right_before 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	}
+
+	&::after {
+		animation: move_right_after 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	}
+
+	@extend %doubleArrowsButton;
+
+	// animated scroll arrow animation
+	@keyframes move_right_before {
+		0% {
+			transform: translate(-5px, 0) rotate(-45deg);
+		}
+
+		80% {
+			transform: translate(5px, 0) rotate(-45deg);
+		}
+
+		100% {
+			transform: translate(-5px, 0) rotate(-45deg);
+		}
+	}
+	// animated scroll arrow animation
+	@keyframes move_right_after {
+		0% {
+			transform: translate(-5px, 0) rotate(-45deg);
+		}
+
+		80% {
+			transform: translate(15px, 0) rotate(-45deg);
+		}
+
+		100% {
+			transform: translate(-5px, 0) rotate(-45deg);
+		}
+	}
+}
+
+// A button to share URL and post contents in social medias
+%ButtonShare {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+}
+
+// Padrão para custom block appender
+%blockAppenderButton {
+	> .block-list-appender {
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+		z-index: 10;
+
+		.custom-appender {
+			display: flex;
+			flex-direction: row;
+			gap: 2px;
+		}
+
+		.button-remove,
+		.button-appender {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+			padding: 15px;
+			line-height: 30px;
+			border-radius: 4px;
+			color: $white;
+			border: none;
+			cursor: pointer;
+			white-space: nowrap;
+
+			&:disabled {
+				opacity: 0.8;
+				cursor: default;
+			}
+
+			svg {
+				width: 15px;
+
+				path {
+					stroke: $white;
+				}
+			}
+		}
+
+		.button-remove {
+			background: darken($error, 10);
+		}
+
+		.button-appender {
+			background: $black;
+		}
+	}
+}
+
+// Input Text
+%InputText {
+	font-family: $font-helvetica;
+	border: 0;
+	border-bottom: 2px solid rgba($white, 0.7);
+	background: none;
+	padding: 0.5rem 0;
+	width: 100%;
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: $white;
+	outline: 0;
+	transition: all 0.3s ease-in-out;
+
+	&::placeholder {
+		font-weight: 500;
+		color: rgba($white, 0.8);
+	}
+
+	&:focus {
+		border-bottom: 2px solid $white;
+	}
+}

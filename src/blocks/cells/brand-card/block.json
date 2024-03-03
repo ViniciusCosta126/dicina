@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/brand-card",
+	"title": "Card Marca",
+	"description": "Card para apresentação da marca",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-brand-card"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default dark"
+		},
+		"contentAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"cardimg": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": ""
+			}
+		},
+		"content": {
+			"type": "string",
+			"default": "Cillum aliquip quis quis deserunt ex in et proident exercitation enim culpa magna. Exercitation commodo elit laboris irure culpa velit non dolore. Adipisicing anim dolore sit eu excepteur qui. Aute laborum commodo ex amet nulla dolore aliqua id elit culpa dolor sint adipisicing fugiat."
+		},
+		"titleBrand": {
+			"type": "string",
+			"default": "Nome da marca"
+		},
+		"hasLogo": {
+			"type": "boolean",
+			"default": true
+		},
+		"logo": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": ""
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

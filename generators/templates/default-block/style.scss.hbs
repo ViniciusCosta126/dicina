@@ -1,0 +1,11 @@
+@import '../../../css/variables';
+
+.{{kebabCase name}} {
+    &.default {
+		@extend %{{camelCase name}}Default;
+	}
+}
+
+%{{camelCase name}}Default {
+    // Default variant styles;
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "il/timeline",
+    "title": "Linha do Tempo",
+    "category": "cells",
+    "version": "1.0.0",
+    "editorScript": "file:index.jsx",
+    "script": "file:index.jsx",
+    "viewScript": "file:view.js",
+    "style": [ "file:./style.scss", "style-timeline" ],
+    "render": "file:./render.php",
+    "attributes": {
+        "bgColor": {
+            "type": "string",
+            "default": "#EEEEEE"
+        },
+        "title": {
+            "type": "string",
+            "default": "Nossa História"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#2D2D2D"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Nosso caminho para chegar até aqui."
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#2D2D2D"
+        }
+
+	}
+}

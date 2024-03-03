@@ -1,0 +1,163 @@
+@import '../../../css/variables';
+@import '../../../css/mixins';
+
+.about-partner {
+	&.default {
+		@extend %aboutPartnerDefault;
+	}
+}
+
+%aboutPartnerDefault {
+	width: 100%;
+	height: 100vh;
+
+	&.wp-editor {
+		@extend %aboutPartnerDefaultEditor;
+	}
+
+	&.is-desktop {
+		.carousel-content {
+			.partner-item {
+				&.about,
+				&.testimony {
+					@include scrollBar($surface-quaternary, $surface-tertiary, 10, 10);
+				}
+			}
+		}
+	}
+
+	.carousel-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.partner-item {
+			height: 100vh;
+			position: relative;
+
+			.container-block {
+				height: 100%;
+				overflow-y: auto;
+				display: flex;
+				flex-wrap: wrap;
+				padding-top: 40px;
+			}
+
+			&.image {
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				@include lg-small {
+					height: 100vh;
+				}
+			}
+
+			&.about {
+				overflow-y: auto;
+				display: flex;
+				align-content: center;
+				flex-wrap: wrap;
+
+				.container-block {
+					max-width: 430px;
+					justify-content: flex-start;
+					align-items: center;
+					padding-bottom: 40px;
+					height: fit-content;
+
+					@include lg-small {
+						width: 75%;
+						padding-bottom: 40px;
+					}
+				}
+
+				@include lg-small {
+					flex-wrap: wrap;
+					align-content: center;
+					height: fit-content;
+					min-height: 100vh;
+				}
+			}
+
+			&.testimony {
+				overflow-y: auto;
+
+				.container-block {
+					justify-content: center;
+					align-items: center;
+					padding-bottom: 60px;
+
+					@include lg-small {
+						padding-top: 103px;
+						padding-bottom: 96px;
+					}
+				}
+
+				@include lg-small {
+					height: auto;
+				}
+			}
+		}
+	}
+
+	@include lg-small {
+		height: auto;
+
+		.carousel-content {
+			align-items: flex-start;
+		}
+	}
+}
+
+%aboutPartnerDefaultEditor {
+	height: auto;
+
+	.carousel-content {
+		> .block-editor-inner-blocks {
+			width: 100%;
+
+			> .block-editor-block-list__layout {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 0;
+
+				[data-type='il/partner-item'] {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					&:nth-child(1),
+					&:nth-child(2) {
+						width: 50%;
+					}
+
+					.partner-item {
+						width: 100%;
+						height: fit-content;
+						min-height: 800px;
+
+						&.testimony {
+							min-height: auto;
+						}
+
+						&.image {
+							img {
+								width: 88%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

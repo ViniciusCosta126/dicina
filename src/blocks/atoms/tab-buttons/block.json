@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/tab-buttons",
+	"title": "Tab Buttons",
+	"description": "Cabeçalho para abas",
+	"category": "atoms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"viewScript": "file:./view.js",
+	"style": ["file:./style-index.css", "style-tab-buttons"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"id": {
+			"type": "string",
+			"default": ""
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"gradient": {
+			"type": "string",
+			"default": "linear-gradient( 90deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "transparent",
+			"gradient": "linear-gradient( 90deg, #e4ce36 0%, #e0cb39 13.21%, #bcb152 26.23%, #7a8381 50.19%, #3551b2 75.19%, #0a33d0 98.96% )"
+		}
+	}
+}

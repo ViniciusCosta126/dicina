@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/product-item",
+	"title": "Product Item",
+	"description": "Item de produto para utiliza o em listagens",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-product-item"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"productImage": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/480x700",
+				"alt": "Descrição da imagem",
+				"width": "480",
+				"height": "700"
+			}
+		},
+		"productImageCover": {
+			"type": "boolean",
+			"default": false
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#000000"
+		}
+	}
+}

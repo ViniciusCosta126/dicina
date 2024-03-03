@@ -1,0 +1,16 @@
+@import '../../../css/variables';
+
+.section {
+	&.default {
+		@extend %sectionDefault;
+	}
+}
+
+%sectionDefault {
+	position: relative;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 50px;
+	overflow: hidden;
+}

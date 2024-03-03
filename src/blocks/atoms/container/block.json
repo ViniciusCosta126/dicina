@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/container",
+	"title": "Container",
+	"description": "Componente para alinhamento do site",
+	"category": "atoms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-container"],
+	"render": "file:./render.php",
+	"attributes": {
+		"appender": {
+			"type": "boolean",
+			"default": true
+		},
+		"containerSize": {
+			"type": "string",
+			"default": "container-block default"
+		},
+		"paddingSize": {
+			"type": "object",
+			"default": {
+				"mob": {
+					"top": 0,
+					"bottom": 0
+				},
+				"desk": {
+					"top": 0,
+					"bottom": 0
+				}
+			}
+		},
+		"islocked": {
+			"type": "boolean",
+			"default": false
+		},
+		"allowed_blocks": {
+			"type": "array",
+			"default": []
+		},
+		"extraClass": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

@@ -1,0 +1,70 @@
+@import '../../../css/variables';
+
+.breadcrumb {
+	&.default {
+		@extend %breadcrumbDefault;
+	}
+}
+
+%breadcrumbDefault {
+	background-color: transparent;
+	position: absolute;
+	z-index: 10;
+	top: $breadcrumbTopMobile;
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: auto;
+	padding: 34px 0;
+
+	a,
+	p {
+		font-family: $font-primary;
+		overflow-wrap: break-word;
+		color: #fff;
+		font-size: 14px;
+		width: fit-content;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%; /* 14px */
+		text-transform: uppercase;
+		text-decoration: none;
+		vertical-align: middle;
+		margin: 0 12px;
+
+		@include md {
+			font-size: 16px;
+			letter-spacing: 0.8px;
+		}
+	}
+
+	p {
+		display: inline;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+			padding-right: 24px;
+		}
+	}
+
+	a {
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	svg {
+		vertical-align: middle;
+	}
+
+	@include md {
+		padding: 50px 0;
+		top: $breadcrumbTopTablet;
+	}
+
+	@include laptop {
+		top: $breadcrumbTopDesk;
+	}
+}

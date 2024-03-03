@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/accordion-item",
+	"title": "Item do acordeão",
+	"description": "Componente item do acordeão",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-accordion-item"],
+	"render": "file:./render.php",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "superacao"
+		},
+		"content": {
+			"type": "string",
+			"default": "Quando penso que cheguei ao meu limite, logo descubro que é possível superá-lo."
+		},
+		"contentAlign":{
+			"type": "string",
+			"default": "right"
+		},
+		"imgMobile": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/mao-mobile.jpeg"
+			}
+		},
+		"imgTablet": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": ""
+			}
+		},
+		"imgDesk": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/mao-desk.jpeg"
+			}
+		},
+		"img4k": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": ""
+			}
+		}
+	}
+}

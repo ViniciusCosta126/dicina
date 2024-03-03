@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/icon",
+	"title": "Icone",
+	"description": "Componente para inserção de icone",
+	"category": "atoms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": ["file:./style-index.css", "style-icon"],
+	"render": "file:./render.php",
+	"attributes": {
+		"extraClass": {
+			"type": "string",
+			"default": "default"
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/45x45",
+				"alt": "Placeholder icon",
+				"height": 45,
+				"width": 45
+			}
+		}
+	}
+}

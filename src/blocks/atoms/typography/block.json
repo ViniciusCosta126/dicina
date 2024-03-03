@@ -1,0 +1,139 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/typography",
+	"title": "Tipografia",
+	"category": "atoms",
+	"version": "1.0.1",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-typography"],
+	"render": "file:./render.php",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Insira o texto aqui"
+		},
+		"contentEn": {
+			"type": "string",
+			"default": ""
+		},
+		"fontFamily": {
+			"type": "string",
+			"default": "helveticaneue"
+		},
+		"position": {
+			"type": "string",
+			"default": "position-center"
+		},
+		"hasInnerBlocks": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasMaxWidth": {
+			"type": "boolean",
+			"default": false
+		},
+		"maxWidthM": {
+			"type": "integer",
+			"default": 580
+		},
+		"maxWidthD": {
+			"type": "integer",
+			"default": 750
+		},
+		"widthStrokeM": {
+			"type": "number",
+			"default": 2.5
+		},
+		"widthStrokeD": {
+			"type": "number",
+			"default": 5
+		},
+		"color": {
+			"type": "string",
+			"default": "#000"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"tag": {
+			"type": "string",
+			"default": "p"
+		},
+		"disableSizes": {
+			"type": "boolean",
+			"default": false
+		},
+		"size": {
+			"type": "string",
+			"default": ""
+		},
+		"sizeM": {
+			"type": "string",
+			"default": "body-1-m"
+		},
+		"sizeD": {
+			"type": "string",
+			"default": "body-1-d"
+		},
+		"manualSizes": {
+			"type": "boolean",
+			"default": false
+		},
+		"manualSizeM": {
+			"type": "number",
+			"default": 16
+		},
+		"manualSizeD": {
+			"type": "number",
+			"default": 24
+		},
+		"sizeType": {
+			"type": "string",
+			"default": "px"
+		},
+		"textIndent": {
+			"type": "integer",
+			"default": 0
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "align-left"
+		},
+		"textTransform": {
+			"type": "string",
+			"default": "none"
+		},
+		"textWeight": {
+			"type": "string",
+			"default": "weight-normal"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"extraClass": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"content": "Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma galera de tipos e os embaralhou para fazer um livro de espécimes de tipos.",
+			"color": "#000",
+			"bgColor": "transparent",
+			"tag": "p",
+			"sizeD": "body-1-m",
+			"sizeM": "body-1-d",
+			"fontFamily": "helveticaneue"
+		}
+	}
+}

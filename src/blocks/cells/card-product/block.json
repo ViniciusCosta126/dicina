@@ -1,0 +1,112 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/card-product",
+	"title": "Card-Product",
+	"description": "Componente para o carosel de chamada de produtos",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": [
+		"file:./style-index.css",
+		"style-card-product"
+	],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"productId": {
+			"type": "integer",
+			"default": 0
+		},
+		"product": {
+			"type": "object",
+			"default": {
+				"imgMobile": {
+					"type": "object",
+					"default": {
+						"src": "",
+						"alt": ""
+					}
+				},
+				"imgDesktop": {
+					"type": "object",
+					"default": {
+						"src": "",
+						"alt": ""
+					}
+				}
+			}
+		},
+		"textInImg": {
+			"type": "string",
+			"default": "Nosso texto"
+		},
+		"textInImgEN": {
+			"type": "string",
+			"default": "My text"
+		},
+		"innerImage": {
+			"type": "object",
+			"default": {
+				"src": "",
+				"alt": ""
+			}
+		},
+		"innerImageEN": {
+			"type": "object",
+			"default": {
+				"src": "",
+				"alt": ""
+			}
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"url": "/product",
+				"title": "Saiba mais",
+				"target": ""
+			}
+		},
+		"linkEN": {
+			"type": "object",
+			"default": {
+				"url": "/product",
+				"title": "Saiba mais",
+				"target": ""
+			}
+		},
+		"hasText": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasImage": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

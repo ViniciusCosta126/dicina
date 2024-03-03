@@ -1,0 +1,141 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/newsletter",
+	"title": "Newsletter",
+	"description": "Newsletter",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-newsletter"],
+	"render": "file:./render.php",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Faça"
+		},
+		"textoPrincipal": {
+			"type": "object",
+			"default": {
+				"normal": "Fique por dentro do",
+				"sennaSans": "movimento"
+			}
+		},
+		"titleMobile": {
+			"type": "object",
+			"default": {
+				"normal": "Faça parte do grupo de",
+				"sennaSans": "Fãs"
+			}
+		},
+		"titleDesktop": {
+			"type": "object",
+			"default": {
+				"normal": "Faça parte da nossa",
+				"sennaSans": "comunidade"
+			}
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Assine e não perca nenhuma novidade da marca Senna"
+		},
+		"inputPlaceholder": {
+			"type": "string",
+			"default": "Digite seu e-mail"
+		},
+		"checkboxLabel": {
+			"type": "string",
+			"default": "Li e concordo com as <a href='/politica-de-uso'>Políticas de Privacidade</a>"
+		},
+		"buttonLabel": {
+			"type": "string",
+			"default": "Inscreva-se agora"
+		},
+		"bgImage": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "/wp-content/themes/Template-blocks/images/newsletter-bg.jpg"
+			}
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"errorMessage": {
+			"type": "string",
+			"default": "Erro ao enviar, tente novamente."
+		},
+		"successMessage": {
+			"type": "string",
+			"default": "Inscrição realizada!"
+		},
+		"requiredMessage": {
+			"type": "string",
+			"default": "*Campo Obrigatório"
+		},
+		"isTemplated": {
+			"type": "boolean",
+			"default": false
+		},
+		"titleEn": {
+			"type": "string",
+			"default": "Faça"
+		},
+		"textoPrincipalEn": {
+			"type": "object",
+			"default": {
+				"normal": "Fique por dentro do",
+				"sennaSans": "movimento"
+			}
+		},
+		"titleMobileEn": {
+			"type": "object",
+			"default": {
+				"normal": "Be part of the group of",
+				"sennaSans": "Fans"
+			}
+		},
+		"titleDesktopEn": {
+			"type": "object",
+			"default": {
+				"normal": "Be part of our",
+				"sennaSans": "community"
+			}
+		},
+		"subtitleEn": {
+			"type": "string",
+			"default": "Subscribe and don't miss any news from the Senna brand"
+		},
+		"errorMessageEn": {
+			"type": "string",
+			"default": "Error sending, please try again."
+		},
+		"successMessageEn": {
+			"type": "string",
+			"default": "Enrollment completed"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#ffffff",
+			"variant": "default"
+		}
+	}
+}

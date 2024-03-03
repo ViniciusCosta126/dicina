@@ -1,0 +1,342 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.product-list {
+	&.default {
+		@extend %productListDefault;
+	}
+
+	&.journey_highlights {
+		@extend %productListJourneyHighlights;
+	}
+
+	&.journey_products {
+		@extend %productListJourneyProducts;
+	}
+}
+
+%productListDefault {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	&.wp-editor {
+		@extend %productListEditor;
+	}
+
+	.text-wrapper {
+		height: auto;
+		padding: 40px 0 72px;
+
+		@include md {
+			height: 28%;
+			display: flex;
+			align-content: center;
+			flex-wrap: wrap;
+			padding: 0;
+		}
+	}
+
+	.products-wrapper {
+		height: 100vh;
+		max-height: 900px;
+
+		.tns-nav {
+			@include md {
+				display: none;
+			}
+		}
+
+		@include md {
+			height: 72%;
+		}
+	}
+
+	@include md {
+		min-height: 960px;
+		height: calc(100vh - $headerHeightMobile);
+	}
+
+	@include laptop-small {
+		height: calc(100vh - $headerHeightDesk);
+	}
+}
+
+%productListJourneyHighlights {
+	background-color: #002753;
+	justify-content: unset;
+	height: calc(100vh - $headerHeightMobile);
+	min-height: 600px;
+
+	&.wp-editor {
+		@extend %productListEditorJourney;
+	}
+
+	.container-block {
+		&.default {
+			max-width: unset;
+			width: 100%;
+
+			h2 {
+				text-transform: uppercase;
+				-webkit-text-stroke: 2px;
+				letter-spacing: 2.56px;
+				font-weight: 500;
+
+				@include md {
+					font-size: 53px;
+					letter-spacing: 2.65px;
+					line-height: 150%;
+				}
+			}
+
+			.tns-outer {
+				.tns-ovh {
+					@include max-md {
+						margin: 0 -24px;
+						padding: 0 24px;
+					}
+
+					@include lg {
+						width: unset;
+						position: unset;
+						max-width: unset;
+						height: 100%;
+					}
+				}
+
+				.tns-controls {
+					pointer-events: none;
+
+					button {
+						pointer-events: all;
+						width: 100px;
+						background: transparent;
+					}
+				}
+
+				.tns-inner {
+					.carousel-content {
+						@include md {
+							display: flex;
+							justify-content: center;
+						}
+					}
+				}
+
+				.tns-nav {
+					bottom: 26px;
+
+					@include md {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.title-container {
+			padding-top: 40px;
+
+			@include md {
+				padding-top: 90px;
+			}
+		}
+
+		&.carousel-container {
+			height: 80%;
+		}
+	}
+
+	@extend %productListDefault;
+}
+
+%productListJourneyProducts {
+	background-color: #002753;
+	justify-content: unset;
+	height: calc(100vh - $headerHeightMobile);
+	min-height: 600px;
+
+	&.wp-editor {
+		@extend %productListEditorJourney;
+	}
+
+	.container-block {
+		&.default {
+			max-width: unset;
+			width: 100%;
+
+			h2 {
+				text-transform: uppercase;
+				-webkit-text-stroke: 2px;
+				letter-spacing: 2.56px;
+
+				@include md {
+					font-size: 53px;
+				}
+			}
+
+			.tns-outer {
+				.tns-ovh {
+					@include max-md {
+						margin: 0 -24px;
+						padding: 0 24px;
+					}
+
+					@include lg {
+						width: unset;
+						position: unset;
+						max-width: unset;
+					}
+				}
+
+				.tns-controls {
+					pointer-events: none;
+
+					button {
+						pointer-events: all;
+						width: 100px;
+						background: transparent;
+					}
+				}
+
+				.tns-nav {
+					bottom: 26px;
+
+					@include md {
+						display: none;
+					}
+				}
+			}
+
+			.tns-inner {
+				.carousel-content {
+					@include md {
+						display: flex;
+						justify-content: center;
+					}
+				}
+			}
+		}
+
+		&.title-container {
+			padding-top: 40px;
+
+			@include md {
+				padding-top: 90px;
+			}
+		}
+
+		&.carousel-container {
+			height: 80%;
+		}
+	}
+
+	@extend %productListDefault;
+}
+
+// Styles to default editor
+%productListEditor {
+	height: auto !important;
+
+	// Estilizações para o painel
+	> .block-editor-inner-blocks {
+		width: 100%;
+
+		> .block-editor-block-list__layout {
+			display: flex;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			max-width: 100%;
+			overflow: auto;
+			gap: 25px;
+
+			> .wp-block {
+				width: fit-content;
+				display: inline-block;
+			}
+
+			[data-type='il/container'] {
+				width: 100% !important;
+
+				.text-wrapper {
+					height: fit-content;
+					padding: 40px 0 72px;
+
+					> .block-editor-inner-blocks {
+						width: 100%;
+					}
+				}
+
+				[data-type='il/carousel'] {
+					height: 600px;
+					width: 100% !important;
+					white-space: nowrap;
+
+					.carousel-content {
+						height: 100%;
+
+						> .block-editor-inner-blocks {
+							height: 100%;
+
+							> .block-editor-block-list__layout {
+								overflow-x: auto;
+								height: 100%;
+							}
+						}
+					}
+
+					[data-type='il/product-item'] {
+						white-space: normal;
+						display: inline-block;
+						min-width: 400px;
+						width: 32.5vw;
+						height: 100%;
+						padding: 20px;
+						box-sizing: border-box;
+						vertical-align: top;
+
+						.product-item {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Styles to variant editor
+%productListEditorJourney {
+	max-height: unset;
+	.block-editor-inner-blocks {
+		height: 100%;
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/product-list'] {
+	height: fit-content;
+
+	> .product-list {
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				> .block-list-appender {
+					bottom: 0 !important;
+					pointer-events: all !important;
+					opacity: 1 !important;
+
+					.button-remove,
+					.button-appender {
+						padding: 15px;
+					}
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+}

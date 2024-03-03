@@ -1,0 +1,161 @@
+@import '../../../css/variables';
+@import '../../cells/post-listing-header/style';
+
+.result-search {
+	.info {
+		font-family: $font-helvetica;
+		font-size: 18px;
+		font-weight: 500;
+		color: $primary;
+		margin-bottom: 24px;
+
+		span {
+			color: $warning;
+			display: block;
+			margin-bottom: 12px;
+		}
+	}
+	&.default {
+		@extend %resultSearchDefault;
+	}
+}
+
+%resultSearchDefault {
+	// Default variant styles;
+	padding-bottom: 40px;
+
+	.result-search {
+		&__header {
+			padding: 40px 0;
+
+			.term-result {
+				max-width: 971px;
+				width: fit-content;
+			}
+
+			.title-term-search {
+				font-family: $font-helvetica;
+				margin-bottom: 24px;
+				font-size: 32px;
+				line-height: 1.2;
+				letter-spacing: 0.03em;
+				color: $primary;
+				font-weight: 500;
+				-webkit-text-stroke: 0.5px;
+			}
+
+			.term-search {
+				font-family: $font-helvetica;
+				position: relative;
+				padding-bottom: 9px;
+				font-size: 16px;
+				font-weight: 500;
+				color: #003b6c;
+				margin-bottom: 8px;
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 1px;
+					left: 0;
+					background: $green-blue;
+					width: 100%;
+					height: 1px;
+				}
+			}
+
+			.text-fail {
+				font-size: 16px;
+				font-family: $font-helvetica;
+				margin-bottom: 4px;
+				font-weight: 300;
+				color: $black;
+			}
+
+			.link-fail-suggestion {
+				font-size: 16px;
+				font-family: $font-helvetica;
+				font-weight: 300;
+				color: $black;
+				line-height: 1.5;
+				display: inline;
+
+				> a {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	.header__list-posts {
+		display: flex;
+		flex-direction: column;
+
+		.aux-title {
+			display: inline;
+			text-transform: uppercase;
+			width: fit-content;
+			-webkit-text-stroke: 0.5px;
+
+			@include md {
+				-webkit-text-stroke: 1px;
+			}
+		}
+
+		.title {
+			display: inline;
+			text-transform: uppercase;
+			width: fit-content;
+		}
+	}
+
+	@include lg {
+		.result-search {
+			&__header {
+				padding: 96px 0 48px;
+
+				.title-term-search {
+					font-size: 50px;
+					margin-bottom: 40px;
+					-webkit-text-stroke: 1px;
+				}
+
+				.term-result {
+					&:not(&.fail) {
+						position: relative;
+						padding-bottom: 16px;
+						.term-search {
+							display: inline;
+							padding: 0;
+							position: static;
+							margin-right: 18px;
+						}
+						.quantity-result {
+							display: inline;
+							font-size: 24px;
+						}
+					}
+				}
+
+				.term-search {
+					padding-bottom: 16px;
+					margin-bottom: 24px;
+					&:after {
+						height: 2px;
+					}
+				}
+
+				.text-fail,
+				.term-search {
+					font-size: 32px;
+				}
+
+				.link-fail-suggestion {
+					font-size: 32px;
+				}
+			}
+		}
+		.header__list-posts {
+			margin-bottom: 38px;
+		}
+	}
+}

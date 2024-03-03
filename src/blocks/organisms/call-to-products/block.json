@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/call-to-products",
+	"title": "Chamada de produtos",
+	"description": "Componente para seção de chamada de produtos",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"viewScript": "file:./view.js",
+	"editorStyle": "file:./style-index.css",
+	"style": [
+		"file:./style-index.css",
+		"style-call-to-products"
+	],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"title": {
+			"type": "string",
+			"default": "Pit stop na loja"
+		},
+		"iconImg": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "/wp-content/themes/Template-blocks/images/cart.png",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"carouselLength": {
+			"type": "integer",
+			"default": 1
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

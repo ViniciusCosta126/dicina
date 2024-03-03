@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "il/benefits",
+    "title": "Benefícios",
+    "category": "cells",
+    "version": "1.0.0",
+    "editorScript": "file:index.jsx",
+    "script": "file:index.jsx",
+    "style": [ "file:./style.scss", "style-benefits" ],
+    "editorStyle": "file:./editor.css",
+    "render": "file:./render.php",
+    "attributes": {
+        "bgColor": {
+            "type": "string",
+            "default": "#EEEEEE"
+        },
+        "title": {
+            "type": "string",
+            "default": "Benefícios"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#2D2D2D"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Atuamos garantindo o sucesso de mais de 100 clientes em diversos segmentos do mercado"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#2D2D2D"
+        },
+        "cardTextColor": {
+            "type": "string",
+            "default": "#2D2D2D"
+        },
+        "card1img": {
+            "type": "object",
+            "default": {
+                "id" : "",
+                "src": "/wp-content/themes/Template-blocks/images/benefits-default1.png"
+            }
+        },
+        "card1title": {
+            "type": "string",
+            "default": "Serviço Personalizado"
+        },
+        "card1text": {
+            "type": "string",
+            "default": "Entendo sua empresa conseguimos entregar um produto personalizado que atende a suas demandas."
+        },
+        "card2img": {
+            "type": "object",
+            "default": {
+                "id" : "",
+                "src": "/wp-content/themes/Template-blocks/images/benefits-default2.png"
+            }
+        },
+        "card2title": {
+            "type": "string",
+            "default": "Somos Analíticos"
+        },
+        "card2text": {
+            "type": "string",
+            "default": "Trabalhamos com analise de dados para melhor atender as necessidades da sua empresa."
+        },
+        "card3img": {
+            "type": "object",
+            "default": {
+                "id" : "",
+                "src": "/wp-content/themes/Template-blocks/images/benefits-default3.png"
+            }
+        },
+        "card3title": {
+            "type": "string",
+            "default": "Mercado Segmentado"
+        },
+        "card3text": {
+            "type": "string",
+            "default": "Com uma analise utilizando softwares de ultima geração para segmentar seu público alvo com efeciência."
+        }
+	}
+}

@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/testimony",
+	"title": "Testimony",
+	"description": "Componente para adicionar um depoimento de clientes ou parceiros",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-testimony"],
+	"render": "file:./render.php",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Eu dolore ad consectetur et mollit dolor tempor velit."
+		},
+		"variant": {
+			"type": "string",
+			"default": "collabs"
+		},
+		"textSizeM": {
+			"type": "number",
+			"default": 26
+		},
+		"textSizeD": {
+			"type": "number",
+			"default": 26
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#121212"
+		},
+		"svgColor": {
+			"type": "string",
+			"default": "#A2A1A8"
+		},
+		"align": {
+			"type": "string",
+			"default": "align-left-center"
+		},
+		"hasSignature": {
+			"type": "boolean",
+			"default": false
+		},
+		"signature": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/180x180",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "collabs"
+		}
+	}
+}

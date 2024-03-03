@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "il/timeline-event",
+    "title": "Evento da Linha do Tempo",
+    "category": "atoms",
+    "version": "1.0.0",
+	"editorScript": "file:index.jsx",
+    "script": "file:index.jsx",
+    "style": [ "file:./style.scss", "style-timeline-event" ],
+    "render": "file:./render.php",
+    "attributes": {
+        "contentUp": {
+            "type": "boolean",
+			"default": "false"
+        },
+        "title": {
+            "type": "string",
+            "default": "Melhor agência de performance do Brasil"
+        },
+        "text": {
+            "type": "string",
+            "default": "Fomos consagrados pela Associação Brasileira de Comércio Eletrônico"
+        },
+        "year": {
+            "type": "string",
+            "default": "2014"
+        },
+        "img": {
+            "type": "object",
+            "default": {
+                "id" : "",
+                "src": "/wp-content/themes/Template-blocks/images/timeline-default1.png"
+            }
+        }
+	}
+}

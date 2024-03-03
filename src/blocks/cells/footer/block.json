@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/footer",
+	"title": "Footer",
+	"description": "Footer",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-footer"],
+	"render": "file:./render.php",
+	"attributes": {
+		"bgColor": {
+			"type": "string",
+			"default": "#002753"
+		},
+		"footerLink": {
+			"type": "string",
+			"default": "Lorem ilum dolor"
+		},
+		"footerLinkEN": {
+			"type": "string",
+			"default": "Lorem ilum dolor"
+		},
+		"hasLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"target": ""
+			}
+		},
+		"copyright": {
+			"type": "string",
+			"default": "© 2023  Sua Marca"
+		},
+		"copyrightEN": {
+			"type": "string",
+			"default": "© 2023  Sua marca"
+		},
+		"address": {
+			"type": "string",
+			"default": "Seu endereço Lorem ilum dolor"
+		},
+		"socialTitle": {
+			"type": "string",
+			"default": "Redes Sociais | <span>Acompanhe o Sua empresa</span>"
+		},
+		"socialTitleEN": {
+			"type": "string",
+			"default": "Social Media | <span>Follow  Sua empresa</span>"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#ffffff",
+			"variant": "default"
+		}
+	}
+}

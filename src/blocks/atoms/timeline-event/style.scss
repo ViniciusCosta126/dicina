@@ -1,0 +1,46 @@
+@import '../../../css/variables';
+
+.node-top-down,
+.node-down-top {
+	margin-top: 254px;
+	text-align: right;
+	position: relative;
+	width: 184px;
+
+	.info {
+		position: absolute;
+		right: 0;
+	}
+
+	.event-title {
+		font-family: $font-primary;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 28px;
+		text-align: right;
+		margin: 0;
+	}
+	.event-text {
+		text-align: right;
+		font-family: $font-primary;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		margin: 8px 0 0;
+	}
+	.event-year {
+		font-family: $font-primary;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 68px;
+		color: #0d3842;
+		margin-top: 8px;
+	}
+}
+
+.node-down-top {
+	.info {
+		bottom: calc(100% - 40px);
+	}
+}

@@ -1,0 +1,12 @@
+@import '../../../css/variables';
+
+.section-testimony {
+	&.default {
+		@extend %sectionTestimonyDefault;
+	}
+}
+
+%sectionTestimonyDefault {
+	display: block;
+	width: 100%;
+}

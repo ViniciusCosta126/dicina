@@ -1,0 +1,166 @@
+@import '../../../css/variables';
+
+.racing-years {
+	&.default {
+		@extend %racingYearsDefault;
+	}
+}
+
+%racingYearsDefault {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+
+	.racing-years {
+		&-image-background {
+			display: none;
+
+			@include md {
+				display: block;
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 25%;
+				height: 100%;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					height: 100%;
+					width: 48%;
+					// background is set by block.json on render.php and index.jsx
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			@include lg {
+				width: 50%;
+			}
+		}
+
+		&-content {
+			display: block;
+			width: 100%;
+			position: relative;
+			z-index: 2;
+			text-align: left;
+			max-height: calc(100vh - $headerHeightMobile);
+			padding: 70px 0;
+
+			.scrollable-list {
+				min-height: unset;
+
+				&-content {
+					height: fit-content;
+					max-height: 385px;
+
+					.link-double-arrow {
+						@include lg {
+							white-space: nowrap;
+						}
+					}
+
+					@include md {
+						height: auto;
+						max-height: 100%;
+						width: 100%;
+					}
+
+					@include lg {
+						width: 200%;
+						transform: translateX(-50%);
+
+						.button {
+							br {
+								display: none;
+							}
+						}
+					}
+				}
+
+				@include md {
+					max-height: calc(100% - 100px);
+				}
+			}
+
+			&__title {
+				text-transform: uppercase;
+				letter-spacing: 2.65px;
+				-webkit-background-clip: text !important;
+				-webkit-text-fill-color: transparent !important;
+				-webkit-text-stroke-width: 1px;
+				width: fit-content;
+
+				&.not-break-line {
+					@include md {
+						white-space: nowrap !important;
+					}
+				}
+
+				@include md {
+					-webkit-text-stroke-width: 2px;
+				}
+			}
+
+			@include md {
+				display: flex;
+				justify-content: flex-end;
+				align-content: center;
+				flex-wrap: wrap;
+				margin-left: 25%;
+				height: calc(100vh - $headerHeightMobile);
+				width: 75%;
+				text-align: right;
+			}
+
+			@include lg {
+				padding: 80px 0;
+				margin-left: 50%;
+				width: 50%;
+				height: calc(100vh - $headerHeightDesk);
+			}
+
+			@include laptop {
+				padding: 110px 0;
+			}
+		}
+	}
+
+	&.wp-editor {
+		.racing-years-content {
+			min-height: 650px;
+		}
+
+		.scrollable-list {
+			&-content {
+				@include md {
+					position: relative;
+					top: 0;
+					right: 0;
+					height: 100%;
+					width: 100%;
+
+					.button {
+						br {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

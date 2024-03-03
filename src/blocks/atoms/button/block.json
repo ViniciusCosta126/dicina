@@ -1,0 +1,113 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/button",
+	"title": "Botão",
+	"category": "atoms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-button"],
+	"render": "file:./render.php",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Call to action"
+		},
+		"hasEN": {
+			"type": "boolean",
+			"default": false
+		},
+		"contentEN": {
+			"type": "string",
+			"default": ""
+		},
+		"hasTooltip": {
+			"type": "boolean",
+			"default": false
+		},
+		"tooltip": {
+			"type": "string",
+			"default": ""
+		},
+		"hasLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"target": ""
+			}
+		},
+		"action": {
+			"type": "string",
+			"default": ""
+		},
+		"modalID": {
+			"type": "string",
+			"default": "modal-id"
+		},
+		"addCustomColor": {
+			"type": "boolean",
+			"default": false
+		},
+		"color": {
+			"type": "string",
+			"default": ""
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"colorHover": {
+			"type": "string",
+			"default": ""
+		},
+		"bgColorHover": {
+			"type": "string",
+			"default": ""
+		},
+		"variant": {
+			"type": "string",
+			"default": "primary"
+		},
+		"extraClass": {
+			"type": "string",
+			"default": ""
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"hasIcon": {
+			"type": "boolean",
+			"default": false
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"src": "https://placeholder.co/30x30",
+				"alt": "icone",
+				"width": 30,
+				"height": 30
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"content": "Call to action",
+			"color": "#FFFFFF",
+			"bgColor": "#0d3842",
+			"variant": "primary"
+		}
+	}
+}

@@ -1,0 +1,42 @@
+@import '../../../css/variables';
+
+.product-image {
+	&.default {
+		@extend %productImageDefault;
+	}
+}
+
+%productImageDefault {
+	overflow: hidden;
+	font-size: 0;
+	background: transparent;
+
+	.product-image {
+		&-content {
+			cursor: pointer;
+			overflow: hidden;
+			display: block;
+			height: 80px;
+			width: 80px;
+			border-radius: 4px;
+			border: 1px solid $surface-light-gray;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
+			&:hover,
+			&.active {
+				border-color: $white;
+			}
+
+
+			@include md {
+				height: 120px;
+				width: 120px;
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+@import '../../../css/variables';
+
+.blog-slide-item {
+	&-hero {
+		@extend %blogHeroItem;
+	}
+}
+
+%blogHeroItem {
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+
+	a {
+		text-decoration: none;
+	}
+
+	.container {
+		background-color: #f5f5f5;
+		position: relative;
+		height: $pressHeroTextHeightMobile;
+
+		@include md {
+			display: none;
+		}
+	}
+
+	.slide-item {
+		overflow: hidden;
+
+		&--text-box {
+			padding-top: 24px;
+
+			p,
+			.post-content--category {
+				font-size: 14px;
+				line-height: 15px;
+				font-family: $font-helvetica;
+				color: $primary;
+				text-transform: uppercase;
+				margin-bottom: 16px;
+
+				a {
+					color: inherit;
+					text-decoration: none;
+				}
+			}
+
+			h3,
+			.post-content--title {
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-size: 26px;
+				line-height: 36px;
+				font-family: $font-helvetica;
+				color: $black-0;
+
+				a {
+					color: inherit;
+					text-decoration: none;
+				}
+			}
+		}
+
+		&--image {
+			img {
+				display: block;
+				width: 100%;
+				object-fit: cover;
+				object-position: top center;
+				height: calc(100vh - ($largeHeaderHeightMobile + $pressHeroTextHeightMobile));
+
+				@include md {
+					height: calc(100vh - ($largeHeaderHeightMobile + $pressHeroTextHeightDesk));
+				}
+
+				@include lg {
+					height: calc(100vh - ($headerHeightDesk + $pressHeroTextHeightDesk));
+				}
+			}
+		}
+	}
+
+	@include md {
+		display: none;
+	}
+}

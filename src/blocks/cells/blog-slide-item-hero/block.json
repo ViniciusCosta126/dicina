@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/blog-slide-item-hero",
+	"title": "Slide-Item",
+	"description": "Item de slide para utilizar carrossel da hero da Imprensa (Blog)",
+	"category": "cells",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"style": ["file:./style.scss", "style-blog-slide-item-hero"],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "blog-hero"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#f5f5f5"
+		},
+		"postLink": {
+			"type": "string",
+			"default": ""
+		},
+		"bgImage": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/1920x1080",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"bgImageMobile": {
+			"type": "object",
+			"default": {
+				"src": "https://placehold.co/1024x768",
+				"alt": "Imagem placeholder mobile"
+			}
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"bgColor": "#ffffff",
+			"variant": "blog-hero",
+			"bgImageMobile": "https://placehold.co/768x1024"
+		}
+	}
+}

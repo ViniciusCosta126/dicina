@@ -1,0 +1,52 @@
+@import '../../../css/variables';
+
+.timeline {
+    background: #e1ff9a;
+    padding: 56px 0;
+
+    .container {
+        .title {
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 68px;
+            color: #000000;
+            margin: 0;
+        }
+        .subtitle {
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: #000000;
+            margin-top: 8;
+        }
+        .cta {
+            padding: 16px 36px;
+            background: #0d3842;
+            border-radius: 8px;
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            color: #ffffff;
+            display: inline-block;
+            margin: 16px 0;
+            text-decoration: none;
+        }
+        .scroll-x-viewport {
+            background: #d0d0d0;
+            overflow-x: scroll;
+            display: flex;
+            flex-direction: row;
+            padding: 0 24px 0 100px;
+            min-height: 635px;
+            overflow-y: hidden;
+            cursor: grab;
+            user-select: none;
+        }
+    }
+}

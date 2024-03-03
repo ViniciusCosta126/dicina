@@ -1,0 +1,14 @@
+@import '../../../css/variables';
+
+.heading {
+	font-family: 'Helvetica Now for Monks', sans-serif;
+	font-weight: 800;
+	font-size: 26px;
+	line-height: 37px;
+	display: inline-block;
+	width: auto;
+
+	@media (min-width: $desktop) {
+		font-size: 48px;
+	}
+}

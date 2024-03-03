@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/big-numbers-carousel",
+	"title": "Carousel Números redes sociais",
+	"description": "",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:index.jsx",
+	"script": "file:index.jsx",
+	"viewScript": "file:view.js",
+	"style": ["file:./style.scss", "style-big-numbers-carousel"],
+	"render": "file:./render.php",
+	"attributes": {
+		"allowed_blocks": {
+			"type": "array",
+			"default": ["il/big-numbers-card"]
+		},
+		"loop": {
+			"type": "boolean",
+			"default": false
+		},
+		"speed": {
+			"type": "integer",
+			"default": 400
+		},
+		"autoplayTimeout": {
+			"type": "integer",
+			"default": 1000
+		}
+	}
+}

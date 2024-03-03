@@ -1,0 +1,64 @@
+@import '../../../css/variables';
+
+.spotify {
+	&.default {
+		@extend %spotifyDefault;
+	}
+}
+
+%spotifyDefault {
+	background-color: $dark-blue;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	.container {
+		.container-title {
+			.aux-title {
+				-webkit-text-stroke: 0.5px;
+				line-height: 150%;
+				letter-spacing: 0.6px;
+				text-transform: uppercase;
+				display: inline;
+				margin-right: 5px;
+				@include md {
+					display: block;
+				}
+			}
+
+			.title {
+				line-height: 120%;
+				letter-spacing: 2.36px;
+				text-transform: uppercase;
+				display: inline;
+				@include md {
+					display: block;
+				}
+			}
+		}
+
+		iframe {
+			margin-top: 32px;
+			border-radius: 16px;
+			@include md {
+				flex: 1;
+				display: inline;
+				margin-top: 0;
+			}
+		}
+
+		@include md {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+		}
+
+		@include laptop-small {
+			gap: 60px;
+		}
+	}
+
+	@include md {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
+}

@@ -1,0 +1,433 @@
+@import '../../../css/variables';
+
+.text-with-image {
+	&.titles-texts,
+	&.titles-texts-button {
+		@extend %textWithImageTitleText;
+	}
+
+	&.simple-title-text {
+		@extend %textWithImageTitleTextSimple;
+	}
+
+	&.only-text {
+		@extend %textWithImageOnlyText;
+	}
+
+	&.only-testimony {
+		@extend %textWithImageOnlyTestimony;
+	}
+
+	&.text-testimony {
+		@extend %textWithImageOnlyTextTestimony;
+	}
+
+	&.testimony-text {
+		@extend %textWithImageOnlyTestimonyText;
+	}
+
+	&.text-video {
+		@extend %textWithImageOnlyTextVideo;
+	}
+	&.title-text-testimony {
+		@extend %textWithImageTitleTextTestimony;
+	}
+}
+
+// Common styles to variants
+%textWithImageOnlyText,
+%textWithImageTitleText,
+%textWithImageTitleTextSimple,
+%textWithImageOnlyTestimony,
+%textWithImageOnlyTextTestimony,
+%textWithImageOnlyTestimonyText,
+%textWithImageOnlyTextVideo,
+%textWithImageTitleTextTestimony {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+	}
+
+	//Horizontal Positions
+	&.left {
+		.container {
+			justify-content: flex-start;
+		}
+
+		.text-with-image {
+			&-background {
+				@include md {
+					right: unset;
+					left: 50%;
+					width: 50%;
+
+					&::after {
+						left: -1px;
+						right: unset;
+					}
+				}
+			}
+
+			&-content {
+				@include md {
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+
+	&.right {
+		.container {
+			justify-content: flex-end;
+		}
+
+		.text-with-image {
+			&-background {
+				@include md {
+					left: unset;
+					right: 50%;
+					width: 50%;
+
+					&::after {
+						left: unset;
+						right: -1px;
+						transform: scaleX(-1);
+					}
+				}
+			}
+
+			&-content {
+				@include md {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+
+	&.center {
+		.container {
+			justify-content: center;
+		}
+
+		.text-with-image {
+			&-background {
+				display: none;
+			}
+		}
+	}
+
+	//Vertical Positions
+	&.top {
+		.text-with-image {
+			&-content {
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	&.middle {
+		.text-with-image {
+			&-content {
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
+
+	&.bottom {
+		.text-with-image {
+			&-content {
+				justify-content: flex-end;
+				flex-direction: column;
+			}
+		}
+	}
+
+	.text-with-image {
+		&-background {
+			display: block;
+			width: 100%;
+			position: relative;
+
+			&::after {
+				content: '';
+				z-index: 1;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				// mobile height in with variant;
+				// background is inline (on render.php and index.jsx)
+
+				@include md {
+					top: 0;
+					bottom: unset;
+					width: 48%;
+					height: 100%;
+				}
+			}
+
+			img {
+				width: 100%;
+			}
+
+			@include md {
+				margin-bottom: 0;
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				height: 100%;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		&-content {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			width: 100%;
+			padding: 0 0 50px;
+
+			@include md {
+				width: 60%;
+				padding: 50px 0;
+
+				&.is-hero {
+					padding: $breadcrumbHeight 0 50px;
+				}
+			}
+		}
+	}
+
+	.label {
+		display: inline-block;
+		text-transform: uppercase;
+		-webkit-text-stroke: 0.5px $white;
+
+		@include lg {
+			-webkit-text-stroke: 0 $white;
+		}
+	}
+
+	.big-title {
+		letter-spacing: 4px;
+		line-height: 130%;
+		text-transform: uppercase;
+		margin-top: 0;
+		-webkit-background-clip: text !important;
+		-webkit-text-fill-color: transparent !important;
+		width: fit-content;
+
+		&.small {
+			font-size: clamp(40px, 6vw, 96px) !important;
+		}
+
+		&.big {
+			font-size: clamp(70px, 7vw, 128px) !important;
+		}
+	}
+
+	.title {
+		text-transform: uppercase;
+	}
+
+	.text {
+		line-height: 150%;
+	}
+
+	.testimony {
+		.typography {
+			line-height: 150%;
+
+			@include md {
+				line-height: 130%;
+			}
+		}
+	}
+
+	&.wp-editor {
+		.text-with-image-content {
+			> .block-editor-inner-blocks {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Excepct %textWithImageTitleText
+%textWithImageOnlyText,
+%textWithImageTitleTextSimple,
+%textWithImageOnlyTestimony,
+%textWithImageOnlyTextTestimony,
+%textWithImageOnlyTestimonyText,
+%textWithImageOnlyTextVideo {
+	.text-with-image {
+		&-background {
+			margin-bottom: -50px;
+
+			&::after {
+				@include max-md {
+					height: 250px;
+				}
+			}
+		}
+	}
+}
+
+// Excepct %textWithImageTitleTextSimple and %textWithImageOnlyTextVideo
+%textWithImageOnlyText,
+%textWithImageTitleText,
+%textWithImageOnlyTestimony,
+%textWithImageOnlyTextTestimony,
+%textWithImageOnlyTestimonyText,
+%textWithImageTitleTextTestimony {
+	.text-with-image {
+		&-content {
+			@include md {
+				min-height: calc(100vh - $headerHeightDesk);
+			}
+		}
+	}
+}
+
+// Styles to Titles and text
+%textWithImageTitleText,
+%textWithImageTitleTextTestimony {
+	.text-with-image {
+		&-background {
+			margin-bottom: -12px;
+
+			&::after {
+				@include max-md {
+					height: 150px;
+				}
+			}
+		}
+
+		&-content {
+			padding: 0 0 75px;
+
+			.link {
+				width: fit-content;
+			}
+
+			@include md {
+				padding: 77px 0 77px;
+
+				&.is-hero {
+					padding: $breadcrumbHeight 0 77px;
+				}
+			}
+		}
+	}
+}
+
+// Styles to simple title and text
+%textWithImageTitleTextSimple {
+	.text-with-image {
+		&-background {
+			display: none;
+		}
+
+		&-content {
+			padding: 40px 0;
+
+			@include md {
+				width: 100%;
+				max-width: 840px;
+				padding: 80px 0;
+			}
+		}
+	}
+}
+
+// Styles to text
+%textWithImageOnlyText {
+	.text-with-image {
+		&-content {
+			padding: 0 0 82px;
+
+			@include md {
+				padding: 170px 0 170px;
+			}
+		}
+	}
+}
+
+// Styles to testymony
+// Styles to text and testymony
+// Styles to testymony and text
+%textWithImageOnlyTestimony,
+%textWithImageOnlyTextTestimony,
+%textWithImageOnlyTestimonyText {
+	.text-with-image {
+		&-content {
+			.testimony {
+				width: fit-content;
+				padding: 30px 0;
+
+				.quotation-marks {
+					width: 24px;
+					height: 17px;
+
+					@include md {
+						width: 48px;
+						height: 34px;
+					}
+				}
+
+				.typography {
+					font-weight: 500;
+
+					@include md {
+						font-weight: 300;
+					}
+				}
+
+				@include md {
+					padding: 44px 0;
+				}
+			}
+
+			@include md {
+				width: 75%;
+			}
+
+			@include lg {
+				width: 60%;
+				max-width: 640px;
+			}
+		}
+	}
+}
+
+// Style to Text and Video
+%textWithImageOnlyTextVideo {
+	.text-with-image {
+		&-content {
+			padding: 40px 0;
+
+			.button {
+				width: fit-content;
+			}
+
+			@include md {
+				width: 100%;
+				max-width: 840px;
+				padding: 80px 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,398 @@
+@import '../../../css/variables';
+@import '../../../css/placeholders';
+
+.social-media-gallery {
+	&.default,
+	&.tiktok,
+	&.instagram {
+		@extend %galleryDefault;
+	}
+}
+
+%galleryDefault {
+	padding-top: 64px;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+	}
+
+	.social-media-gallery {
+		&-content {
+			width: 100%;
+
+			.title {
+				text-indent: 5px;
+			}
+
+			.text {
+				max-width: 600px;
+				line-height: 150%;
+			}
+
+			.tab-buttons {
+				.tab-button {
+					@include md-lg {
+						font-size: 1rem !important;
+					}
+				}
+			}
+
+			.just-image-carousel {
+				&.small {
+					position: relative;
+					height: 230px;
+					width: 100vw;
+					left: 50%;
+					transform: translateX(-50%);
+
+					.tns-outer,
+					.tns-ovh,
+					.tns-inner,
+					.carousel-content {
+						height: 100%;
+						display: block;
+					}
+
+					.social-media-item {
+						height: 100%;
+						aspect-ratio: 19/33;
+						cursor: pointer;
+						width: unset !important;
+
+						&--image {
+							width: calc(100% - 4px);
+							height: calc(100% - 4px);
+						}
+
+						&--content {
+							display: none;
+						}
+					}
+
+					@include md {
+						height: 330px;
+						left: 0;
+						transform: translateX(0);
+					}
+
+					@include lg {
+						width: calc(50vw + 10%);
+					}
+				}
+			}
+
+			.slider-in-phone {
+				@extend %galleryDefaultSliderInPhone;
+			}
+
+			@include lg {
+				max-width: none;
+				width: 55%;
+				margin-left: 45%;
+			}
+		}
+	}
+
+	&.instagram {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		.social-media-gallery {
+			&-content {
+				.just-image-carousel {
+					&.small {
+						height: 156px;
+
+						.social-media-item {
+							aspect-ratio: unset;
+							width: 132px !important;
+							min-height: 156px;
+							height: 156px;
+
+							@include md {
+								width: 200px !important;
+								min-height: 200px;
+							}
+						}
+
+						@include md {
+							height: 200px;
+						}
+					}
+				}
+			}
+		}
+
+		@include lg {
+			padding-top: 96px;
+			padding-bottom: 96px;
+		}
+	}
+
+	&.in-front {
+		position: relative;
+		z-index: $zModal;
+	}
+
+	&:not(.wp-editor) {
+		&.instagram {
+			.slider-in-phone {
+				.social-media-item {
+					background: transparent;
+				}
+			}
+		}
+	}
+
+	&.wp-editor {
+		@extend %galleryDefaultEditor;
+	}
+}
+
+%galleryDefaultSliderInPhone {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transform: scale(0);
+	transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	background: $primary;
+
+	.carousel,
+	.tns-outer,
+	.tns-ovh,
+	.tns-inner,
+	.carousel-content {
+		height: 100%;
+	}
+
+	.social-media-item {
+		height: 100%;
+		width: 100%;
+	}
+
+	.close-button {
+		z-index: 3;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		height: 40px;
+		width: 40px;
+		padding: 10px;
+		background: lighten($primary, 5);
+		border: none;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 70%;
+			height: 2.5px;
+			background: $white;
+		}
+
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		@include lg {
+			display: none;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	&.tiktok {
+		.unmute-button,
+		.mute-button {
+			height: 50px;
+			width: 50px;
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+			z-index: 3;
+			background: rgba($white, 0.5);
+			padding: 10px;
+			border-radius: 50%;
+			border: none;
+			cursor: pointer;
+			opacity: 0.3;
+
+			&.hide {
+				display: none;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			@include md {
+				bottom: unset;
+				top: 20px;
+				right: 20px;
+			}
+
+			@include lg {
+				top: 25px;
+				right: 25px;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			z-index: 2;
+			top: -1px;
+			left: -1px;
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			background-image: url('../../../../images/phone-mask.png');
+			pointer-events: none;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+
+			@include md {
+				content: '';
+			}
+
+			@include laptop {
+				background-size: 100% 110%;
+				background-position: 0% 1%;
+			}
+		}
+	}
+
+	@include lg {
+		position: absolute;
+		aspect-ratio: 9/16;
+		height: 100%;
+		width: calc(45% - 90px);
+		opacity: 1;
+		transform: scale(1) translateY(0);
+		bottom: 0;
+		left: 0;
+		top: unset;
+	}
+
+	@include laptop {
+		height: 100%;
+	}
+}
+
+%galleryDefaultEditor {
+	padding-bottom: 77px;
+
+	.social-media-gallery-content {
+		> .block-editor-inner-blocks > .block-editor-block-list__layout {
+			position: unset;
+		}
+	}
+
+	.just-image-carousel {
+		width: 100%;
+
+		&.small {
+			@include lg {
+				width: 100%;
+			}
+		}
+
+		.carousel-content > .block-editor-inner-blocks {
+			height: 100%;
+
+			> .block-editor-block-list__layout {
+				height: 100%;
+				overflow-x: auto;
+				white-space: nowrap;
+				display: flex;
+				justify-content: flex-start;
+				gap: 30px;
+
+				[data-type='il/social-media-item'] {
+					display: inline-block;
+					width: fit-content;
+					height: 95%;
+				}
+			}
+		}
+	}
+
+	[data-type='il/wrapper']:has(.slider-in-phone) {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		aspect-ratio: 9/16;
+		width: calc(45% - 90px);
+		max-width: 400px;
+
+		.slider-in-phone {
+			height: 100%;
+			width: 100%;
+
+			> .block-editor-inner-blocks {
+				height: 100%;
+
+				> .block-editor-block-list__layout {
+					height: 100%;
+
+					[data-type='il/button'] {
+						display: none;
+					}
+
+					[data-type='il/carousel'] {
+						height: 100%;
+
+						.carousel-content {
+							> .block-editor-inner-blocks > .block-editor-block-list__layout {
+								width: 100%;
+								height: calc(100% - 15px);
+							}
+
+							[data-type='il/social-media-item'] {
+								width: 300px;
+								aspect-ratio: 9/16;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Common styles to tabs block
+[data-type='il/social-media-gallery'] {
+	height: fit-content;
+
+	.social-media-gallery-content {
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				.block-list-appender {
+					bottom: -51px !important;
+					opacity: 1 !important;
+					pointer-events: all !important;
+				}
+
+				@extend %blockAppenderButton;
+			}
+		}
+	}
+}

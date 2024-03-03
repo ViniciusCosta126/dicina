@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/result-final",
+	"title": "Resultado Final",
+	"description": "Componente para secao de formula 3 do resultado final",
+	"category": "organisms",
+	"version": "1.0.0",
+	"editorScript": "file:./index.jsx",
+	"script": "file:./index.jsx",
+	"editorStyle": "file:./style-index.css",
+	"style": [
+		"file:./style-index.css",
+		"style-result-final"
+	],
+	"render": "file:./render.php",
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"marginM": {
+			"type": "integer",
+			"default": 0
+		},
+		"marginD": {
+			"type": "integer",
+			"default": 0
+		},
+		"hasImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"bgImageMobile": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/768x768",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"bgImageDesk": {
+			"type": "object",
+			"default": {
+				"type": "image/jpeg",
+				"src": "https://placehold.co/720x890",
+				"alt": "Imagem placeholder"
+			}
+		},
+		"bgColorDegrade": {
+			"type": "string",
+			"default": "linear-gradient(180deg, rgba(0, 39, 83, 0) 0%, #002753 90%, #002753 100%)"
+		},
+		"bgColorDegradeDesk": {
+			"type": "string",
+			"default": "linear-gradient(to right, #002753 0, transparent 100%)"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"blockOnly": true,
+			"variant": "default",
+			"bgColor": "#ffffff"
+		}
+	}
+}

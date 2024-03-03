@@ -1,0 +1,51 @@
+@import '../../../css/variables';
+
+.partner-item {
+	&.image {
+		@extend %partnerItemImage;
+	}
+
+	&.about {
+		@extend %partnerItemAbout;
+	}
+
+	&.testimony {
+		@extend %partnerItemTestimony;
+	}
+}
+
+%partnerItemImage {
+	width: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	@include lg-small {
+		width: 50%;
+	}
+}
+
+%partnerItemAbout {
+	width: 100%;
+	display: block;
+
+	@include lg-small {
+		width: 50%;
+	}
+}
+
+%partnerItemTestimony {
+	width: 100%;
+	display: block;
+
+	.testimony {
+		@include max-lg-small {
+			padding: 50px 0;
+		}
+	}
+}
