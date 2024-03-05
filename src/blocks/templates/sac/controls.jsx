@@ -4,7 +4,7 @@ import { InspectorControls } from '@wordpress/block-editor';
 export default function Controls({ attributes, setAttributes }) {
 	return (
 		<InspectorControls>
-			<Panel>{/* Atributos para o template Books-Template */}</Panel>
+			<Panel>{/* Atributos para o template Sac */}</Panel>
 		</InspectorControls>
 	);
 }

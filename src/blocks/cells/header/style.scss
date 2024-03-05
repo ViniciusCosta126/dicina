@@ -177,7 +177,7 @@
 						margin-top: 8px;
 						height: 5px;
 						width: 0;
-						background: $button-hover;
+						background: #fff;
 						transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 					}
 
@@ -519,7 +519,7 @@
 					a {
 						&:hover {
 							&::after {
-								color: $yellow;
+								color: $white;
 								transform: matrix(0.71, 0.71, -0.71, 0.71, 50, 0);
 								-ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 50, 0);
 								-webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 50, 0);
@@ -557,7 +557,7 @@
 						padding: 10px;
 
 						&:hover {
-							border-color: $yellow;
+							border-color: $white;
 						}
 					}
 				}
@@ -592,13 +592,13 @@
 					}
 
 					&:hover::before {
-						background-color: #ebc435;
+						background-color: #fff;
 						transform: translateX(50px);
 					}
 
 					&:hover {
 						& + .arrow {
-							border-color: #ebc535;
+							border-color: #fff;
 						}
 					}
 
@@ -607,7 +607,7 @@
 						letter-spacing: 0.12em;
 
 						&:hover {
-							color: $yellow;
+							color: $white;
 							transform: translateX(-50px);
 						}
 					}
@@ -716,11 +716,11 @@
 				&:hover {
 					color: $primary;
 					background-color: transparent;
-					border-color: $quaternary;
+					border-color: $white;
 				}
 
 				&:after {
-					background: $quaternary;
+					background: $white;
 				}
 
 				@include lg {

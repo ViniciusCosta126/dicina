@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "il/books-template",
-	"title": "Livros - Template",
-	"description": "Template para pagina de livros",
+	"name": "il/sac",
+	"title": "Sac",
+	"description": "Template para pagina de sac",
 	"category": "templates",
 	"version": "1.0.0",
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
-	"style": ["file:./style.scss", "style-books-template"],
+	"style": ["file:./style.scss", "style-sac"],
 	"render": "file:./render.php",
 	"attributes": {},
 	"example": {

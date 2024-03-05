@@ -25,7 +25,7 @@
 		}
 
 		hr {
-			background: linear-gradient(90deg, #00a851 0%, #1832d7 100%);
+			background: #fff;
 			height: 4px;
 			border: 0;
 			margin: 40px 0;
@@ -345,7 +345,7 @@
 					width: 100%;
 					top: 0;
 					bottom: -5px;
-					background: linear-gradient(90deg, $light-yellow 0%, $light-yellow 100%);
+					background: linear-gradient(90deg, $white 0%, $white 100%);
 					background-size: 0 3px; /* vertical size of underline */
 					background-repeat: no-repeat;
 					background-position: left bottom; /* start position of underline */

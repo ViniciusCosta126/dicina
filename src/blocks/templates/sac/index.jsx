@@ -2,7 +2,7 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 
 import metadata from './block.json';
-import Controls from './controls.jsx';
+import Controls from "./controls.jsx";
 
 import './style.scss';
 
@@ -22,15 +22,19 @@ registerBlockType(metadata.name, {
  * @param {*} props Block's properties
  * @returns JSX
  */
-
+ 
 export default function EditorComponent({ attributes, setAttributes }) {
 	return (
 		<>
 			{/* Editor controls */}
 			<Controls attributes={attributes} setAttributes={setAttributes} />
 
-			<div className={`home wp-editor`}>
-				<InnerBlocks template={[['il/declaracao', {}]]} />
+			<div className={`sac wp-editor`}>
+				<InnerBlocks
+					template={[
+						['il/hero-journey', { content:"SAC | Dicina" }],
+					]}
+				/>
 			</div>
 		</>
 	);

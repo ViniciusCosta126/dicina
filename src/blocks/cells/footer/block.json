@@ -37,11 +37,11 @@
 		},
 		"copyright": {
 			"type": "string",
-			"default": "© 2023  Sua Marca"
+			"default": "© 2024  SharkCode todos os direitos reservados"
 		},
 		"copyrightEN": {
 			"type": "string",
-			"default": "© 2023  Sua marca"
+			"default": "© 2024  SharkCode todos os direitos reservados"
 		},
 		"address": {
 			"type": "string",

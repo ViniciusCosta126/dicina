@@ -4,7 +4,7 @@ import { InspectorControls } from '@wordpress/block-editor';
 export default function Controls({ attributes, setAttributes }) {
 	return (
 		<InspectorControls>
-			<Panel>{/* Atributos para o template Privacy Policy */}</Panel>
+			<Panel>{/* Atributos para o template Trabalhe Conosco */}</Panel>
 		</InspectorControls>
 	);
 }

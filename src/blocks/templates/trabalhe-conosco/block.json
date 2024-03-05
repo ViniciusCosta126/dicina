@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "il/privacy-policy",
-	"title": "Privacy Policy",
-	"description": "Template para p gina de pol tica de privacidade",
+	"name": "il/trabalhe-conosco",
+	"title": "Trabalhe Conosco",
+	"description": "Template da pagina trabalhe conosco",
 	"category": "templates",
 	"version": "1.0.0",
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
-	"style": ["file:./style.scss", "style-privacy-policy"],
+	"style": ["file:./style.scss", "style-trabalhe-conosco"],
 	"render": "file:./render.php",
 	"attributes": {},
 	"example": {
