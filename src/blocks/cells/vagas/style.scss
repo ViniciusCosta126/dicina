@@ -8,10 +8,7 @@
 
 %vagasDefault {
     // Default variant styles;
-    background-color: #192375;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
+    background-color: transparent;
     .title {
         margin-bottom: 10px;
     }
@@ -94,8 +91,12 @@
         }
     }
 
-    @include lg {
-        padding-top: 96px;
-        padding-bottom: 96px;
+    &.wp-editor{
+        width: 100%;
+        .aviso{
+            color: $white;
+            font-size: 26px;
+        }
     }
+
 }

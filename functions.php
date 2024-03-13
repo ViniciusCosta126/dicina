@@ -8,3 +8,4 @@ require_once ABSPATH . "/wp-content/themes/Template-blocks/inc/common.php";
 require_once ABSPATH . "/wp-content/themes/Template-blocks/inc/requests/load_more.php";
 
 require_once ABSPATH . "/wp-content/themes/template-blocks/inc/custom-post-type/vagas_custom_post_type.php";
+require_once ABSPATH . "/wp-content/themes/template-blocks/inc/custom-post-type/candidate_contact.php";

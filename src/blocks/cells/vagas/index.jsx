@@ -101,8 +101,8 @@ export default function EditorComponent({ attributes, setAttributes }) {
 						]}
 					/>
 
-					<div>
-						%% Aqui vai ficar as vagas que estao disponiveis no painel %%
+					<div className='aviso'>
+						%% Aqui vão ficar as vagas que estão disponiveis no painel %%
 					</div>
 				</div>
 			</div>

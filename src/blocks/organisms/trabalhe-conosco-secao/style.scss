@@ -1,0 +1,54 @@
+@import '../../../css/variables';
+
+.trabalhe-conosco-secao {
+    &.default {
+        @extend %trabalheConoscoSecaoDefault;
+    }
+}
+
+%trabalheConoscoSecaoDefault {
+    // Default variant styles;
+    background-color: #192375;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .container-block {
+        .vagas {
+            @include lg {
+                width: 50%;
+            }
+        }
+
+        .vaga-form {
+            @include lg {
+                width: 50%;
+            }
+        }
+
+        @include lg {
+            display: flex;
+            gap: 60px;
+        }
+    }
+
+    @include lg {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    &.wp-editor{
+        .container-block{
+            display: unset;
+
+            >.block-editor-inner-blocks{
+                >.block-editor-block-list__layout{
+                    >.block-editor-block-list__block{
+                        width: 50%;
+                    }
+                    display: flex;
+                    gap: 60px;
+                }
+            }
+        }
+    }
+}

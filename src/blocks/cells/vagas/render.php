@@ -34,35 +34,30 @@ $posts = get_posts($args);
             }
         }
     </style>
+    <?= $content ?>
 
-    <div class="container">
-        <?= $content ?>
+    <?php foreach ($posts as $post): ?>
+        <?php setup_postdata($post); ?>
 
-        <?php foreach ($posts as $post): ?>
-            <?php setup_postdata($post); ?>
+        <div class="vaga">
+            <h2 class="vaga__title">
+                <?= get_field('titulo_vaga', $post->ID) ?>
+            </h2>
+            <div class="vaga__info">
+                <p class="titulo">Descrição</p>
+                <p class="info">
+                    <?= get_field('descricao', $post->ID) ?>
+                </p>
 
-            <div class="vaga">
-                <h2 class="vaga__title">
-                    <?= get_field('titulo_vaga', $post->ID) ?>
-                </h2>
-                <div class="vaga__info">
-                    <p class="titulo">Descrição</p>
-                    <p class="info">
-                        <?= get_field('descricao', $post->ID) ?>
-                    </p>
-
-                </div>
-                <div class="vaga__info">
-                    <p class="titulo">Requisitos</p>
-                    <p class="info">
-                        <?= get_field('requisitos', $post->ID) ?>
-                    </p>
-                </div>
             </div>
+            <div class="vaga__info">
+                <p class="titulo">Requisitos</p>
+                <p class="info">
+                    <?= get_field('requisitos', $post->ID) ?>
+                </p>
+            </div>
+        </div>
 
-        <?php endforeach; ?>
-
-    
-    </div>
+    <?php endforeach; ?>
 
 </div>
