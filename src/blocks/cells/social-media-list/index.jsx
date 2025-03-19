@@ -53,10 +53,10 @@ export default function EditorComponent({ attributes, setAttributes }) {
 				<InnerBlocks
 					allowedBlocks={['il/social-icon']}
 					template={[
-						['il/social-icon', { icon: { src: templteUri + '/images/facebook-icon.svg' } }],
-						['il/social-icon', { icon: { src: templteUri + '/images/instagram-icon.svg' } }],
-						['il/social-icon', { icon: { src: templteUri + '/images/twitter-icon.svg' } }],
-						['il/social-icon', { icon: { src: templteUri + '/images/tiktok-icon.svg' } }],
+						['il/social-icon', { icon: { src: 'https://placehold.co/45x45' } }],
+						['il/social-icon', { icon: { src: 'https://placehold.co/45x45' } }],
+						['il/social-icon', { icon: { src: 'https://placehold.co/45x45' } }],
+						['il/social-icon', { icon: { src: 'https://placehold.co/45x45' } }],
 					]}
 				/>
 			</div>

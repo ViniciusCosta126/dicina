@@ -22,8 +22,6 @@ registerBlockType(metadata.name, {
  * @returns JSX
  */
 export default function EditorComponent({ attributes, setAttributes }) {
-	const imagePath = '/wp-content/themes/Template-blocks/images/products/';
-
 	return (
 		<>
 			{/* Editor controls */}
@@ -112,19 +110,15 @@ export default function EditorComponent({ attributes, setAttributes }) {
 												url: '',
 												target: 'blank',
 											},
-											category: 'LINHA EXCLUSIVA',
-											product: 'Tênis Esportivo LOTUS Special Edition Feminina Ayrton Senna Preto',
+											category: 'Lorem Ipsum',
+											product: 'Lorem Ipsum',
 											image1: {
-												src:
-													imagePath +
-													'tenis-ASICS-feminino/Tênis-Esportivo-LOTUS-Special-Edition-Feminina-Ayrton-Senna-Preto-Capa.jpg',
-												alt: 'Capa Tênis Esportivo LOTUS Special Edition Feminina Ayrton Senna Preto',
+												src: 'https://placehold.co/360x360',
+												alt: 'https://placehold.co/360x360',
 											},
 											image2: {
-												src:
-													imagePath +
-													'tenis-ASICS-feminino/Tênis-Esportivo-LOTUS-Special-Edition-Feminina-Ayrton-Senna-Preto.jpg',
-												alt: 'Tênis Esportivo LOTUS Special Edition Feminina Ayrton Senna Preto',
+												src: 'https://placehold.co/360x360',
+												alt: 'https://placehold.co/360x360',
 											},
 										},
 									],
@@ -135,98 +129,15 @@ export default function EditorComponent({ attributes, setAttributes }) {
 												url: '',
 												target: 'blank',
 											},
-											category: 'Livros',
-											product: 'Livro Ayrton Senna Uma Lenda da Velocidade F1 Ayrton Senna Preto',
+											category: 'Lorem Ipsum',
+											product: 'Lorem Ipsum',
 											image1: {
-												src:
-													imagePath +
-													'Livro_Ayrton-Senna-uma-lenda-da-velocidade/Livro-Ayrton-Senna-Uma-Lenda-da-Velocidade-F1-Ayrton-Senna-Preto.jpg',
-												alt: 'Livro Ayrton Senna Uma Lenda da Velocidade F1 Ayrton Senna Preto',
+												src: 'https://placehold.co/360x360',
+												alt: 'https://placehold.co/360x360',
 											},
 											image2: {
-												src:
-													imagePath +
-													'Livro_Ayrton-Senna-uma-lenda-da-velocidade/Livro-Ayrton-Senna-Uma-Lenda-da-Velocidade-F1-Ayrton-Senna-Preto-Aberto.jpg',
-
-												alt: 'Livro Ayrton Senna Uma Lenda da Velocidade F1 Ayrton Senna Preto Aberto',
-											},
-										},
-									],
-									[
-										'il/product',
-										{
-											link: {
-												url: '',
-												target: 'blank',
-											},
-											category: 'CAMISETAS',
-											product: 'Camiseta duplo S',
-											image1: {
-												src: imagePath + 'Camiseta-duplo-S/senna-usando-camiseta.jpg',
-												alt: 'Senna usando camiseta Duplo S',
-											},
-											image2: {
-												src: imagePath + 'Camiseta-duplo-S/camiseta-duplo-s-senna.jpg',
-												alt: 'Camiseta Duplo S',
-											},
-										},
-									],
-									[
-										'il/product',
-										{
-											link: {
-												url: '',
-												target: 'blank',
-											},
-											category: 'Bonés',
-											product: 'Bone Nacional Ayrton Senna',
-											image1: {
-												src: imagePath + 'Bone-Nacional/Ayrton-Senna-usando-o-bone-Nacional-senna.jpg',
-												alt: 'Ayrton Senna Usando Bone Nacional ',
-											},
-											image2: {
-												src: imagePath + 'Bone-Nacional/Bone-Nacional-senna.jpg',
-												alt: 'Bone Nacional Ayrton Senna',
-											},
-										},
-									],
-									[
-										'il/product',
-										{
-											link: {
-												url: '',
-												target: 'blank',
-											},
-											category: 'Álbuns',
-											product: 'Album de Figurinhas 2022 Ayrton Senna',
-											image1: {
-												src: imagePath + 'album-topps/album-de-Figurinhas-2022-Ayrton-Senna.jpg',
-												alt: 'Album de Figurinhas 2022 Ayrton Senna',
-											},
-											image2: {
-												src: imagePath + 'album-topps/brtopps_magento-senna-14.jpg',
-												alt: 'brtopps magento Album de Figurinhas 2022 Ayrton Senna',
-											},
-										},
-									],
-									[
-										'il/product',
-										{
-											link: {
-												url: '',
-												target: 'blank',
-											},
-											category: 'Livros',
-											product: 'Livro 100 Senna Capa Bota Vermelha',
-											image1: {
-												src:
-													imagePath +
-													'Livro-100-Senna/Patrocinios-Livro-100-Senna-Capa-Bota-Vermelha.jpg',
-												alt: 'Livro 100 Senna Capa Bota Vermelha',
-											},
-											image2: {
-												src: imagePath + 'Livro-100-Senna/Livro-100-Senna-Capa-Bota-Vermelha.jpg',
-												alt: 'Livro 100 Senna Capa Bota Vermelha',
+												src: 'https://placehold.co/360x360',
+												alt: 'https://placehold.co/360x360',
 											},
 										},
 									],

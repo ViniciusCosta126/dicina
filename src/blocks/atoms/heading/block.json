@@ -1,18 +1,21 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 2,
-    "name": "il/heading",
-    "title": "Título",
-    "category": "atoms",
-    "version": "1.0.0",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "il/heading",
+	"title": "Título",
+	"category": "atoms",
+	"version": "1.0.0",
 	"editorScript": "file:index.jsx",
-    "script": "file:index.jsx",
-    "style": [ "file:./style.scss", "style-heading" ],
-    "render": "file:./render.php",
-    "attributes": {
+	"script": "file:index.jsx",
+	"style": [
+		"file:./style.scss",
+		"style-heading"
+	],
+	"render": "file:./render.php",
+	"attributes": {
 		"content": {
 			"type": "string",
-			"default": "Raccoon.Monks é a gigante da América Latina"
+			"default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
 		},
 		"color": {
 			"type": "string",

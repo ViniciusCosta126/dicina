@@ -2,14 +2,17 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "il/hero-journey",
-	"title": "Hero Journey",
-	"description": "Primeira seção da página jornada senna, com duas variantes",
+	"title": "Hero Imagem e Texto",
+	"description": "Hero com imagem e texto",
 	"category": "organisms",
 	"version": "1.0.0",
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
 	"viewScript": "file:view.js",
-	"style": ["file:./style.scss", "style-hero-journey"],
+	"style": [
+		"file:./style.scss",
+		"style-hero-journey"
+	],
 	"render": "file:./render.php",
 	"attributes": {
 		"variant": {

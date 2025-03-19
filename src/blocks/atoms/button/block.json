@@ -7,7 +7,10 @@
 	"version": "1.0.0",
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
-	"style": ["file:./style.scss", "style-button"],
+	"style": [
+		"file:./style.scss",
+		"style-button"
+	],
 	"render": "file:./render.php",
 	"attributes": {
 		"content": {
@@ -106,7 +109,7 @@
 			"blockOnly": true,
 			"content": "Call to action",
 			"color": "#FFFFFF",
-			"bgColor": "#0d3842",
+			"bgColor": "#002753",
 			"variant": "primary"
 		}
 	}
