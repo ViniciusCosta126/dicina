@@ -48,7 +48,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 			{/* Editor controls */}
 			<Controls attributes={attributes} setAttributes={setAttributes} />
 
-			<div className={`breadcrumb ${variant} breadcrumb-${randomComponentId}`}></div>
+			<div className={`breadcrum breadcrumb-${randomComponentId}`}></div>
 		</>
 	);
 }

@@ -38,7 +38,7 @@
 	&.active {
 		.button {
 			p {
-				color: $white;
+				color: $black;
 			}
 		}
 	}
@@ -75,10 +75,10 @@
 }
 
 %tabsItemContentEditor {
-	> .block-editor-inner-blocks {
+	>.block-editor-inner-blocks {
 		width: 100%;
 
-		> .block-editor-block-list__layout {
+		>.block-editor-block-list__layout {
 			width: 100%;
 			display: flex;
 			align-items: flex-start;
@@ -95,8 +95,8 @@
 	&:has(.content-tab) {
 		position: unset !important;
 
-		> .content-tab > .block-editor-inner-blocks {
-			> .block-editor-block-list__layout {
+		>.content-tab>.block-editor-inner-blocks {
+			>.block-editor-block-list__layout {
 				&:empty {
 					height: 100px;
 					position: relative;

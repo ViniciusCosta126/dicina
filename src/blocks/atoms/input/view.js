@@ -1,4 +1,4 @@
-import { changeDate } from '../../cells/data-selector/view';
+
 
 document.addEventListener(
 	'DOMContentLoaded',
@@ -26,10 +26,6 @@ document.addEventListener(
 						customSelectLabel.innerHTML = option.dataset.value;
 						select.setAttribute('data-option-selected', option.dataset.value);
 						select.classList.remove('custom-select--open');
-
-						if (type === 'day' || type === 'month' || type === 'year') {
-							changeDate(option.dataset.value, type, option);
-						}
 					});
 				});
 			});

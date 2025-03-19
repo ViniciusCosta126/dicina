@@ -162,7 +162,7 @@ function getLanguageUrl($lang)
 // Insert metadata and scripts in head
 function insertInHead()
 {
-?>
+	?>
 	<!-- Cookie Banner -->
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
@@ -170,10 +170,10 @@ function insertInHead()
 	<!-- RSS Feed -->
 	<link rel="alternate" type="application/+xml" href="<?php bloginfo('rss2_url'); ?>">
 
-	<?php if ($_SERVER['HTTP_HOST'] === 'senna.com') : ?>
+	<?php if ($_SERVER['HTTP_HOST'] === ''): ?>
 		<!-- Google Tag Manager -->
 		<script rel="onload" as="script">
-			(function(w, d, s, l, i) {
+			(function (w, d, s, l, i) {
 				w[l] = w[l] || [];
 				w[l].push({
 					'gtm.start': new Date().getTime(),
@@ -190,9 +190,9 @@ function insertInHead()
 		</script>
 
 		<script rel="onload" as="script">
-			(function(i, s, o, g, r, a, m) {
+			(function (i, s, o, g, r, a, m) {
 				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function() {
+				i[r] = i[r] || function () {
 					(i[r].q = i[r].q || []).push(arguments)
 				}, i[r].l = 1 * new Date();
 				a = s.createElement(o),
@@ -219,10 +219,9 @@ function insertInHead()
 			gtag('config', 'G-J347XJL2KF');
 		</script>
 
-		<!-- Hotjar Tracking Code for https://www.ayrtonsenna.com.br/ -->
 		<script rel="onload" as="script">
-			(function(h, o, t, j, a, r) {
-				h.hj = h.hj || function() {
+			(function (h, o, t, j, a, r) {
+				h.hj = h.hj || function () {
 					(h.hj.q = h.hj.q || []).push(arguments)
 				};
 				h._hjSettings = {
@@ -236,7 +235,7 @@ function insertInHead()
 				a.appendChild(r);
 			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 		</script>
-<?php endif;
+	<?php endif;
 }
 
 add_action('wp_head', 'insertInHead');
