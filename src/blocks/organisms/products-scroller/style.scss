@@ -124,6 +124,7 @@
 					text-align: center;
 					z-index: 5;
 				}
+
 				.overlay {
 					position: absolute;
 					bottom: 0;
@@ -135,11 +136,11 @@
 			}
 		}
 
-		.tns-inner > .products__carousel {
+		.tns-inner>.products__carousel {
 			display: flex;
 		}
 
-		> #tns1-ow {
+		>#tns1-ow {
 			white-space: nowrap;
 			width: 95%;
 			margin: 0 auto;
@@ -280,6 +281,7 @@
 		}
 
 		&.pin-bottom {
+
 			// importants para sobreescrever regras do gsap
 			.pin-spacer {
 				width: 100% !important;
@@ -340,16 +342,18 @@
 							left: 0;
 							top: 0;
 							opacity: 0;
+
 							@media (min-width: 1024px) {
 								display: block;
 							}
 						}
+
 						@media (min-width: 1024px) {
 							display: block;
 						}
 					}
 
-					&:hover > .products__carousel__card__img {
+					&:hover>.products__carousel__card__img {
 						&--hover {
 							opacity: 1;
 						}
@@ -418,6 +422,7 @@
 	from {
 		top: 100%;
 	}
+
 	to {
 		visibility: visible;
 		top: 0;
@@ -429,6 +434,7 @@
 		top: 0%;
 		visibility: visible;
 	}
+
 	to {
 		top: 100%;
 		visibility: hidden;
@@ -445,10 +451,11 @@
 		text-align: center;
 		font-size: 30px;
 		font-weight: 600;
-		color: $light-yellow;
+		color: $light-quaternary;
 	}
 
 	.subtitle-wrapper {
+
 		.subtitle,
 		.subtitle__second {
 			font-size: 16px;

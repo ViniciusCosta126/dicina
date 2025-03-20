@@ -153,7 +153,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 									ManualSizeD: 32,
 									color: '#ffffff',
 									bgColor: 'transparent',
-									fontFamily: 'helveticaneue',
+									fontFamily: 'poppins',
 									textAlign: 'align-center-left',
 									marginM: 24,
 									marginD: 32,

@@ -7,7 +7,10 @@
 	"version": "1.0.1",
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
-	"style": ["file:./style.scss", "style-typography"],
+	"style": [
+		"file:./style.scss",
+		"style-typography"
+	],
 	"render": "file:./render.php",
 	"attributes": {
 		"content": {
@@ -20,7 +23,7 @@
 		},
 		"fontFamily": {
 			"type": "string",
-			"default": "helveticaneue"
+			"default": "poppins"
 		},
 		"position": {
 			"type": "string",
@@ -133,7 +136,7 @@
 			"tag": "p",
 			"sizeD": "body-1-m",
 			"sizeM": "body-1-d",
-			"fontFamily": "helveticaneue"
+			"fontFamily": "poppins"
 		}
 	}
 }

@@ -27,7 +27,7 @@
 				width: 100%;
 				height: 8px;
 				left: $containerMobile;
-				background: $gradientGrayTransparent;
+				background: $primary;
 
 				.tab-bar-item {
 					position: absolute;
@@ -35,7 +35,7 @@
 					left: 0;
 					width: 0;
 					height: 8px;
-					background: $green-blue;
+					background: $primary;
 					transition: left 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), width 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 					@include md {
@@ -106,11 +106,11 @@
 	padding-bottom: 45px;
 	position: relative;
 
-	> .block-editor-inner-blocks {
+	>.block-editor-inner-blocks {
 		width: 100%;
 		height: fit-content;
 
-		> .block-editor-block-list__layout {
+		>.block-editor-block-list__layout {
 			width: 100%;
 			height: fit-content;
 			display: flex;
@@ -136,11 +136,11 @@
 
 		&:has(> .tab-bar) {
 			.tab-bar {
-				> .block-editor-inner-blocks {
+				>.block-editor-inner-blocks {
 					width: 100%;
 					height: fit-content;
 
-					> .block-editor-block-list__layout {
+					>.block-editor-block-list__layout {
 						height: 8px;
 
 						@include md {
@@ -152,11 +152,11 @@
 		}
 
 		.wrapper.tabs-buttons-content {
-			> .block-editor-inner-blocks {
+			>.block-editor-inner-blocks {
 				width: 100%;
 				height: 100%;
 
-				> .block-editor-block-list__layout {
+				>.block-editor-block-list__layout {
 					width: 100%;
 					height: 100%;
 					display: flex;
@@ -184,10 +184,10 @@
 [data-type='il/tabs'] {
 	height: fit-content;
 
-	> .tabs {
-		> .block-editor-inner-blocks {
-			> .block-editor-block-list__layout {
-				> .block-list-appender {
+	>.tabs {
+		>.block-editor-inner-blocks {
+			>.block-editor-block-list__layout {
+				>.block-list-appender {
 					bottom: -45px !important;
 					pointer-events: none !important;
 					opacity: 0 !important;
@@ -215,10 +215,10 @@
 	}
 
 	&.is-selected {
-		> .tabs {
-			> .block-editor-inner-blocks {
-				> .block-editor-block-list__layout {
-					> .block-list-appender {
+		>.tabs {
+			>.block-editor-inner-blocks {
+				>.block-editor-block-list__layout {
+					>.block-list-appender {
 						opacity: 1 !important;
 						pointer-events: all !important;
 					}

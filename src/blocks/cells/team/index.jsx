@@ -33,7 +33,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 			padding: ${marginM}px 0;
 		}
 		.team p{
-			font-family: HelveticaNeue;
+			font-family: poppins;
 		}
 		
 		

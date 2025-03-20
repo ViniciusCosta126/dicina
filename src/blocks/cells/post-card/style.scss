@@ -1,6 +1,7 @@
 @import '../../../css/variables';
 
 .post-card {
+
 	&.default,
 	&.sidebar {
 		@extend %postCardDefault;
@@ -15,6 +16,7 @@
 			@extend %postCardSidebarMostRead;
 		}
 	}
+
 	&.journey {
 		@extend %postCardJourney;
 	}
@@ -70,7 +72,7 @@
 				transform: translate(50%, 50%) rotate(45deg);
 			}
 
-			> img {
+			>img {
 				object-fit: cover;
 				width: 100%;
 				height: 100%;
@@ -189,7 +191,7 @@
 			bottom: 0px;
 			height: 1px;
 			width: 100%;
-			background: $green-blue;
+			background: $primary;
 			transform: rotate(180deg);
 		}
 
@@ -218,10 +220,12 @@
 				.post-card__category {
 					color: #00a851;
 				}
+
 				.post-card__date {
 					display: none;
 				}
 			}
+
 			.title-wrapper {
 				.post-card__title {
 					color: #fff;
@@ -234,9 +238,10 @@
 		background: rgba(24, 50, 215, 0.2);
 		height: 280px;
 		display: block;
+
 		&::before,
 		&::after {
-			background-color: $dark-blue;
+			background-color: $primary;
 		}
 
 		@include md {
@@ -255,7 +260,7 @@
 		content: '';
 		height: 100%;
 		width: 1.25px;
-		background: $blue-light-green-bottom;
+		background: #fff;
 		position: absolute;
 		left: 0px;
 		bottom: 0px;
@@ -272,7 +277,7 @@
 		&:before {
 			height: 1px;
 			width: 100%;
-			background: $green-blue;
+			background: $primary;
 			transform: rotate(180deg);
 		}
 
@@ -291,6 +296,7 @@
 }
 
 %postCardSmall {
+
 	// Default variant styles
 	@include max-md {
 		.post-card__img {

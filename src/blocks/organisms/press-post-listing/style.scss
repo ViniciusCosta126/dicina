@@ -4,6 +4,7 @@
 	&.default {
 		@extend %pressPostListingDefault;
 	}
+
 	&.journey {
 		@extend %pressPostListingJourney;
 	}
@@ -14,7 +15,8 @@
 }
 
 %pressPostListingJourney {
-	background-color: $dark-blue;
+	background-color: $primary;
+
 	.post-listing-header {
 		.title {
 			width: initial;

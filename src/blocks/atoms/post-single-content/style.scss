@@ -144,12 +144,13 @@
 
 %postTitles {
 	.entry-content {
-		> h1,
-		> h2,
-		> h3,
-		> h4,
-		> h5,
-		> h6 {
+
+		>h1,
+		>h2,
+		>h3,
+		>h4,
+		>h5,
+		>h6 {
 			&:not(.typography) {
 				font-family: $font-primary;
 				line-height: 150%;
@@ -160,15 +161,15 @@
 			}
 		}
 
-		> h1,
-		> h2,
-		> h3 {
+		>h1,
+		>h2,
+		>h3 {
 			font-size: 32px;
 		}
 
-		> h4,
-		> h5,
-		> h6 {
+		>h4,
+		>h5,
+		>h6 {
 			font-size: 26px;
 		}
 	}
@@ -176,7 +177,7 @@
 
 %postTexts {
 	.entry-content {
-		> p {
+		>p {
 			&:not(.typography) {
 				font-family: $font-primary;
 				font-size: 18px;
@@ -201,8 +202,9 @@
 
 %postList {
 	.entry-content {
-		> ol,
-		> ul {
+
+		>ol,
+		>ul {
 			font-family: $font-primary;
 			padding-left: 30px;
 			margin-bottom: 40px;
@@ -379,7 +381,7 @@
 		left: 0;
 		height: 100%;
 		width: 11px;
-		background: $yellow-blue-bottom;
+		background: $secondary;
 	}
 
 	.quotes-icon {
@@ -512,7 +514,7 @@
 				min-height: calc($bannerProductHeightDesk + 520px);
 				padding-bottom: calc($bannerProductHeightDesk + 80px);
 
-				> .wp-block {
+				>.wp-block {
 					padding-right: $sidebarWidth;
 				}
 

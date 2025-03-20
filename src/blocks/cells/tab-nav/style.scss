@@ -23,13 +23,13 @@ $tabNavHeight: 72px;
 		width: 100%;
 		height: 3px;
 		margin-top: -3px;
-		background: $green-blue;
+		background: $primary;
 		filter: blur(0.2px);
 		opacity: 0;
 		transition: opacity 0.5s ease-in;
 	}
 
-	> .container {
+	>.container {
 		max-width: 1178px;
 		position: relative;
 		padding: 0;
@@ -61,10 +61,10 @@ $tabNavHeight: 72px;
 			white-space: nowrap;
 
 			.carousel-content {
-				> .block-editor-inner-blocks {
+				>.block-editor-inner-blocks {
 					width: 100%;
 
-					> .block-editor-block-list__layout {
+					>.block-editor-block-list__layout {
 						overflow: auto;
 						width: 100%;
 						padding-right: 100px;
@@ -115,7 +115,7 @@ $tabNavHeight: 72px;
 		}
 	}
 
-	.tns-horizontal.tns-subpixel > .tns-item {
+	.tns-horizontal.tns-subpixel>.tns-item {
 		vertical-align: middle;
 		white-space: nowrap;
 	}
@@ -130,10 +130,11 @@ $tabNavHeight: 72px;
 	height: fit-content;
 
 	/* stylelint-disable */
-	.block-editor-inner-blocks > {
+	.block-editor-inner-blocks> {
 		.block-editor-block-list__layout {
 			@extend %blockAppenderButton;
 		}
 	}
+
 	/* stylelint-enable */
 }

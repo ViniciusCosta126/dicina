@@ -70,7 +70,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 			titleAttributes = {
 				content: title,
 				tag: 'h2',
-				fontFamily: 'helveticaneue',
+				fontFamily: 'poppins',
 				manualSizes: true,
 				manualSizeM: 32,
 				manualSizeD: 50,

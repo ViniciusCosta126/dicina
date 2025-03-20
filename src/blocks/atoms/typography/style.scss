@@ -38,15 +38,15 @@
 	}
 
 	// Font Family
-	.helveticaneue,
-	&.helveticaneue {
+	.poppins,
+	&.poppins {
 		font-family: $font-primary;
 	}
 
 
 
-	.helveticaneue-cond,
-	&.helveticaneue-cond {
+	.poppins-cond,
+	&.poppins-cond {
 		font-family: $font-tertiary;
 	}
 
@@ -241,6 +241,7 @@
 			@extend %body-3-desk;
 		}
 	}
+
 	&.body-4 {
 		&-m {
 			@extend %body-4;
@@ -254,6 +255,7 @@
 			@extend %body-4-desk;
 		}
 	}
+
 	&.body-5 {
 		&-m {
 			@extend %body-5;
@@ -263,6 +265,7 @@
 			@extend %body-5-desk;
 		}
 	}
+
 	&.body-6 {
 		&-m {
 			@extend %body-6;
@@ -272,6 +275,7 @@
 			@extend %body-6-desk;
 		}
 	}
+
 	&.body-7 {
 		&-m {
 			@extend %body-7;

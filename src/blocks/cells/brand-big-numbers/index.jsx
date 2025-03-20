@@ -66,7 +66,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 								manualSizeD: 40,
 								color: '#fff',
 								bgColor: 'transparent',
-								fontFamily: 'helveticaneue',
+								fontFamily: 'poppins',
 								textAlign: 'align-center',
 								content: '+36mi',
 							},

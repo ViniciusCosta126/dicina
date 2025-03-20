@@ -16,7 +16,7 @@
 		&:after {
 			content: '';
 			height: 8px;
-			background: $linear6;
+			background: $primary;
 			width: 100%;
 			position: absolute;
 			bottom: -8px;
@@ -92,7 +92,7 @@
 		}
 
 		.tns-nav-active {
-			background: $linear6;
+			background: $primary;
 			width: 60px;
 		}
 
@@ -132,13 +132,14 @@
 
 			button {
 				flex-grow: 1;
+
 				&:last-of-type {
 					margin-right: 0;
 				}
 			}
 
 			.tns-nav-active {
-				background: $linear6;
+				background: $primary;
 				width: 60px;
 				flex-grow: 2;
 			}

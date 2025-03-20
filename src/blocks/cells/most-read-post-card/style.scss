@@ -4,6 +4,7 @@
 	&.default {
 		@extend %mostReadPostCardDefault;
 	}
+
 	&.journey {
 		@extend %mostReadPostCardJourney;
 	}
@@ -11,7 +12,7 @@
 
 %mostReadPostCardDefault {
 	// Default variant styles;
-	background: $dark-blue;
+	background: $primary;
 	width: 100%;
 	height: auto;
 

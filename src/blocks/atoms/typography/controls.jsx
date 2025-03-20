@@ -45,8 +45,8 @@ export default function Controls({ clientId, attributes, setAttributes }) {
 	];
 
 	const fontFamilies = [
-		{ label: 'Helvetica Neue', value: 'helveticaneue' },
-		{ label: 'Helvetica Neue Condensed', value: 'helveticaneue-cond' },
+		{ label: 'Poppins', value: 'poppins' },
+		{ label: 'Helvetica Neue Condensed', value: 'poppins-cond' },
 	];
 
 	const sizesM = [

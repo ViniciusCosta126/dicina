@@ -97,7 +97,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 							{
 								content: '0000',
 								tag: 'h2',
-								fontFamily: 'helveticaneue',
+								fontFamily: 'poppins',
 								disableSizes: true,
 								widthStrokeM: 3,
 								widthStrokeD: 6,
@@ -150,7 +150,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 							{
 								content: '0000',
 								tag: 'h2',
-								fontFamily: 'helveticaneue',
+								fontFamily: 'poppins',
 								disableSizes: true,
 								widthStrokeM: 3,
 								widthStrokeD: 6,
@@ -196,7 +196,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 							{
 								content: 'Title...',
 								tag: 'h2',
-								fontFamily: 'helveticaneue',
+								fontFamily: 'poppins',
 								manualSizes: true,
 								manualSizeM: 24,
 								manualSizeD: 32,
@@ -382,7 +382,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 							{
 								content: '0000',
 								tag: 'h2',
-								fontFamily: 'helveticaneue',
+								fontFamily: 'poppins',
 								disableSizes: true,
 								widthStrokeM: 3,
 								widthStrokeD: 6,

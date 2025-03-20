@@ -54,7 +54,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'A MARCA',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -64,7 +64,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'senna',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -93,7 +93,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'um Legado global em',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -103,7 +103,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'constante movimento',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -132,7 +132,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'Inspirando pessoas',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -142,7 +142,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'em todo o mundo',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -171,7 +171,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'perpetuando o espírito',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},
@@ -181,7 +181,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					{
 						content: 'INDOMÁVEL de Ayrton Senna',
 						color: '#FFFFFF',
-						fontFamily: 'helveticaneue',
+						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
 						sizeD: 'title-3-d',
 					},

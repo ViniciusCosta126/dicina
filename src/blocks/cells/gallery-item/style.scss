@@ -63,7 +63,7 @@
 				left: 0;
 				width: 100px;
 				height: 100%;
-				background: $gradientBlackTransparentRight;
+				background: $primary;
 			}
 
 			img {
@@ -125,8 +125,8 @@
 		display: none !important;
 	}
 
-	> .container {
-		> .block-editor-inner-blocks {
+	>.container {
+		>.block-editor-inner-blocks {
 			width: 100%;
 
 			.gallery-item__text {

@@ -21,11 +21,11 @@
 			.rect {
 				width: 10px;
 				height: 85px;
-				background: $gradient-bar;
+				background: $primary;
 			}
 		}
 
-		> .block-editor-inner-blocks {
+		>.block-editor-inner-blocks {
 			width: 80%;
 		}
 	}

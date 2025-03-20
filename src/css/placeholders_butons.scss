@@ -178,7 +178,7 @@
 		}
 
 		&::after {
-			background-color: $light-yellow;
+			background-color: $light-quaternary;
 		}
 	}
 
@@ -312,7 +312,7 @@
 
 		&::before,
 		&::after {
-			border-color: $yellow !important;
+			border-color: $quaternary !important;
 		}
 
 		@extend %animatedRightArrowsButton;
@@ -323,7 +323,7 @@
 		text-decoration: none;
 
 		p {
-			background: $yellow-blue-right;
+			background: $secondary;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}

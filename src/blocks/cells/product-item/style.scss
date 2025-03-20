@@ -4,9 +4,11 @@
 	&.default {
 		@extend %productItemDefault;
 	}
+
 	&.journey_highlights {
 		@extend %productItemHighlights;
 	}
+
 	&.journey_products {
 		@extend %productItemJourneyProduct;
 	}
@@ -83,7 +85,7 @@
 				left: 0;
 				height: 100%;
 				width: 100%;
-				background: $gradientBlackTransparent;
+				background: $primary;
 				transform: rotate(180deg);
 			}
 
@@ -105,6 +107,7 @@
 %productItemHighlights {
 	height: 403px;
 	width: 290px;
+
 	.product-item {
 		&-wrapper {
 			width: 100%;
@@ -179,9 +182,11 @@
 			.secondText {
 				text-transform: uppercase;
 			}
+
 			.firstText {
 				letter-spacing: 2.24px;
 			}
+
 			.secondText {
 				@include md {
 					line-height: 120%;
@@ -216,6 +221,7 @@
 
 %productItemJourneyProduct {
 	width: 296px;
+
 	// Product item styles
 	.product-item {
 		&-wrapper {
@@ -290,11 +296,14 @@
 			.typography {
 				text-transform: uppercase;
 			}
+
 			.category {
 				letter-spacing: 2.24px;
 			}
+
 			.title {
 				font-size: 17px;
+
 				@include md {
 					font-size: 20px;
 				}
@@ -309,6 +318,7 @@
 			}
 		}
 	}
+
 	@include lg {
 		width: 33%;
 	}

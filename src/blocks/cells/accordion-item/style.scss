@@ -42,7 +42,7 @@ details {
 			position: relative;
 			z-index: 1;
 
-			.accordion__title{
+			.accordion__title {
 				color: $surface-quinary;
 				-webkit-text-stroke-color: $surface-quinary;
 			}
@@ -86,16 +86,16 @@ details {
 
 			}
 
-			&:hover{
-				.accordion__title{
+			&:hover {
+				.accordion__title {
 
-				background: $green-blue;
-				-webkit-text-stroke: 0px;
-				-webkit-text-stroke-color: transparent;
+					background: $primary;
+					-webkit-text-stroke: 0px;
+					-webkit-text-stroke-color: transparent;
 
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
 				}
 			}
 		}
@@ -109,13 +109,14 @@ details {
 					justify-content: flex-end;
 				}
 
-				&.left{
+				&.left {
 					justify-content: flex-start;
 				}
 
-				&.center{
+				&.center {
 					justify-content: center;
 				}
+
 				.testimony {
 					max-width: 544px;
 					padding: 50px 25px;
@@ -124,7 +125,7 @@ details {
 			}
 		}
 
-		summary{
+		summary {
 			.accordion__title {
 				font-size: 54px;
 				line-height: 65px;
@@ -135,6 +136,7 @@ details {
 	@include laptop {
 		summary {
 			padding: 8px 0;
+
 			.accordion__title {
 				font-size: 96px;
 				line-height: 117px;

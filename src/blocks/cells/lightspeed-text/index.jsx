@@ -79,7 +79,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 										manualSizeM: 3,
 										manualSizeD: 5,
 										sizeType: 'vw',
-										fontFamily: 'helveticaneue',
+										fontFamily: 'poppins',
 										content: 'Texto principal',
 										color: 'linear-gradient(0deg,#00A851 0%,#1832D7 100%)',
 										bgColor: '#002753',
