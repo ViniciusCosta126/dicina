@@ -81,17 +81,6 @@ export default function EditorComponent({ attributes, setAttributes }) {
 									</svg>
 								</button>
 							)}
-
-							<div className="header__lang desktop">
-								<div className="header__lang_items">
-									<a href="#" className="active">
-										PT
-									</a>
-
-									<a href="#">EN</a>
-								</div>
-							</div>
-
 							<button className="header__menu_btn">
 								<span></span>
 								<span></span>
@@ -103,19 +92,6 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					<nav className="navbar open">
 						<div className="container">
 							<div className="navbar__container__left">
-								<div className="navbar__lang mobile">
-									<ul className="navbar__lang_list">
-										<li>
-											<a href="#" className="active">
-												PT
-											</a>
-										</li>
-										<li>
-											<a href="#">EN</a>
-										</li>
-									</ul>
-								</div>
-
 								<div className="navbar__text_up">
 									<RichText
 										allowedFormats={[]}
