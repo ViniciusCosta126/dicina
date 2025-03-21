@@ -147,7 +147,7 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 			titleAttributes = {
 				content: title,
 				tag: 'h2',
-				fontFamily: 'sennasans sennasans-stroke',
+				fontFamily: 'sans-serif sans-serif-stroke',
 				manualSizes: true,
 				manualSizeM: 32,
 				manualSizeD: 52,

@@ -61,7 +61,7 @@
 		},
 		"title": {
 			"type": "string",
-			"default": "Insira o <br>texto aqui</senna>"
+			"default": "Insira o <br>texto aqui</br>"
 		}
 	},
 	"example": {

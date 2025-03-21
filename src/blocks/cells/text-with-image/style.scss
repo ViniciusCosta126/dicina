@@ -1,6 +1,7 @@
 @import '../../../css/variables';
 
 .text-with-image {
+
 	&.titles-texts,
 	&.titles-texts-button {
 		@extend %textWithImageTitleText;
@@ -29,6 +30,7 @@
 	&.text-video {
 		@extend %textWithImageOnlyTextVideo;
 	}
+
 	&.title-text-testimony {
 		@extend %textWithImageTitleTextTestimony;
 	}
@@ -259,7 +261,7 @@
 
 	&.wp-editor {
 		.text-with-image-content {
-			> .block-editor-inner-blocks {
+			>.block-editor-inner-blocks {
 				width: 100%;
 			}
 		}

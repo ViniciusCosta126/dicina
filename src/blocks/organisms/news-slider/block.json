@@ -8,16 +8,19 @@
 	"version": "1.0.0",
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
-	"style": ["file:./style.scss", "style-news-slider"],
+	"style": [
+		"file:./style.scss",
+		"style-news-slider"
+	],
 	"render": "file:./render.php",
-	"attributes": {		
+	"attributes": {
 		"bgColor": {
 			"type": "string",
 			"default": "#002753"
 		},
 		"title": {
 			"type": "string",
-			"default": "Título fonte Senna"
+			"default": "Título fonte Poppins"
 		},
 		"upperTitle": {
 			"type": "string",

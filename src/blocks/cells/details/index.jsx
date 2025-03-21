@@ -82,7 +82,6 @@ export default function EditorComponent({ clientId, attributes, setAttributes })
 			{
 				content: '1º',
 				tag: 'p',
-				fontFamily: 'sennasans sennasans-stroke',
 				manualSizes: true,
 				...numberSizes,
 				widthStrokeM: 1.5,

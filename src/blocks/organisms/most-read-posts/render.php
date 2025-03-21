@@ -38,7 +38,7 @@ if ($popular_posts->have_posts()) {
 					"src" => "https://placehold.co/600x400",
 					"width" => 600,
 					"height" => 400,
-					"alt" => "Ayrton Senna"
+					"alt" => ""
 				)
 			),
 			"category" => array(
@@ -75,26 +75,30 @@ $carousel_end_block = '<!-- /wp:il/carousel -->';
 
 ?>
 <section class="most-read-posts <?= $attributes["variant"] ?> most-read-posts-<?= $randomComponentId ?>">
-    <style>
-    .most-read-posts-<?=$randomComponentId ?> {
-        margin-bottom: <?=$attributes["marginM"] ?>px;
-    }
+	<style>
+		.most-read-posts-<?= $randomComponentId ?> {
+			margin-bottom:
+				<?= $attributes["marginM"] ?>
+				px;
+		}
 
-    @media (min-width: 768px) {
-        .most-read-posts-<?=$randomComponentId ?> {
-            margin-bottom: <?=$attributes["marginD"] ?>px;
-        }
-    }
-    </style>
+		@media (min-width: 768px) {
+			.most-read-posts-<?= $randomComponentId ?> {
+				margin-bottom:
+					<?= $attributes["marginD"] ?>
+					px;
+			}
+		}
+	</style>
 
-    <div class="container">
-        <div class="most-read-posts__container">
-            <?= $content ?>
-            <?= do_blocks($carousel_block . $post_blocks . $carousel_end_block); ?>
+	<div class="container">
+		<div class="most-read-posts__container">
+			<?= $content ?>
+			<?= do_blocks($carousel_block . $post_blocks . $carousel_end_block); ?>
 
-            <div class="most-read-posts__list">
-                <?= do_blocks('<!-- wp:il/post-listing {"variant": "sidebar", "withImages": false, "amount": 4}  /-->'); ?>
-            </div>
-        </div>
-    </div>
+			<div class="most-read-posts__list">
+				<?= do_blocks('<!-- wp:il/post-listing {"variant": "sidebar", "withImages": false, "amount": 4}  /-->'); ?>
+			</div>
+		</div>
+	</div>
 </section>

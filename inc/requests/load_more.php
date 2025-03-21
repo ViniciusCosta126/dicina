@@ -56,7 +56,7 @@ function loadMorePosts()
 
             $post_data = array(
                 "widthCard" => $cardClass,
-                "variant"=> $variant,
+                "variant" => $variant,
                 "category" => array(
                     "url" => "{$hostUrl}/noticias",
                     "label" => "Notícias"
@@ -66,7 +66,7 @@ function loadMorePosts()
                 "link" => $post_url,
                 "cardImg" => array(
                     "src" => "",
-                    "alt" => "Ayrton Senna",
+                    "alt" => "",
                     "width" => "600",
                     "height" => "400"
                 )

@@ -7,7 +7,7 @@ import MarginPanel from '../../../panels/MarginPanel';
 export default function Controls({ attributes, setAttributes }) {
 	const { variant } = attributes;
 
-	const variants = [{ label: 'Sennaticos', value: 'sennaticos' }];
+	const variants = [{ label: 'Lorem', value: 'Lorem' }];
 
 	return (
 		<InspectorControls>

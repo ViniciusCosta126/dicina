@@ -53,7 +53,7 @@
 			"type": "object",
 			"default": {
 				"src": "https://via.placeholder.com/600x400",
-				"alt": "Ayrton Senna",
+				"alt": "",
 				"width": "600",
 				"height": "400"
 			}

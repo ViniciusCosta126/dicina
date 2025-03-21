@@ -13,17 +13,17 @@
 	}
 
 	&__container {
-		> * {
+		>* {
 			transform: translateX(-100vw);
 			transition: all 0.5s linear;
 		}
 
-		.sennasans.stroke {
+		.sans-serif.stroke {
 			line-height: 120%;
 		}
 
 		&.wiggle {
-			> * {
+			>* {
 				transition: all 1.25s linear;
 				transform: translateX(0);
 				animation: 1.25s wiggle ease;
@@ -40,9 +40,11 @@
 		0% {
 			transform: translateX(-100vw) skewX(-20deg);
 		}
+
 		50% {
 			transform: translateX(0) skewX(20deg);
 		}
+
 		100% {
 			transform: translateX(0%) skewX(0deg);
 		}

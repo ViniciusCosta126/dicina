@@ -9,7 +9,10 @@
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
 	"viewScript": "file:view.js",
-	"style": ["file:./style.scss", "style-contact-forms"],
+	"style": [
+		"file:./style.scss",
+		"style-contact-forms"
+	],
 	"render": "file:./render.php",
 	"attributes": {
 		"title": {
@@ -20,7 +23,7 @@
 			"type": "object",
 			"default": {
 				"normal": "nós queremos",
-				"sennaSans": "te ouvir!"
+				"sans-serif": "te ouvir!"
 			}
 		},
 		"subtitle": {

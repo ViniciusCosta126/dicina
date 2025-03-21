@@ -9,7 +9,10 @@
 	"editorScript": "file:index.jsx",
 	"script": "file:index.jsx",
 	"viewScript": "file:view.js",
-	"style": ["file:./style.scss", "style-products"],
+	"style": [
+		"file:./style.scss",
+		"style-products"
+	],
 	"render": "file:./render.php",
 	"attributes": {
 		"productsTitle": {
@@ -18,7 +21,7 @@
 		},
 		"productsSubtitle": {
 			"type": "string",
-			"default": "Vista sua verdade e contribua com o Instituto Ayrton Senna."
+			"default": "Lorem Ipsum is simply dummy text of the printing and typesetting"
 		},
 		"title": {
 			"type": "string",
@@ -26,11 +29,11 @@
 		},
 		"subtitle": {
 			"type": "string",
-			"default": "Conheça nossos produtos <br>oficiais da marca Senna."
+			"default": "Lorem Ipsum is simply dummy text of the printing and typesetting"
 		},
 		"subtitle__second": {
 			"type": "string",
-			"default": "Suas compras podem contribuir <br>com o Instituto Ayrton Senna."
+			"default": "Lorem Ipsum is simply dummy text of the printing and typesetting<br>Lorem Ipsum"
 		}
 	},
 	"example": {

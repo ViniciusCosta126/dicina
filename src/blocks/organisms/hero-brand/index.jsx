@@ -62,7 +62,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 				[
 					'il/typography',
 					{
-						content: 'senna',
+						content: 'lorem',
 						color: '#FFFFFF',
 						fontFamily: 'poppins',
 						sizeM: 'title-3-m',
@@ -179,7 +179,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 				[
 					'il/typography',
 					{
-						content: 'INDOMÁVEL de Ayrton Senna',
+						content: 'Lorem Ipsum',
 						color: '#FFFFFF',
 						fontFamily: 'poppins',
 						sizeM: 'title-3-m',

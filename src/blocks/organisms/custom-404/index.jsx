@@ -139,7 +139,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 					<picture>
 						<source media="(min-width:2000px)" srcset={image4k.src} alt="" />
 						<source media="(min-width:1024px)" srcset={imageDesk.src} />
-						<img src={image.src} alt="olhar-senna" class="img" />
+						<img src={image.src} alt="olhar" class="img" />
 					</picture>
 				</div>
 			</section>

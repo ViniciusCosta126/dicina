@@ -17,7 +17,7 @@ $language = 'isPortuguese';
 		<picture>
 			<source media="(min-width:2000px)" srcset=<?= $attributes["image4k"]["src"] ?> alt="" />
 			<source media="(min-width:1024px)" srcset="<?= $attributes["imageDesk"]["src"] ?>" />
-			<img src="<?= $attributes["image"]["src"] ?>" alt="olhar-senna" class="img" />
+			<img src="<?= $attributes["image"]["src"] ?>" alt="" class="img" />
 		</picture>
 	</div>
 </section>

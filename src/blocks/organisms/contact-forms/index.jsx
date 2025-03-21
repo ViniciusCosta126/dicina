@@ -74,12 +74,12 @@ export default function EditorComponent({ attributes, setAttributes }) {
 								allowedFormats={[]}
 								className="contact-forms__title contact-forms__title--senna-sans"
 								placeholder="Texto principal Senna Sans"
-								value={attributes.textoPrincipal.sennaSans}
+								value={attributes.textoPrincipal.sans - serif}
 								onChange={(title) =>
 									setAttributes({
 										textoPrincipal: {
 											...attributes.textoPrincipal,
-											sennaSans: title,
+											sans_serif: title,
 										},
 									})
 								}
