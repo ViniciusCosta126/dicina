@@ -1,0 +1,62 @@
+@import '../../../css/variables';
+
+.section-faq {
+    &.default {
+        @extend %sectionFaqDefault;
+    }
+}
+
+%sectionFaqDefault {
+
+    // Default variant styles;
+    &.wp-editor {
+        >.block-editor-inner-blocks {
+            >.block-editor-block-list__layout {
+                >.block-list-appender {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 10;
+                    pointer-events: all;
+
+                    .custom-appender {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2px;
+                    }
+
+                    .button-remove,
+                    .button-appender {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 15px;
+                        padding: 10px;
+                        border-radius: 4px;
+                        color: $white;
+                        border: none;
+                        cursor: pointer;
+                        white-space: nowrap;
+
+                        svg {
+                            width: 15px;
+
+                            path {
+                                stroke: $white;
+                            }
+                        }
+                    }
+
+                    .button-remove {
+                        background: darken($error, 10);
+                    }
+
+                    .button-appender {
+                        background: $black;
+                    }
+                }
+            }
+        }
+    }
+}

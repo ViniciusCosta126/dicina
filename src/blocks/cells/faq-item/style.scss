@@ -18,12 +18,14 @@
     position: relative;
     padding: 16px;
 
+
     .resposta {
         height: 0;
         opacity: 0;
-        transition: 0.2s ease;
+        transition: 1000ms ease linear;
         margin-top: 10px;
         font-size: 16px;
+        max-width: 90%;
 
         @include lg {
             font-size: 20px;
@@ -67,7 +69,7 @@
 
     &.open {
         .resposta {
-            transition: 0.2s ease;
+            transition: 1000ms ease linear;
             height: initial;
             opacity: 1;
         }
