@@ -67,7 +67,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 								sizeD: 'body-4-d',
 								color: '#000',
 								bgColor: 'transparent',
-								content: 'Pergunta Lorem',
+								content: 'What is Lorem Ipsum?',
 								textWeight: "weight-bold"
 							},
 						],
@@ -79,7 +79,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 								sizeD: 'body-6-d',
 								color: '#000',
 								bgColor: 'transparent',
-								content: 'Resposta Lorem',
+								content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 								textWeight: "weight-normal",
 								extraClass: 'resposta'
 							},
