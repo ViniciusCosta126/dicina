@@ -1,0 +1,87 @@
+@import '../../../css/variables';
+
+.faq-item {
+    &.default {
+        @extend %faqItemDefault;
+    }
+
+    &.wp-editor {
+        .resposta {
+            height: initial !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+%faqItemDefault {
+    // Default variant styles;
+    position: relative;
+    padding: 16px;
+
+    .resposta {
+        height: 0;
+        opacity: 0;
+        transition: 0.2s ease;
+        margin-top: 10px;
+        font-size: 16px;
+
+        @include lg {
+            font-size: 20px;
+        }
+    }
+
+    .icon-button {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            transition: 0.2s ease;
+        }
+
+        &::after {
+            top: 50%;
+            content: "";
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+            display: block;
+            transform: translateY(-50%);
+            position: absolute;
+            transition: 0.2s ease;
+        }
+    }
+
+    &.open {
+        .resposta {
+            transition: 0.2s ease;
+            height: initial;
+            opacity: 1;
+        }
+
+        .icon-button {
+            &::before {
+                transform: translateY(-50%) rotate(45deg);
+                transition: 0.2s ease;
+            }
+
+            &::after {
+                transform: translateY(-50%) rotate(135deg);
+                transition: 0.2s ease;
+            }
+        }
+    }
+}
