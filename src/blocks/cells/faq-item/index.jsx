@@ -79,7 +79,7 @@ export default function EditorComponent({ attributes, setAttributes }) {
 								sizeD: 'body-6-d',
 								color: '#000',
 								bgColor: 'transparent',
-								content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+								content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 								textWeight: "weight-normal",
 								extraClass: 'resposta'
 							},
